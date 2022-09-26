@@ -31,5 +31,11 @@
   },
   "posts/2022-09-24-pengenalan-pandas-dataframe/pengenalan-pandas-dataframe.qmd": {
     "pengenalan-pandas-dataframe.html": "80533d81"
+  },
+  "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.qmd": {
+    "pengolahan-data-menggunakan-pandas-part-1.html": "4d364b1c"
+  },
+  "posts/2022-09-25-filter-data-menggunakan-pandas/filter-data-menggunakan-pandas.qmd": {
+    "filter-data-menggunakan-pandas.html": "ae88d149"
   }
 }

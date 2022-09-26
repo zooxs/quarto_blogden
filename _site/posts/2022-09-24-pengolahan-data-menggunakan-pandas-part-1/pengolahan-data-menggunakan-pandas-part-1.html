@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Pandu Mulya Muhammad Syah">
-<meta name="description" content="Membuat Pandas Dataframe">
+<meta name="description" content="Mengolah data menggunakan Pandas: membaca data, menambah kolom dan menyimpan ke dalam file baru.">
 
-<title>BlogDen - Pengenalan Pandas DataFrame</title>
+<title>BlogDen - Pengolahan Data Menggunakan Pandas - Part 1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -176,10 +176,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Pengenalan Pandas DataFrame</h1>
+      <h1 class="title">Pengolahan Data Menggunakan Pandas - Part 1</h1>
                   <div>
         <div class="description">
-          <p>Membuat Pandas Dataframe</p>
+          <p>Mengolah data menggunakan Pandas: membaca data, menambah kolom dan menyimpan ke dalam file baru.</p>
         </div>
       </div>
                           <div class="quarto-categories">
@@ -218,10 +218,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
    
   <ul>
   <li><a href="#pendahuluan" id="toc-pendahuluan" class="nav-link active" data-scroll-target="#pendahuluan">Pendahuluan</a></li>
-  <li><a href="#membuat-dataframe" id="toc-membuat-dataframe" class="nav-link" data-scroll-target="#membuat-dataframe">Membuat DataFrame</a>
+  <li><a href="#pengolahan-data" id="toc-pengolahan-data" class="nav-link" data-scroll-target="#pengolahan-data">Pengolahan Data</a>
   <ul class="collapse">
-  <li><a href="#membuat-dataframe-dari-dict" id="toc-membuat-dataframe-dari-dict" class="nav-link" data-scroll-target="#membuat-dataframe-dari-dict">Membuat <code>DataFrame</code> dari <code>dict</code></a></li>
-  <li><a href="#membuat-dataframe-dari-numpy-ndarray" id="toc-membuat-dataframe-dari-numpy-ndarray" class="nav-link" data-scroll-target="#membuat-dataframe-dari-numpy-ndarray">Membuat <code>DataFrame</code> dari numpy <code>ndarray</code></a></li>
+  <li><a href="#pembacaan-data" id="toc-pembacaan-data" class="nav-link" data-scroll-target="#pembacaan-data">Pembacaan data</a></li>
+  <li><a href="#menambah-kolom" id="toc-menambah-kolom" class="nav-link" data-scroll-target="#menambah-kolom">Menambah kolom</a></li>
+  </ul></li>
+  <li><a href="#menyimpan-data" id="toc-menyimpan-data" class="nav-link" data-scroll-target="#menyimpan-data">Menyimpan Data</a>
+  <ul class="collapse">
+  <li><a href="#format-csv" id="toc-format-csv" class="nav-link" data-scroll-target="#format-csv">Format CSV</a></li>
+  <li><a href="#format-xlsx" id="toc-format-xlsx" class="nav-link" data-scroll-target="#format-xlsx">Format XLSX</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -234,26 +239,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <section id="pendahuluan" class="level1">
 <h1>Pendahuluan</h1>
-<p>Pandas DataFrame meruapakan salah satu tipe data yang umum digunakan pada Python, terutama dalam analisis data. Dataframe merupakan tipe data dua dimensi, <em>size-mutable</em> (ukurannya dapat berubah), memiliki nilai data yang heterogen (terdiri dari beberapa tipe data seperti <code>int</code>, <code>str</code> dan <code>float</code>). Data ini dapat dibentuk dari <em>dictionary</em> yang berisi <code>key</code> sebagai nama kolom dan <code>value</code> sebagai nilai data pada kolom.</p>
+<p>Pandas menjadi salah satu <em>library</em> yang banyak digunakan dalam pemrosesan data karena memiliki banyak fitur yang mendukung. Penggunaan bahasa pemrograman dalam pemrosesan data menjadi pilihan yang baik terutama jika data yang diolah memiliki ukuran yang besar dan variasi yang beragam. Pada artikel ini akan dijelaskan secara ringkah penggunaan Pandas dalam pemrosesan data mulai dari pembacaan hingga pembuatan berkas hasil pengolahan.</p>
 </section>
-<section id="membuat-dataframe" class="level1">
-<h1>Membuat DataFrame</h1>
-<section id="membuat-dataframe-dari-dict" class="level2">
-<h2 class="anchored" data-anchor-id="membuat-dataframe-dari-dict">Membuat <code>DataFrame</code> dari <code>dict</code></h2>
+<section id="pengolahan-data" class="level1">
+<h1>Pengolahan Data</h1>
+<section id="pembacaan-data" class="level2">
+<h2 class="anchored" data-anchor-id="pembacaan-data">Pembacaan data</h2>
+<p>Data dalam bentuk <em>file</em> seperti <code>csv</code>, <code>json</code> maupun <code>xlsx</code> dapat dibaca menggunakan Pandas menggunakan metode yang tersedia. Data yang digunakan berada dalam format <code>xlsx</code> dan memiliki nama <code>data_anggota.xlsx</code>, untuk membaca file tersebut digunakan metode <code>read_excel()</code>.</p>
+<p><code>{bash, echo=FALSE} ls *xlsx</code></p>
 <div class="cell" data-execution_count="1">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pandas <span class="im">import</span> DataFrame</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'nama'</span>: [<span class="st">'Ani'</span>, <span class="st">'Budi'</span>, <span class="st">'Cindy'</span>, <span class="st">'Doni'</span>, <span class="st">'Eka'</span>],</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'umur'</span>: [<span class="dv">20</span>, <span class="dv">22</span>, <span class="dv">19</span>, <span class="dv">23</span>, <span class="dv">21</span>],</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'gender'</span>: [<span class="st">'P'</span>, <span class="st">'L'</span>, <span class="st">'P'</span>, <span class="st">'L'</span>, <span class="st">'L'</span>]</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> DataFrame(d)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pandas <span class="im">import</span> read_excel</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> read_excel(<span class="st">'data_anggota.xlsx'</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="1">
 
 <div>
 
@@ -261,98 +262,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <thead>
     <tr>
       <th></th>
-      <th>nama</th>
-      <th>umur</th>
-      <th>gender</th>
+      <th>nama_depan</th>
+      <th>nama_belakang</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
       <td>Ani</td>
-      <td>20</td>
-      <td>P</td>
+      <td>Lestari</td>
     </tr>
     <tr>
       <th>1</th>
       <td>Budi</td>
-      <td>22</td>
-      <td>L</td>
+      <td>Hermawan</td>
     </tr>
     <tr>
       <th>2</th>
       <td>Cindy</td>
-      <td>19</td>
-      <td>P</td>
+      <td>Amara</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Doni</td>
-      <td>23</td>
-      <td>L</td>
+      <td>Dodi</td>
+      <td>Mulyanto</td>
     </tr>
     <tr>
       <th>4</th>
       <td>Eka</td>
-      <td>21</td>
-      <td>L</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-</div>
-<p>Indeks atau indikasi baris pada tabel di atas dapat dirubah dengan menambahkan parameter <code>index</code> yang berisi <code>list</code>.</p>
-<div class="cell" data-execution_count="2">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>baris <span class="op">=</span> [<span class="st">'satu'</span>, <span class="st">'dua'</span>, <span class="st">'tiga'</span>, <span class="st">'empat'</span>, <span class="st">'lima'</span>]</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> DataFrame(d, index<span class="op">=</span>baris)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display" data-execution_count="10">
-
-<div>
-
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>nama</th>
-      <th>umur</th>
-      <th>gender</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>satu</th>
-      <td>Ani</td>
-      <td>20</td>
-      <td>P</td>
-    </tr>
-    <tr>
-      <th>dua</th>
-      <td>Budi</td>
-      <td>22</td>
-      <td>L</td>
-    </tr>
-    <tr>
-      <th>tiga</th>
-      <td>Cindy</td>
-      <td>19</td>
-      <td>P</td>
-    </tr>
-    <tr>
-      <th>empat</th>
-      <td>Doni</td>
-      <td>23</td>
-      <td>L</td>
-    </tr>
-    <tr>
-      <th>lima</th>
-      <td>Eka</td>
-      <td>21</td>
-      <td>L</td>
+      <td>Saputra</td>
     </tr>
   </tbody>
 </table>
@@ -360,139 +298,111 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </section>
-<section id="membuat-dataframe-dari-numpy-ndarray" class="level2">
-<h2 class="anchored" data-anchor-id="membuat-dataframe-dari-numpy-ndarray">Membuat <code>DataFrame</code> dari numpy <code>ndarray</code></h2>
+<section id="menambah-kolom" class="level2">
+<h2 class="anchored" data-anchor-id="menambah-kolom">Menambah kolom</h2>
+<p>Pada <code>DataFrame</code> di atas akan ditambahkan kolom baru yang berisi nama lengkap dari masing-masing anggota. Karena tipe data pada kolom nama depan dan belakang sama (<code>str</code> atau <code>object</code>) langkah pemrosesan tipe data <code>str</code> dapat dilakukan seperti di bawah ini.</p>
+<div class="cell" data-execution_count="2">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'nama_lengkap'</span>] <span class="op">=</span> df.nama_depan <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> df.nama_belakang</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'email'</span>] <span class="op">=</span> df.nama_depan.<span class="bu">str</span>.lower() <span class="op">+</span> <span class="st">'.'</span> <span class="op">+</span> df.nama_belakang.<span class="bu">str</span>.lower() <span class="op">+</span> <span class="st">'@mail.com'</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="2">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>nama_depan</th>
+      <th>nama_belakang</th>
+      <th>nama_lengkap</th>
+      <th>email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Ani</td>
+      <td>Lestari</td>
+      <td>Ani Lestari</td>
+      <td>ani.lestari@mail.com</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Budi</td>
+      <td>Hermawan</td>
+      <td>Budi Hermawan</td>
+      <td>budi.hermawan@mail.com</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Cindy</td>
+      <td>Amara</td>
+      <td>Cindy Amara</td>
+      <td>cindy.amara@mail.com</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Dodi</td>
+      <td>Mulyanto</td>
+      <td>Dodi Mulyanto</td>
+      <td>dodi.mulyanto@mail.com</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Eka</td>
+      <td>Saputra</td>
+      <td>Eka Saputra</td>
+      <td>eka.saputra@mail.com</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Selain nama lengkap, kolom email juga dapat ditambahkan. Kolom email memiliki format penawaan <code>nama_depan.nama_belakang@mail.com</code>, metode <code>str.lower()</code> pada contoh di atas berfungsi untuk membuat setiap karakter menjadi huruf kecil.</p>
+</section>
+</section>
+<section id="menyimpan-data" class="level1">
+<h1>Menyimpan Data</h1>
+<p>Data yang telah diolah dapat disimpak ke dalam file baru menggunakan metode <code>to_csv()</code> untuk format <code>csv</code> atau <code>to_excel</code> untuk format excel seperti <code>xlsx</code> atau pun <code>xls</code>.</p>
+<section id="format-csv" class="level2">
+<h2 class="anchored" data-anchor-id="format-csv">Format CSV</h2>
 <div class="cell" data-execution_count="3">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy <span class="im">import</span> array</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    [<span class="st">'Ani'</span>, <span class="st">'Budi'</span>, <span class="st">'Cindy'</span>, <span class="st">'Doni'</span>, <span class="st">'Eka'</span>],</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">20</span>, <span class="dv">22</span>, <span class="dv">19</span>, <span class="dv">23</span>, <span class="dv">21</span>],</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    [<span class="st">'P'</span>, <span class="st">'L'</span>, <span class="st">'P'</span>, <span class="st">'L'</span>, <span class="st">'L'</span>]</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> DataFrame(array(data))</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">'hasil_pengolahan.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="11">
-
-<div>
-
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Ani</td>
-      <td>Budi</td>
-      <td>Cindy</td>
-      <td>Doni</td>
-      <td>Eka</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>20</td>
-      <td>22</td>
-      <td>19</td>
-      <td>23</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>P</td>
-      <td>L</td>
-      <td>P</td>
-      <td>L</td>
-      <td>L</td>
-    </tr>
-  </tbody>
-</table>
 </div>
-</div>
-</div>
-<p>Baris dan kolom pada tabel di atas disesuaikan dengan baris dan kolom pada numpy <code>ndarray</code> di mana setiap list yang berada di dalam <code>data</code> merupakan baris sedangkan nilai pada masing-masing list tersebut merupakan kolom. Untuk mengubah tampilan tabel tersebut sesuai dengan tabel pada tabel sebelumnya, atribut transpose dapat digunakan (menjadikan baris sebagai kolom, begitu juga sebaliknya).</p>
+</section>
+<section id="format-xlsx" class="level2">
+<h2 class="anchored" data-anchor-id="format-xlsx">Format XLSX</h2>
 <div class="cell" data-execution_count="4">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.T</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df.columns <span class="op">=</span> [<span class="st">'nama'</span>, <span class="st">'umur'</span>, <span class="st">'gender'</span>]</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>df.index <span class="op">=</span> baris</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df.to_excel(<span class="st">'hasil_pengolahan.xlsx'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="12">
-
-<div>
-
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>nama</th>
-      <th>umur</th>
-      <th>gender</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>satu</th>
-      <td>Ani</td>
-      <td>20</td>
-      <td>P</td>
-    </tr>
-    <tr>
-      <th>dua</th>
-      <td>Budi</td>
-      <td>22</td>
-      <td>L</td>
-    </tr>
-    <tr>
-      <th>tiga</th>
-      <td>Cindy</td>
-      <td>19</td>
-      <td>P</td>
-    </tr>
-    <tr>
-      <th>empat</th>
-      <td>Doni</td>
-      <td>23</td>
-      <td>L</td>
-    </tr>
-    <tr>
-      <th>lima</th>
-      <td>Eka</td>
-      <td>21</td>
-      <td>L</td>
-    </tr>
-  </tbody>
-</table>
 </div>
-</div>
-</div>
-<p>Baris dan kolom pada <code>DataFrame</code> dapat diubah setelah dibuat dengan menetapakan atribut <code>.columns</code> dan <code>.index</code> dengan nilai baru yang ingin digunakan. Nilai baru tersebut biasa dalam bentuk tipe data <code>list</code>.</p>
+<p><code>{bash, echo=FALSE} ls hasil_pengolahan*</code></p>
 
 
 </section>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.id">https://creativecommons.org/licenses/by/4.0/deed.id</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Sitasi</h2><div><div class="quarto-appendix-secondary-label">Sitasi BibTeX:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{mulyamuhammadsyah2022,
-  author = {Pandu Mulya Muhammad Syah},
+  author = {Pandu Mulya Muhammad Syah and Pandu Mulya Muhammad Syah},
   editor = {},
-  title = {Pengenalan Pandas DataFrame},
+  title = {Pengolahan Data Menggunakan Pandas - Part 1},
   date = {2022-09-24},
   langid = {id}
 }
 </code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Sebagai atribusi, silahkan mengutip karya ini sebagai:</div><div id="ref-mulyamuhammadsyah2022" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
-Pandu Mulya Muhammad Syah. 2022. <span>“Pengenalan Pandas
-DataFrame.”</span> September 24, 2022.
+Pandu Mulya Muhammad Syah, and Pandu Mulya Muhammad Syah. 2022.
+<span>“Pengolahan Data Menggunakan Pandas - Part 1.”</span> September
+24, 2022.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

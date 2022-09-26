@@ -22,6 +22,7 @@ citation: true
 # caption location
 fig-cap-location: bottom
 
+date-format: short
 
 # Default for author
 author: 

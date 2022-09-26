@@ -1,0 +1,83 @@
+---
+title: "Filter Data Menggunakan Pandas"
+description: |
+  Beberapa cara yang digunakan dalam memfilter data menggunakan Pandas.
+categories: [Python, Pandas]
+date: 2022-09-25
+
+---
+
+
+![](pandas_tb_filter.png)
+
+Penyaringan (*filter*) data merupakan salah satu langkah yang sering dilakukan dalam pemrosesan suatu data. Pandas memiliki beberapa cara dalam melakukan penyaringan di antaranya adalah `logical_operator`, metode `loc`, `iloc` dan `query`. Data yang diguanakan pada contoh pembahasan di bawah ini merupakan data *dummy* berupa nilai hasil ulangan dari beberapa mata pelajaran.
+
+```{python}
+from pandas import read_csv
+df = read_csv('nilai_ulangan.csv')
+df.head()
+```
+
+## Menggunakan logical operator
+
+Langkah di bawah ini menampilkan nama siswa yang memiliki nilai ulangan matematika di atas 50. Logical operator dapat juga dituliskan `df[df['matematika'] > 50]`. 
+
+```{python}
+df[df.matematika > 50]
+```
+
+Penyaringan dengan cara ini juga dapat diaplikasikan pada beberapa kondisi operator. Langkah di bawah ini menampilkan siswa yang memiliki nilai matematika di atas 60 dan nilai fisika di atas 55. Operator ganda tersebut dapat digunakan dengan format `[(operator_1) & (operator_2)]`, tanda `&` (`and`) berfungsi untuk mengharuskan kedua kondisi operator terpenuhi. Untuk kondisi yang terpenuhi hanya salah satu saja dapat digunakan tanda `|` atau `or`.
+
+```{python}
+df[(df.matematika > 60) & (df.fisika > 55)]
+```
+
+```{python}
+df[(df.matematika > 60) | (df.fisika > 55)]
+```
+
+Untuk menampilkan data dengan nama siswa yang memiliki kesamaan tertentu dapat menggunakan langkah di bawah ini. Hasil pada langkah ini menampilkan nama siswa yang berawalan `E`.
+
+```{python}
+df[df.nama.str.startswith('E')]
+```
+
+## Menggunakan `loc` dan `iloc`
+
+Metode `loc` dan `iloc` pada Pandas berfungsi memfilter data berdasarkan baris dan kolom tertentu. Perbedaan mendasar pada kedua metode ini terletak pada parameter kolom di mana `loc` menggunakan label seperti nama kolom sedangkan `iloc` menggunakan indeks berupa nomor. Untuk parameter baris tetap menggunakan indeks berupa angka selama indeks tersebut tidak dirubah. Secara umum format parameter baris dan kolom pada kedua metode ini adalah `[awal_baris:akhir_baris, awal_kolom:akhir_kolom]`.
+
+Langkah di bawah ini menampilkan 5 baris pertama data dengan kolom berlabel `nama` hingga `fisika` menggunakan metode `loc`.
+
+```{python}
+df.loc[:5, 'nama':'fisika']
+```
+
+Hasil yang sama dapat dilakukan dengan menggunakan list pada parameter kolom. Urutan elemen pada list tersebut tidak harus sama dengan urutan kolom pada data asalkan elemen tersebut berada di dalam kolom.
+
+```{python}
+df.loc[:5, ['nama', 'matematika', 'fisika']]
+```
+
+Langkah di bawah ini menampilkan 5 baris pertam dan 3 kolom pertama pada data menggunakan metode `iloc`. Perlu diketahui, baik parameter baris maupun kolom parameter awalnya tidak perlu diisi karena sudah mengindikasikan titik awal dari masing-masing parameter.
+
+```{python}
+df.iloc[:5, :3]
+```
+
+Untuk menampilkan kolom ke-1 dan kolom ke-3 dari baris 3 hingga ke-7 dapat menggunakan langkah di bawah ini. Indeks berupa angka dimulai dari 0, sehingga kolom ke-1 dan kolom ke-3 dapat direpresentasikan sebagai indeks 0 dan 2.
+
+```{python}
+df.iloc[3:7, [0,2]]
+```
+
+## Menggunakan `query`
+
+Metode `query` menggunakan parameter dalam bentuk `str` sehingga lebih memudahkan dalam memfilter data. Langkah di bawah menampilkan siswa yang memiliki nilia matematika dan fisika di atas 60 dan 75 secara bersamaan. 
+
+```{python}
+df.query('matematika > 60 and fisika > 75')
+```
+
+
+
+

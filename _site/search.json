@@ -4,7 +4,42 @@
     "href": "index.html",
     "title": "BlogDen",
     "section": "",
-    "text": "Reusehttps://creativecommons.org/licenses/by/4.0/deed.idSitasiSitasi BibTeX:@online{mulyamuhammadsyah,\n  author = {Pandu Mulya Muhammad Syah},\n  editor = {},\n  title = {BlogDen},\n  langid = {id}\n}\nSebagai atribusi, silahkan mengutip karya ini sebagai:\nPandu Mulya Muhammad Syah. n.d. “BlogDen.”"
+    "text": "Python\n\n\nPandas\n\n\n\n\nBeberapa cara yang digunakan dalam memfilter data menggunakan Pandas.\n\n\n\n\n\n\n25/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPython\n\n\nPandas\n\n\n\n\nMengolah data menggunakan Pandas: membaca data, menambah kolom dan menyimpan ke dalam file baru.\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah, Pandu Mulya Muhammad Syah\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nPython\n\n\nPandas\n\n\n\n\nDasar-dasar library Pandas yang perlu diketahui.\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPython\n\n\nPandas\n\n\n\n\nMembuat Pandas Dataframe\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nPython\n\n\n\n\nBeberapa environtmen umum yang digunakan programmer untuk membuat dan mengembangkan program Python\n\n\n\n\n\n\n19/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nPython\n\n\n\n\nBeberapa alasan kenapa Bahasa Pemrograman Pyhon layak untuk dipelajari\n\n\n\n\n\n\n12/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nLinux\n\n\n\n\nAlasan menggunakan Linux sebagai Daily Driver\n\n\n\n\n\n\n04/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\nTidak ada item yang cocok"
+  },
+  {
+    "objectID": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html",
+    "href": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html",
+    "title": "Pengolahan Data Menggunakan Pandas - Part 1",
+    "section": "",
+    "text": "Pandas menjadi salah satu library yang banyak digunakan dalam pemrosesan data karena memiliki banyak fitur yang mendukung. Penggunaan bahasa pemrograman dalam pemrosesan data menjadi pilihan yang baik terutama jika data yang diolah memiliki ukuran yang besar dan variasi yang beragam. Pada artikel ini akan dijelaskan secara ringkah penggunaan Pandas dalam pemrosesan data mulai dari pembacaan hingga pembuatan berkas hasil pengolahan."
+  },
+  {
+    "objectID": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#pembacaan-data",
+    "href": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#pembacaan-data",
+    "title": "Pengolahan Data Menggunakan Pandas - Part 1",
+    "section": "Pembacaan data",
+    "text": "Pembacaan data\nData dalam bentuk file seperti csv, json maupun xlsx dapat dibaca menggunakan Pandas menggunakan metode yang tersedia. Data yang digunakan berada dalam format xlsx dan memiliki nama data_anggota.xlsx, untuk membaca file tersebut digunakan metode read_excel().\n{bash, echo=FALSE} ls *xlsx\n\n\nCode\nfrom pandas import read_excel\ndf = read_excel('data_anggota.xlsx')\ndf\n\n\n\n\n\n\n  \n    \n      \n      nama_depan\n      nama_belakang\n    \n  \n  \n    \n      0\n      Ani\n      Lestari\n    \n    \n      1\n      Budi\n      Hermawan\n    \n    \n      2\n      Cindy\n      Amara\n    \n    \n      3\n      Dodi\n      Mulyanto\n    \n    \n      4\n      Eka\n      Saputra"
+  },
+  {
+    "objectID": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#menambah-kolom",
+    "href": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#menambah-kolom",
+    "title": "Pengolahan Data Menggunakan Pandas - Part 1",
+    "section": "Menambah kolom",
+    "text": "Menambah kolom\nPada DataFrame di atas akan ditambahkan kolom baru yang berisi nama lengkap dari masing-masing anggota. Karena tipe data pada kolom nama depan dan belakang sama (str atau object) langkah pemrosesan tipe data str dapat dilakukan seperti di bawah ini.\n\n\nCode\ndf['nama_lengkap'] = df.nama_depan + ' ' + df.nama_belakang\ndf['email'] = df.nama_depan.str.lower() + '.' + df.nama_belakang.str.lower() + '@mail.com'\ndf\n\n\n\n\n\n\n  \n    \n      \n      nama_depan\n      nama_belakang\n      nama_lengkap\n      email\n    \n  \n  \n    \n      0\n      Ani\n      Lestari\n      Ani Lestari\n      ani.lestari@mail.com\n    \n    \n      1\n      Budi\n      Hermawan\n      Budi Hermawan\n      budi.hermawan@mail.com\n    \n    \n      2\n      Cindy\n      Amara\n      Cindy Amara\n      cindy.amara@mail.com\n    \n    \n      3\n      Dodi\n      Mulyanto\n      Dodi Mulyanto\n      dodi.mulyanto@mail.com\n    \n    \n      4\n      Eka\n      Saputra\n      Eka Saputra\n      eka.saputra@mail.com\n    \n  \n\n\n\n\nSelain nama lengkap, kolom email juga dapat ditambahkan. Kolom email memiliki format penawaan nama_depan.nama_belakang@mail.com, metode str.lower() pada contoh di atas berfungsi untuk membuat setiap karakter menjadi huruf kecil."
+  },
+  {
+    "objectID": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#format-csv",
+    "href": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#format-csv",
+    "title": "Pengolahan Data Menggunakan Pandas - Part 1",
+    "section": "Format CSV",
+    "text": "Format CSV\n\n\nCode\ndf.to_csv('hasil_pengolahan.csv', index=False)"
+  },
+  {
+    "objectID": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#format-xlsx",
+    "href": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#format-xlsx",
+    "title": "Pengolahan Data Menggunakan Pandas - Part 1",
+    "section": "Format XLSX",
+    "text": "Format XLSX\n\n\nCode\ndf.to_excel('hasil_pengolahan.xlsx', index=False)\n\n\n{bash, echo=FALSE} ls hasil_pengolahan*"
   },
   {
     "objectID": "posts/2022-09-24-pengenalan-dasar-dasar-pandas/pengenalan-dasar-dasar-pandas.html#ukuran-dataset",
@@ -126,6 +161,34 @@
     "text": "Keharusan belajar Python\nDengan kemajuan teknologi informasi dan penggunaan media sosial yang masif menyebabkan banyak sumber materi pembelajarn Python di berbagai media seperti Youtube dan course dari lembaga tertentu baik yang gratis maupun berbayar. Beberapa kanal YouTube seperti Indonesia Belajar, Dea Afrizal, Corey Schafer dan Tech With Tim merangkum materi mendasar Python untuk pemula. Free courses seperti FreeCodeCamp dan Kaggel memiliki cakupan materi pengelan dasar Python hingga penerapannya di bidang webapp dan machine learning. Melihat penerapan Python yang luas di berbagai bidang dan ketersediaan resources materi cukup menjadi alasan seseorang mempelajari bahasa tersebut. Terlebih di era digital ini kemampuan programming sangat dibutuhkan dalam kegiatan industri."
   },
   {
+    "objectID": "posts/2022-09-25-filter-data-menggunakan-pandas/filter-data-menggunakan-pandas.html",
+    "href": "posts/2022-09-25-filter-data-menggunakan-pandas/filter-data-menggunakan-pandas.html",
+    "title": "Filter Data Menggunakan Pandas",
+    "section": "",
+    "text": "Penyaringan (filter) data merupakan salah satu langkah yang sering dilakukan dalam pemrosesan suatu data. Pandas memiliki beberapa cara dalam melakukan penyaringan di antaranya adalah logical_operator, metode loc, iloc dan query. Data yang diguanakan pada contoh pembahasan di bawah ini merupakan data dummy berupa nilai hasil ulangan dari beberapa mata pelajaran."
+  },
+  {
+    "objectID": "posts/2022-09-25-filter-data-menggunakan-pandas/filter-data-menggunakan-pandas.html#menggunakan-logical-operator",
+    "href": "posts/2022-09-25-filter-data-menggunakan-pandas/filter-data-menggunakan-pandas.html#menggunakan-logical-operator",
+    "title": "Filter Data Menggunakan Pandas",
+    "section": "Menggunakan logical operator",
+    "text": "Menggunakan logical operator\nLangkah di bawah ini menampilkan nama siswa yang memiliki nilai ulangan matematika di atas 50. Logical operator dapat juga dituliskan df[df['matematika'] > 50].\n\n\nCode\ndf[df.matematika > 50]\n\n\n\n\n\n\n  \n    \n      \n      nama\n      matematika\n      fisika\n      kimia\n    \n  \n  \n    \n      0\n      Ani\n      64\n      75\n      54\n    \n    \n      1\n      Budi\n      96\n      85\n      58\n    \n    \n      2\n      Cindy\n      67\n      71\n      91\n    \n    \n      5\n      Eko\n      63\n      98\n      96\n    \n    \n      8\n      Gisel\n      61\n      70\n      77\n    \n    \n      9\n      Lestari\n      79\n      52\n      39\n    \n    \n      10\n      Hermawan\n      76\n      79\n      75\n    \n    \n      12\n      Mulyanto\n      58\n      77\n      82\n    \n    \n      13\n      Saskia\n      96\n      64\n      43\n    \n  \n\n\n\n\nPenyaringan dengan cara ini juga dapat diaplikasikan pada beberapa kondisi operator. Langkah di bawah ini menampilkan siswa yang memiliki nilai matematika di atas 60 dan nilai fisika di atas 55. Operator ganda tersebut dapat digunakan dengan format [(operator_1) & (operator_2)], tanda & (and) berfungsi untuk mengharuskan kedua kondisi operator terpenuhi. Untuk kondisi yang terpenuhi hanya salah satu saja dapat digunakan tanda | atau or.\n\n\nCode\ndf[(df.matematika > 60) & (df.fisika > 55)]\n\n\n\n\n\n\n  \n    \n      \n      nama\n      matematika\n      fisika\n      kimia\n    \n  \n  \n    \n      0\n      Ani\n      64\n      75\n      54\n    \n    \n      1\n      Budi\n      96\n      85\n      58\n    \n    \n      2\n      Cindy\n      67\n      71\n      91\n    \n    \n      5\n      Eko\n      63\n      98\n      96\n    \n    \n      8\n      Gisel\n      61\n      70\n      77\n    \n    \n      10\n      Hermawan\n      76\n      79\n      75\n    \n    \n      13\n      Saskia\n      96\n      64\n      43\n    \n  \n\n\n\n\n\n\nCode\ndf[(df.matematika > 60) | (df.fisika > 55)]\n\n\n\n\n\n\n  \n    \n      \n      nama\n      matematika\n      fisika\n      kimia\n    \n  \n  \n    \n      0\n      Ani\n      64\n      75\n      54\n    \n    \n      1\n      Budi\n      96\n      85\n      58\n    \n    \n      2\n      Cindy\n      67\n      71\n      91\n    \n    \n      3\n      Dodi\n      35\n      83\n      45\n    \n    \n      4\n      Eka\n      48\n      77\n      64\n    \n    \n      5\n      Eko\n      63\n      98\n      96\n    \n    \n      8\n      Gisel\n      61\n      70\n      77\n    \n    \n      9\n      Lestari\n      79\n      52\n      39\n    \n    \n      10\n      Hermawan\n      76\n      79\n      75\n    \n    \n      11\n      Amara\n      36\n      73\n      54\n    \n    \n      12\n      Mulyanto\n      58\n      77\n      82\n    \n    \n      13\n      Saskia\n      96\n      64\n      43\n    \n  \n\n\n\n\nUntuk menampilkan data dengan nama siswa yang memiliki kesamaan tertentu dapat menggunakan langkah di bawah ini. Hasil pada langkah ini menampilkan nama siswa yang berawalan E.\n\n\nCode\ndf[df.nama.str.startswith('E')]\n\n\n\n\n\n\n  \n    \n      \n      nama\n      matematika\n      fisika\n      kimia\n    \n  \n  \n    \n      4\n      Eka\n      48\n      77\n      64\n    \n    \n      5\n      Eko\n      63\n      98\n      96\n    \n    \n      6\n      Endang\n      45\n      45\n      73"
+  },
+  {
+    "objectID": "posts/2022-09-25-filter-data-menggunakan-pandas/filter-data-menggunakan-pandas.html#menggunakan-loc-dan-iloc",
+    "href": "posts/2022-09-25-filter-data-menggunakan-pandas/filter-data-menggunakan-pandas.html#menggunakan-loc-dan-iloc",
+    "title": "Filter Data Menggunakan Pandas",
+    "section": "Menggunakan loc dan iloc",
+    "text": "Menggunakan loc dan iloc\nMetode loc dan iloc pada Pandas berfungsi memfilter data berdasarkan baris dan kolom tertentu. Perbedaan mendasar pada kedua metode ini terletak pada parameter kolom di mana loc menggunakan label seperti nama kolom sedangkan iloc menggunakan indeks berupa nomor. Untuk parameter baris tetap menggunakan indeks berupa angka selama indeks tersebut tidak dirubah. Secara umum format parameter baris dan kolom pada kedua metode ini adalah [awal_baris:akhir_baris, awal_kolom:akhir_kolom].\nLangkah di bawah ini menampilkan 5 baris pertama data dengan kolom berlabel nama hingga fisika menggunakan metode loc.\n\n\nCode\ndf.loc[:5, 'nama':'fisika']\n\n\n\n\n\n\n  \n    \n      \n      nama\n      matematika\n      fisika\n    \n  \n  \n    \n      0\n      Ani\n      64\n      75\n    \n    \n      1\n      Budi\n      96\n      85\n    \n    \n      2\n      Cindy\n      67\n      71\n    \n    \n      3\n      Dodi\n      35\n      83\n    \n    \n      4\n      Eka\n      48\n      77\n    \n    \n      5\n      Eko\n      63\n      98\n    \n  \n\n\n\n\nHasil yang sama dapat dilakukan dengan menggunakan list pada parameter kolom. Urutan elemen pada list tersebut tidak harus sama dengan urutan kolom pada data asalkan elemen tersebut berada di dalam kolom.\n\n\nCode\ndf.loc[:5, ['nama', 'matematika', 'fisika']]\n\n\n\n\n\n\n  \n    \n      \n      nama\n      matematika\n      fisika\n    \n  \n  \n    \n      0\n      Ani\n      64\n      75\n    \n    \n      1\n      Budi\n      96\n      85\n    \n    \n      2\n      Cindy\n      67\n      71\n    \n    \n      3\n      Dodi\n      35\n      83\n    \n    \n      4\n      Eka\n      48\n      77\n    \n    \n      5\n      Eko\n      63\n      98\n    \n  \n\n\n\n\nLangkah di bawah ini menampilkan 5 baris pertam dan 3 kolom pertama pada data menggunakan metode iloc. Perlu diketahui, baik parameter baris maupun kolom parameter awalnya tidak perlu diisi karena sudah mengindikasikan titik awal dari masing-masing parameter.\n\n\nCode\ndf.iloc[:5, :3]\n\n\n\n\n\n\n  \n    \n      \n      nama\n      matematika\n      fisika\n    \n  \n  \n    \n      0\n      Ani\n      64\n      75\n    \n    \n      1\n      Budi\n      96\n      85\n    \n    \n      2\n      Cindy\n      67\n      71\n    \n    \n      3\n      Dodi\n      35\n      83\n    \n    \n      4\n      Eka\n      48\n      77\n    \n  \n\n\n\n\nUntuk menampilkan kolom ke-1 dan kolom ke-3 dari baris 3 hingga ke-7 dapat menggunakan langkah di bawah ini. Indeks berupa angka dimulai dari 0, sehingga kolom ke-1 dan kolom ke-3 dapat direpresentasikan sebagai indeks 0 dan 2.\n\n\nCode\ndf.iloc[3:7, [0,2]]\n\n\n\n\n\n\n  \n    \n      \n      nama\n      fisika\n    \n  \n  \n    \n      3\n      Dodi\n      83\n    \n    \n      4\n      Eka\n      77\n    \n    \n      5\n      Eko\n      98\n    \n    \n      6\n      Endang\n      45"
+  },
+  {
+    "objectID": "posts/2022-09-25-filter-data-menggunakan-pandas/filter-data-menggunakan-pandas.html#menggunakan-query",
+    "href": "posts/2022-09-25-filter-data-menggunakan-pandas/filter-data-menggunakan-pandas.html#menggunakan-query",
+    "title": "Filter Data Menggunakan Pandas",
+    "section": "Menggunakan query",
+    "text": "Menggunakan query\nMetode query menggunakan parameter dalam bentuk str sehingga lebih memudahkan dalam memfilter data. Langkah di bawah menampilkan siswa yang memiliki nilia matematika dan fisika di atas 60 dan 75 secara bersamaan.\n\n\nCode\ndf.query('matematika > 60 and fisika > 75')\n\n\n\n\n\n\n  \n    \n      \n      nama\n      matematika\n      fisika\n      kimia\n    \n  \n  \n    \n      1\n      Budi\n      96\n      85\n      58\n    \n    \n      5\n      Eko\n      63\n      98\n      96\n    \n    \n      10\n      Hermawan\n      76\n      79\n      75"
+  },
+  {
     "objectID": "posts/2022-09-24-pengenalan-pandas-dataframe/pengenalan-pandas-dataframe.html",
     "href": "posts/2022-09-24-pengenalan-pandas-dataframe/pengenalan-pandas-dataframe.html",
     "title": "Pengenalan Pandas DataFrame",
@@ -151,6 +214,6 @@
     "href": "about.html",
     "title": "Tentang Saya",
     "section": "",
-    "text": "Reusehttps://creativecommons.org/licenses/by/4.0/deed.idSitasiSitasi BibTeX:@online{mulyamuhammadsyah,\n  author = {Pandu Mulya Muhammad Syah},\n  editor = {},\n  title = {Tentang Saya},\n  langid = {id}\n}\nSebagai atribusi, silahkan mengutip karya ini sebagai:\nPandu Mulya Muhammad Syah. n.d. “Tentang Saya.”"
+    "text": "Mahasiswa tingkat akhir yang tertarik dengan pemrograman, data analysis dan sistem operasi Linux."
   }
 ]

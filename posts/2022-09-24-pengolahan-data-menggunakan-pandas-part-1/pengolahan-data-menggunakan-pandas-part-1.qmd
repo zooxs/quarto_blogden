@@ -1,0 +1,56 @@
+---
+title: "Pengolahan Data Menggunakan Pandas - Part 1"
+description: |
+  Mengolah data menggunakan Pandas: membaca data, menambah kolom dan menyimpan ke dalam file baru.
+author:
+  - name: Pandu Mulya Muhammad Syah
+categories: [Python, Pandas]
+date: 2022-09-24
+jupyter: python3
+---
+
+# Pendahuluan
+Pandas menjadi salah satu *library* yang banyak digunakan dalam pemrosesan data karena memiliki banyak fitur yang mendukung. Penggunaan bahasa pemrograman dalam pemrosesan data menjadi pilihan yang baik terutama jika data yang diolah memiliki ukuran yang besar dan variasi yang beragam. Pada artikel ini akan dijelaskan secara ringkah penggunaan Pandas dalam pemrosesan data mulai dari pembacaan hingga pembuatan berkas hasil pengolahan.
+
+# Pengolahan Data
+## Pembacaan data
+Data dalam bentuk *file* seperti `csv`, `json` maupun `xlsx` dapat dibaca menggunakan Pandas menggunakan metode yang tersedia. Data yang digunakan berada dalam format `xlsx` dan memiliki nama `data_anggota.xlsx`, untuk membaca file tersebut digunakan metode `read_excel()`.
+
+```{bash, echo=FALSE}
+ls *xlsx
+```
+
+
+```{python}
+from pandas import read_excel
+df = read_excel('data_anggota.xlsx')
+df
+```
+## Menambah kolom
+Pada `DataFrame` di atas akan ditambahkan kolom baru yang berisi nama lengkap dari masing-masing anggota. Karena tipe data pada kolom nama depan dan belakang sama (`str` atau `object`) langkah pemrosesan tipe data `str` dapat dilakukan seperti di bawah ini.
+
+```{python}
+df['nama_lengkap'] = df.nama_depan + ' ' + df.nama_belakang
+df['email'] = df.nama_depan.str.lower() + '.' + df.nama_belakang.str.lower() + '@mail.com'
+df
+```
+
+Selain nama lengkap, kolom email juga dapat ditambahkan. Kolom email memiliki format penawaan `nama_depan.nama_belakang@mail.com`, metode `str.lower()` pada contoh di atas berfungsi untuk membuat setiap karakter menjadi huruf kecil.
+
+# Menyimpan Data
+Data yang telah diolah dapat disimpak ke dalam file baru menggunakan metode `to_csv()` untuk format `csv` atau `to_excel` untuk format excel seperti `xlsx` atau pun `xls`.
+
+## Format CSV
+
+```{python}
+df.to_csv('hasil_pengolahan.csv', index=False)
+```
+## Format XLSX
+
+```{python}
+df.to_excel('hasil_pengolahan.xlsx', index=False)
+```
+
+```{bash, echo=FALSE}
+ls hasil_pengolahan*
+```

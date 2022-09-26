@@ -2,6 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2022-09-25-filter-data-menggunakan-pandas/filter-data-menggunakan-pandas.html",
+      "/posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html",
       "/posts/2022-09-24-pengenalan-dasar-dasar-pandas/pengenalan-dasar-dasar-pandas.html",
       "/posts/2022-09-24-pengenalan-pandas-dataframe/pengenalan-pandas-dataframe.html",
       "/posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html",
