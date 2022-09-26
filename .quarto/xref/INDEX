@@ -28,5 +28,8 @@
   },
   "posts/pengenalan-pandas/index.qmd": {
     "index.html": "4242d93f"
+  },
+  "posts/2022-09-24-pengenalan-pandas-dataframe/pengenalan-pandas-dataframe.qmd": {
+    "pengenalan-pandas-dataframe.html": "80533d81"
   }
 }

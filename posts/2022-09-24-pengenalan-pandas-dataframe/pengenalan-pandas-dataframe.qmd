@@ -1,0 +1,55 @@
+---
+title: "Pengenalan Pandas DataFrame"
+description: |
+  Membuat Pandas Dataframe
+categories: [Python, Pandas]
+date: 2022-09-24
+jupyter: python3
+---
+
+# Pendahuluan
+Pandas DataFrame meruapakan salah satu tipe data yang umum digunakan pada Python, terutama dalam analisis data. Dataframe merupakan tipe data dua dimensi, *size-mutable* (ukurannya dapat berubah), memiliki nilai data yang heterogen (terdiri dari beberapa tipe data seperti `int`, `str` dan `float`). Data ini dapat dibentuk dari *dictionary* yang berisi `key` sebagai nama kolom dan `value` sebagai nilai data pada kolom.
+
+# Membuat DataFrame
+## Membuat `DataFrame` dari `dict`
+
+```{python}
+from pandas import DataFrame
+d = {
+    'nama': ['Ani', 'Budi', 'Cindy', 'Doni', 'Eka'],
+    'umur': [20, 22, 19, 23, 21],
+    'gender': ['P', 'L', 'P', 'L', 'L']
+}
+
+df = DataFrame(d)
+df
+```
+Indeks atau indikasi baris pada tabel di atas dapat dirubah dengan menambahkan parameter `index` yang berisi `list`.
+
+```{python}
+baris = ['satu', 'dua', 'tiga', 'empat', 'lima']
+df = DataFrame(d, index=baris)
+df
+```
+ 
+## Membuat `DataFrame` dari numpy `ndarray`
+```{python}
+from numpy import array
+data = [
+    ['Ani', 'Budi', 'Cindy', 'Doni', 'Eka'],
+    [20, 22, 19, 23, 21],
+    ['P', 'L', 'P', 'L', 'L']
+]
+df = DataFrame(array(data))
+df
+```
+Baris dan kolom pada tabel di atas disesuaikan dengan baris dan kolom pada numpy `ndarray` di mana setiap list yang berada di dalam `data` merupakan baris sedangkan nilai pada masing-masing list tersebut merupakan kolom. Untuk mengubah tampilan tabel tersebut sesuai dengan tabel pada tabel sebelumnya, atribut transpose dapat digunakan (menjadikan baris sebagai kolom, begitu juga sebaliknya).
+
+```{python}
+df = df.T
+df.columns = ['nama', 'umur', 'gender']
+df.index = baris
+df
+```
+
+Baris dan kolom pada `DataFrame` dapat diubah setelah dibuat dengan menetapakan atribut `.columns` dan `.index` dengan nilai baru yang ingin digunakan. Nilai baru tersebut biasa dalam bentuk tipe data `list`.
