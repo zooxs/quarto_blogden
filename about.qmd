@@ -13,8 +13,17 @@ about:
     - icon: github
       text: Github
       href: https://github.com/zooxs
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/pandumulyams
 citation: false
 license: ''
 ---
+
+<style>
+  .quarto-title-meta, .share-on-section {
+    visibility: hidden;
+  }
+</style>
 
 Mahasiswa tingkat akhir yang tertarik dengan pemrograman, *data analysis* dan sistem operasi Linux.

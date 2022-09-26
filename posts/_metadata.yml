@@ -22,7 +22,11 @@ citation: true
 # caption location
 fig-cap-location: bottom
 
+# date format
 date-format: short
+
+# footer format
+include-after-body: ../footer.html
 
 # Default for author
 author: 

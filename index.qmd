@@ -12,3 +12,9 @@ title-block-banner: true
 citation: false
 license: ''
 ---
+
+<style>
+  .quarto-title-meta, .share-on-section {
+    visibility: hidden;
+  }
+</style>

@@ -24,12 +24,14 @@ website:
         href: https://github.com/zooxs
       - icon: instagram
         href: https://instagram.com/atensiden
+      - icon: twitter
+        href: https://twitter.com/pandumulyams
 format:
   html:
     theme: litera
     css: styles.css
     bibliography: ref.bib
-    include-after-body: footer.html
+    
 # collections:
 #   posts:
 #     share: [twitter, linkedin]   
