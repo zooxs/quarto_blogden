@@ -1,0 +1,19 @@
+---
+title: "Tentang Saya"
+image: photoden.png
+about:
+  template: jolla
+  links:
+    - icon: instagram
+      text: Instagram
+      href: https://instagram.com/atensiden
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/pandu-mulya-muhammad-syah-3a6b1b22b/
+    - icon: github
+      text: Github
+      href: https://github.com/zooxs
+
+---
+
+Mahasiswa tingkat akhir yang tertarik dengan pemrograman, *data analysis* dan sistem operasi Linux.

@@ -1,0 +1,29 @@
+# options specified here will apply to all posts in this folder
+
+# freeze computational output
+# (see https://quarto.org/docs/projects/code-execution.html#freeze)
+freeze: true
+
+# Enable banner style title blocks
+title-block-banner: true
+
+# code
+code-fold: true
+
+# license's type
+license: "CC BY"
+
+# use specific language
+lang: id
+
+# citation
+citation: true
+
+# caption location
+fig-cap-location: bottom
+
+
+# Default for author
+author: 
+  - name: Pandu Mulya Muhammad Syah
+    url: https://linkedin.com/in/pandu-mulya-muhammad-syah-3a6b1b22b/

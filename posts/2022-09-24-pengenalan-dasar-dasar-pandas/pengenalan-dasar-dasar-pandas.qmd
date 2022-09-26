@@ -1,0 +1,101 @@
+---
+title: "Pengenalan Dasar-dasar Pandas"
+description: |
+  Dasar-dasar *library* Pandas yang perlu diketahui.
+date: 2022-09-24
+categories: [Python, Pandas]
+jupyter: python3
+---
+
+![](pandas_logo.png)
+
+# Pendahuluan
+`Pandas` merupapkan salah satu *library* Python yang umum digunakan untuk keperluan *data analysis* karena memiliki banyak fitur yang memudahkan pengguna untuk mengolah data. Terdapat beberapa fitur umum statistik seperti `mean()`, `sum()`, `max()`, `min()`, dan `quantile()` sehingga pengguna dapat dengan mudah mendapatkan hasil nilainya. Pada artikel ini akan dibahas secara ringkas penggunaan `Pandas` pada *dataset titanic* dari *library* `Seaborn`.
+
+# Memuat Dataset
+
+```{python}
+import seaborn as sns
+import pandas as pd
+
+df = sns.load_dataset('titanic')
+df.iloc[:5, :6]
+```
+
+Dataset berasal dari *library* `Seaborn` dan dibaca menggukana `Pandas`. Metode `.iloc[:5, :6]` berfungsi untuk menampilkan 5 baris pertama dan 6 kolom pertama dari data.
+
+## Ukuran dataset
+
+Ukuran dataset (jumlah baris dan kolom) dapat diketahui dengan atribut `.shape`.
+
+```{python}
+df.shape
+```
+
+## Akses nama kolom
+
+Nama kolom yang terdapat dalam dataset dapat diaksek menggunakan atribut `.columns`.
+
+```{python}
+df.columns
+```
+
+
+## Tipe data kolom
+
+Tipe data setiap kolom dapat diketahui menggunakan atribut `.dtypes` pada dataset.
+
+```{python}
+df.dtypes
+```
+
+Dari hasil di atas terlihat beberapa tipe data seperti `int64` untuk bilangan bulat, `float64` untuk bilangan desimal, `bool` untuk data `True` atau `False`, `object` untuk karakter atau kalimat dan `category` untuk kategori data.
+
+## Mengakses data pada kolom tertentu
+
+Terdapat dua cara umum untuk memanggil data pada kolom tertentu, menggunakan nama kolom sebagai indeks dan menggunakan nama kolom sebagai atribut.
+
+1. Nama kolom sebagai indeks
+
+```{python}
+df['age'].head()
+```
+
+2. Nama kolom sebagai atribut
+
+```{python}
+df.age.head()
+```
+
+Untuk memanggil data pada beberapa kolom, cara paling mudah adalah dengan menggunakan `list` (daftar) yang berisi beberapa nama kolom.
+
+```{python}
+df[['survived', 'age']].head()
+```
+
+# Pengolahan Dataset
+## Nilai minimum dan maksimum
+Kedua nilai tersebut dapat ditentukan dengan metode `.min()` dan `.max()`. Diambil data pada kolom `age` sebagai contoh pada bagian ini.
+
+```{python}
+print(f'Nilai min: {df.age.min()}')
+print(f'Nilai max: {df.age.max()}')
+```
+
+## Nilai rata-rata dan standar deviasi
+Nilai tersebut dapat ditentukan dengan metode `.mean()` dan `.std()`.
+
+```{python}
+print(f'Nilai mean: {df.age.mean()}')
+print(f'Nilai std: {df.age.std()}')
+```
+
+## Nilai kuantil
+Nilai kuantil dapat ditentukan dengan metode `.quantile()`. Q10, Q20 maupun Q30 bisa diketahui dengan memasukkan parameter pada metode `.quantile(.10)`, `.quantile(.20)` dan `.quantile(.30)` untuk masing-masing nilai kuantil yang ingin dicari.
+
+```{python}
+print(f'Nilai Q10: {df.age.quantile(.10)}')
+print(f'Nilai Q20: {df.age.quantile(.20)}')
+print(f'Nilai Q30: {df.age.quantile(.30)}')
+```
+

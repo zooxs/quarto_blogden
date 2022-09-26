@@ -1,0 +1,11 @@
+{
+  "hash": "7538afe05064baee90e80e87c3d82701",
+  "result": {
+    "markdown": "---\ntitle: Artikel Pertama\ndate: '2022-09-26'\ncategories:\n  - Python\n---\n\n::: {.cell execution_count=1}\n``` {.python .cell-code}\nprint('hello, hai, hahahah')\n```\n\n::: {.cell-output .cell-output-stdout}\n```\nhello, hai, hahahah\n```\n:::\n:::\n\n\n$$\n\\begin{flalign}\n\\sum F &= m \\times \\sum a\\\\\nF_g &= G \\cdot \\frac{m_1 \\cdot m_2}{r^2}\n\\end{flalign}\n$$\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

@@ -1,0 +1,184 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BlogDen",
+    "section": "",
+    "text": "Reusehttps://creativecommons.org/licenses/by/4.0/deed.idSitasiSitasi BibTeX:@online{mulyamuhammadsyah,\n  author = {Pandu Mulya Muhammad Syah},\n  editor = {},\n  title = {BlogDen},\n  langid = {id}\n}\nSebagai atribusi, silahkan mengutip karya ini sebagai:\nPandu Mulya Muhammad Syah. n.d. “BlogDen.”"
+  },
+  {
+    "objectID": "posts/2022-09-24-pengenalan-dasar-dasar-pandas/pengenalan-dasar-dasar-pandas.html#ukuran-dataset",
+    "href": "posts/2022-09-24-pengenalan-dasar-dasar-pandas/pengenalan-dasar-dasar-pandas.html#ukuran-dataset",
+    "title": "Pengenalan Dasar-dasar Pandas",
+    "section": "Ukuran dataset",
+    "text": "Ukuran dataset\nUkuran dataset (jumlah baris dan kolom) dapat diketahui dengan atribut .shape.\n\n\nCode\ndf.shape\n\n\n(891, 15)"
+  },
+  {
+    "objectID": "posts/2022-09-24-pengenalan-dasar-dasar-pandas/pengenalan-dasar-dasar-pandas.html#akses-nama-kolom",
+    "href": "posts/2022-09-24-pengenalan-dasar-dasar-pandas/pengenalan-dasar-dasar-pandas.html#akses-nama-kolom",
+    "title": "Pengenalan Dasar-dasar Pandas",
+    "section": "Akses nama kolom",
+    "text": "Akses nama kolom\nNama kolom yang terdapat dalam dataset dapat diaksek menggunakan atribut .columns.\n\n\nCode\ndf.columns\n\n\nIndex(['survived', 'pclass', 'sex', 'age', 'sibsp', 'parch', 'fare',\n       'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town',\n       'alive', 'alone'],\n      dtype='object')"
+  },
+  {
+    "objectID": "posts/2022-09-24-pengenalan-dasar-dasar-pandas/pengenalan-dasar-dasar-pandas.html#tipe-data-kolom",
+    "href": "posts/2022-09-24-pengenalan-dasar-dasar-pandas/pengenalan-dasar-dasar-pandas.html#tipe-data-kolom",
+    "title": "Pengenalan Dasar-dasar Pandas",
+    "section": "Tipe data kolom",
+    "text": "Tipe data kolom\nTipe data setiap kolom dapat diketahui menggunakan atribut .dtypes pada dataset.\n\n\nCode\ndf.dtypes\n\n\nsurvived          int64\npclass            int64\nsex              object\nage             float64\nsibsp             int64\nparch             int64\nfare            float64\nembarked         object\nclass          category\nwho              object\nadult_male         bool\ndeck           category\nembark_town      object\nalive            object\nalone              bool\ndtype: object\n\n\nDari hasil di atas terlihat beberapa tipe data seperti int64 untuk bilangan bulat, float64 untuk bilangan desimal, bool untuk data True atau False, object untuk karakter atau kalimat dan category untuk kategori data."
+  },
+  {
+    "objectID": "posts/2022-09-24-pengenalan-dasar-dasar-pandas/pengenalan-dasar-dasar-pandas.html#mengakses-data-pada-kolom-tertentu",
+    "href": "posts/2022-09-24-pengenalan-dasar-dasar-pandas/pengenalan-dasar-dasar-pandas.html#mengakses-data-pada-kolom-tertentu",
+    "title": "Pengenalan Dasar-dasar Pandas",
+    "section": "Mengakses data pada kolom tertentu",
+    "text": "Mengakses data pada kolom tertentu\nTerdapat dua cara umum untuk memanggil data pada kolom tertentu, menggunakan nama kolom sebagai indeks dan menggunakan nama kolom sebagai atribut.\n\nNama kolom sebagai indeks\n\n\n\nCode\ndf['age'].head()\n\n\n0    22.0\n1    38.0\n2    26.0\n3    35.0\n4    35.0\nName: age, dtype: float64\n\n\n\nNama kolom sebagai atribut\n\n\n\nCode\ndf.age.head()\n\n\n0    22.0\n1    38.0\n2    26.0\n3    35.0\n4    35.0\nName: age, dtype: float64\n\n\nUntuk memanggil data pada beberapa kolom, cara paling mudah adalah dengan menggunakan list (daftar) yang berisi beberapa nama kolom.\n\n\nCode\ndf[['survived', 'age']].head()\n\n\n\n\n\n\n  \n    \n      \n      survived\n      age\n    \n  \n  \n    \n      0\n      0\n      22.0\n    \n    \n      1\n      1\n      38.0\n    \n    \n      2\n      1\n      26.0\n    \n    \n      3\n      1\n      35.0\n    \n    \n      4\n      0\n      35.0"
+  },
+  {
+    "objectID": "posts/2022-09-24-pengenalan-dasar-dasar-pandas/pengenalan-dasar-dasar-pandas.html#nilai-minimum-dan-maksimum",
+    "href": "posts/2022-09-24-pengenalan-dasar-dasar-pandas/pengenalan-dasar-dasar-pandas.html#nilai-minimum-dan-maksimum",
+    "title": "Pengenalan Dasar-dasar Pandas",
+    "section": "Nilai minimum dan maksimum",
+    "text": "Nilai minimum dan maksimum\nKedua nilai tersebut dapat ditentukan dengan metode .min() dan .max(). Diambil data pada kolom age sebagai contoh pada bagian ini.\n\n\nCode\nprint(f'Nilai min: {df.age.min()}')\nprint(f'Nilai max: {df.age.max()}')\n\n\nNilai min: 0.42\nNilai max: 80.0"
+  },
+  {
+    "objectID": "posts/2022-09-24-pengenalan-dasar-dasar-pandas/pengenalan-dasar-dasar-pandas.html#nilai-rata-rata-dan-standar-deviasi",
+    "href": "posts/2022-09-24-pengenalan-dasar-dasar-pandas/pengenalan-dasar-dasar-pandas.html#nilai-rata-rata-dan-standar-deviasi",
+    "title": "Pengenalan Dasar-dasar Pandas",
+    "section": "Nilai rata-rata dan standar deviasi",
+    "text": "Nilai rata-rata dan standar deviasi\nNilai tersebut dapat ditentukan dengan metode .mean() dan .std().\n\n\nCode\nprint(f'Nilai mean: {df.age.mean()}')\nprint(f'Nilai std: {df.age.std()}')\n\n\nNilai mean: 29.69911764705882\nNilai std: 14.526497332334044"
+  },
+  {
+    "objectID": "posts/2022-09-24-pengenalan-dasar-dasar-pandas/pengenalan-dasar-dasar-pandas.html#nilai-kuantil",
+    "href": "posts/2022-09-24-pengenalan-dasar-dasar-pandas/pengenalan-dasar-dasar-pandas.html#nilai-kuantil",
+    "title": "Pengenalan Dasar-dasar Pandas",
+    "section": "Nilai kuantil",
+    "text": "Nilai kuantil\nNilai kuantil dapat ditentukan dengan metode .quantile(). Q10, Q20 maupun Q30 bisa diketahui dengan memasukkan parameter pada metode .quantile(.10), .quantile(.20) dan .quantile(.30) untuk masing-masing nilai kuantil yang ingin dicari.\n\n\nCode\nprint(f'Nilai Q10: {df.age.quantile(.10)}')\nprint(f'Nilai Q20: {df.age.quantile(.20)}')\nprint(f'Nilai Q30: {df.age.quantile(.30)}')\n\n\nNilai Q10: 14.0\nNilai Q20: 19.0\nNilai Q30: 22.0"
+  },
+  {
+    "objectID": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html",
+    "href": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html",
+    "title": "Python Environtmen - Media Utama dalam Pengembangan Program Python",
+    "section": "",
+    "text": "Kepopuleran Python sebagai bahasa yang banyak digunakan pada saat ini tidak lepas dari pengaruh ketersediaan media atau tools yang digunakan untuk pengembangan program Python. Kebanyakan pengguna dapat memilih antara memakai IDE, Code/Text Editor atau menggunakan Online Tools yang dapat dijalankan melalui browser selama terkoneksi dengan internet."
+  },
+  {
+    "objectID": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#pycharm",
+    "href": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#pycharm",
+    "title": "Python Environtmen - Media Utama dalam Pengembangan Program Python",
+    "section": "PyCharm",
+    "text": "PyCharm\n\nMerupakan IDE keluaran JetBrain yang terdedikasi untuk Python developer. Fitur pada IDE ini berfokus pada penyediaan environment dalam pengembangan Python, web dan data science. Terdapat beberapa pilihan versi IDE yang dapat diambil baik yang open-source maupun yang berbayar. Selain Python, IDE ini juga mendukung bahasa lainnya seperti bahasa HTML, CSS, JavaScript dan R. PyCharm menyediakan plugin tersendiri untuk memudahkan konfigurasi masing-masing bahasa. PyCharm dapat dijalankan pada sistem operasi pada umumnya seperti Windows, Linux dan MacOS. Selama device yang digunakan memiliki 4GB ram, disk space lebih dari 2.5GB hingga resolusi layar minimum 1024x768 PyCharm dapat dijalankan pada device tersebut (“Get started” 2022)."
+  },
+  {
+    "objectID": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#anaconda",
+    "href": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#anaconda",
+    "title": "Python Environtmen - Media Utama dalam Pengembangan Program Python",
+    "section": "Anaconda",
+    "text": "Anaconda\n\nMerupakan IDE Python yang berfokus pada pengembangan data science. IDE ini sudah dilengkapi beberapa libraries yang umum digunakan dalam kegiatan data science seperti numpy, pandas, matplotlib dan scikit-learn. Beberapa fitur menarik telah terpapasang pada IDE ini seperti packet manager Conda yang mudah digunakan untuk instalasi Python libraries serta pengaturan virtual environment. Selain itu juga terdapat Anaconda Navigator yang merupakan aplikasi desktop berfungsi mengatur integrated application, libraries dan python environment tanpa perlu menggunakan Command Line Interface (CLI). Anaconda juga dilengkapi fitur Cloud Environment Backup sebagai mendia penyimpanan local environment. Dari versi distribusi yang tersedia, pengguna dapat memilih open source distribution atau paid version (“Anaconda distribution,” t.t.).\n\n\n\nAnaconda Navigation"
+  },
+  {
+    "objectID": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#vs-code",
+    "href": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#vs-code",
+    "title": "Python Environtmen - Media Utama dalam Pengembangan Program Python",
+    "section": "VS Code",
+    "text": "VS Code\nMerupakan code editor keluaran Microsoft. Dapat dijalankan pada Windows, MacOS dan linux. Memiliki fitur penambahan extension yang memudahkan pengguna untuk meng-custom code editor sesuai kebutuhannya. Terdapat banyak extension yang tersedia untuk berbagai bahasa pemrograman. Selain itu juga tersedia extension yang berfokus pada workflow seperti git dan tampilan editor seperti color scheme dan icon.\n\n\n\nTampilan VS Code"
+  },
+  {
+    "objectID": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#neovim",
+    "href": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#neovim",
+    "title": "Python Environtmen - Media Utama dalam Pengembangan Program Python",
+    "section": "NeoVim",
+    "text": "NeoVim\nNeovim merupakan code editor berbasis Vim yang didesain untuk ekstensibilitas dan kegunaan serta mendorong pengguna baru untuk ikut berkontribusi (Neovim, t.t.). Merupakan project open source yang dijalankan oleh komunitas untuk mengembangkan neovim menjadi lebih baik lagi. Memiliki banyak plugin yang dapat dipasang untuk memudahkan programmer. Ribuan plugin dapat dilihat pada Vim Awesome. Memiliki ciri khas tidak bergantung pada mouse selama dijalankan dan terdapat banyak shortcut atau key binding yang memudahkan programmer menjalankan tugasnya. Hal ini menyebabkan workflow programmer lebih efisien karena menjaga tangannya tetap berada di atas keyboard.\n\n\n\nTampilan Neovim"
+  },
+  {
+    "objectID": "posts/2022-08-04-5-alasan-menggunakan-linux-sebagai-daily-driver/5-alasan-menggunakan-linux-sebagai-daily-driver.html",
+    "href": "posts/2022-08-04-5-alasan-menggunakan-linux-sebagai-daily-driver/5-alasan-menggunakan-linux-sebagai-daily-driver.html",
+    "title": "5 Alasan Menggunakan Linux Sebagai Daily Driver",
+    "section": "",
+    "text": "Hampir 2 tahun yang lalu saya memutuskan untuk berpindah dari Windows ke sistem operasi berbasis Linux seperti Ubuntu atau Manjaro. Keputusan ini didasari karena kondisi device yang tidak memungkinkan untuk digunakan sebagai daily driver karena keterbatasan spesifikasi device. Usia device yang hampir mencapai masa layannya disertai keterbatasan dalam pilihan upgrade bagian device menjadi alasan utama, di lain sisi harga lisensi Windows 10 yang termasuk tidak murah ikut menjadi bahan pertimbangan kala itu. Setelah mencari beberapa solusi, akhirnya saya memutuskan untuk berpindah ke sistem operasi berbasis Linux karena dapat dijalankan pada device dengan spesifikasi low-end serta lisensi yang bersifat free dan open source. Selama menggunakan Linux berbagai pengalaman sudah saya alami mulai dari adaptasi sistem folder yang berbeda dengan Windows, pembiasaan menggunakan Command Line Interface (CLI), troubleshooting jika terjadi masalah hingga nge-custom tampilan distro yang saya gunakan agar terlihat lebih menarik dan nyaman untuk dipakai. Sebagai daily driver, Linux mampu memenuhi hampir seluruh kebutuhan saya sebagai mahasiswa kala itu. Ketersediaan alternatif aplikasi untuk kebutuhan pengolahan dokumen seperti Libreoffice cukup membantu dalam menyelesaikan tugas-tugas perkuliahan. Compatible terhadap berbagai bahasa pemrograman menjadi kelebihan tersendiri yang turut memudahkan aktivitas saya selama mengerjakan tugas tertentu. Selain itu ada beberapa alasan lainnya Linux cocok digunakan sebagai daily driver, di antaranya:\n\nFree and Open Source. Sistem operasi berbasi Linux termasuk ke dalam Free and Open Source Software di mana pengguna dapat bebas menggunakan perangkat lunak tersebut sesuai kebutuhan dan tujuan apapun serta source code yang terbuka untuk umum sehingga dapat diakses oleh banyak orang. Kelebihan dari perangkat lunak yang termasuk ke dalam ini adalah pengguna dapat dengan bebas menggunakan, belajar, memodifikasi source code sesuai kebutuhan pengguna serta mendistribusikan kembali perangkat lunak tersebut terlepas dari adanya aktivitas modifikasi atau tidak. Selain itu, sifatnya yang terbuka untuk umum menjadikan perangkat lunak tersebut memiliki tingkat keamanan yang tinggi dibanding perangkat lunak milik individu (proprietary software) karena tidak dapat menyembunyikan fitur tertentu di dalam source code-nya. Di samping itu, kehadiran open source mengundang banyak software developer yang tertarik untuk mengembangkan software tersebut menjadi lebih baik lagi (Boval 2019).\nDapat dijalankan pada device dengan spesifikasi low-end. Permasalahan spesifikasi device yang tidak mencukupi untuk menjalankan sistem operasi Windows 10 menyebabkan banyak device lama (umur 5 - 10 tahun) tidak mampu menjalankannya. Hal ini menjadi dilema tersendiri bagi pengguna laptop atau komputer lama antara membeli perangkat baru atau upgarding beberapa bagian pada device mereka. Berbeda dengan Windows, sistem operasi berbasis Linux mampu dijalankan pada perangkat lama karena sebagian developer telah memodifikasi OS ini agar dapat dijalankan pada perangkat dengan spesifikasi low-end. OS berbasis Linux yang banyak beredar saat ini berada dalam bentuk distro, di mana sekelompok developer memodifikasi source code awal untuk disesuaikan dengan kebutuhanan mereka. Salah satu distro yang dapat dijalankan pada device lama adalah Xubuntu, Lubuntu, Zorin OS Lite, Arch Linux, BunshenLabs Linux Lithium, dan Puppy Linux (Cawley 2022).\nCompatible untuk programming. Secara umum Linux mendukung banyak bahasa pemrograman (Python, C++, C, R, dll.) sehingga cocok digunakan untuk programming. Selain itu, fitur package manager (pacman dan apt) pada Linux memberikan kemudahan bagi pengguna jika ingin meng-install suatu aplikasi melalui terminal. Kehadiran software pendukung programming seperti curl dan git. juga menjadi kelebihan tersendiri pada Linux–mengingat kemudahan yang ditawarkan dalam proses instalasi dibanding sistem operasi lainnya jika software tersebut tidak terpasang pada perangkat. Terminal pada Linux juga memiliki fitur automasi berupa bash scripting yang merupakan sebuah script berisi kumpulan perintah untuk menjalankan suatu tugas. Terminal bawaan pada Windows (PowerShell atau Command Prompt) tidak memiliki keefektifan automasi seperti terminal pada Linux sehingga perlu instalasi software tertentu (emulator atau WSL).\nHighly customable. Linux dapat di-custom sesuai kebutuhan dan keinginan penggunanya mulai dari penyesuaian tampilan seperti penggantian theme, icons, wallpaper dan aplikasi pendukung lainnya hingga mendesain sistem operasi tersebut untuk tujuan tertentu seperi lightweight distribution (Xubuntu dan Lubuntu) agar dapat dijalankan pada perangkat lama.\nMemiliki kontrol penuh terhadap sistem operasi. Pengguna Linux dapat juga bertindak sebagai admin bagi sistem operasinya di mana pengguna diberikan kontrol penuh terhadap perangkat yang dia jalankan. Salah satu contohnya adalah pengguna dapat menghapus aplikasi bawaan yang sekiranya tidak berguna. Hal ini akan memberikan ruang penyimpanan lebih besar bagi device terutama yang memiliki spesifikasi low-end.\n\n\n\n\n\nReferensi\n\nBoval, Mochamad. 2019. “Apa Itu Free and Open Source Software?” 8 Juli 2019. https://mochboval.wordpress.com/2019/07/08/apa-itu-free-and-open-source-software/.\n\n\nCawley, Christian. 2022. “10 Lightweight Linux Distributions to Give Your Old PC New Life.” 4 Juni 2022. https://www.makeuseof.com/tag/6-lightweight-linux-distributions-give-pc-lease-life/.\n\nReusehttps://creativecommons.org/licenses/by/4.0/deed.idSitasiSitasi BibTeX:@online{mulyamuhammadsyah2022,\n  author = {Pandu Mulya Muhammad Syah},\n  editor = {},\n  title = {5 Alasan Menggunakan Linux Sebagai Daily Driver},\n  date = {2022-08-04},\n  langid = {id}\n}\nSebagai atribusi, silahkan mengutip karya ini sebagai:\nPandu Mulya Muhammad Syah. 2022. “5 Alasan Menggunakan Linux\nSebagai Daily Driver.” August 4, 2022."
+  },
+  {
+    "objectID": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html",
+    "href": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html",
+    "title": "Bahasa Python - Alasannya Layak untuk Dipelajari",
+    "section": "",
+    "text": "Python merupakan salah satu bahasa pemrograman yang populer dalam dekade belakangan ini. Bahasa yang digagas oleh Guido Van Rossum pada tahun 1991 ini berfokus pada code readability (keterbacaan program) yang memberikan kemudahan kepada pengguna untuk belajar dan mengembangkannya (“Python Language advantages and applications” 2017). Hal ini didukung karena Python termasuk ke dalam high-level language (memiliki syntax atau aturan penulisan program yang mirip seperti Bahasa Ingris: print, import, for i in range(5), if 3 < 4:..., dll.) dan interpreted language (cenderung lebih fleksibel yang menjadikan pengguna lebih leluasa dalam membuat sebuah program) (“Isaac computer science,” t.t.; “Python Language advantages and applications” 2017)."
+  },
+  {
+    "objectID": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html#penggunaan-python-dalam-dunia-industri",
+    "href": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html#penggunaan-python-dalam-dunia-industri",
+    "title": "Bahasa Python - Alasannya Layak untuk Dipelajari",
+    "section": "Penggunaan Python dalam dunia industri",
+    "text": "Penggunaan Python dalam dunia industri\n Sebagai general purpose programming language, Python banyak digunakan pada berbagai bidang mulai dari data analytics, data visualizazion, game development hingga pengembangan website. Ketersediaan library dalam jumlah yang besar disertai komunitas yang mendukung menjadikan Python banyak diminati oleh programmer. Pada masing-masing bidang terdapat libraries yang digemari pengguna karena memiliki banyak fitur mendukung, di antaranya adalah:\n\nNumpy, Pandas, Matplotlib dan Scikit-learn yang umum digunakan pada data analytics, data visualization serta machine learning dan turunannya.\nPyGame dan Kivy untuk keperluan game development dan apps development.\nDjango, Flask dan Selenium yang umum digunakan untuk keperluan pengembangan webapp dan automasinya."
+  },
+  {
+    "objectID": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html#alasan-python-layak-untuk-dipelajari",
+    "href": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html#alasan-python-layak-untuk-dipelajari",
+    "title": "Bahasa Python - Alasannya Layak untuk Dipelajari",
+    "section": "Alasan Python layak untuk dipelajari",
+    "text": "Alasan Python layak untuk dipelajari\nDikutip dari (FutureLearn 2021) terdapat beberap alasan Python layak untuk dipelajari, di anataranya:\n\nMudah untuk digunakan terlebih bagi mereka yang baru belajar dasar-dasar pemrograman.\nMemiliki syntax yang mirip dengan Bahasa Inggris yang memudahkan pengguna untuk belajar dan memahami program yang dibuat.\nTerdapat banyak library pendukung untuk berbagai keperluan. Hal ini disebabkan Python yang tergolong ke dalam open-source language sehingga memiliki komunitas yang besar dan banyaknya pengguna berkontribusi dalam pengembangan library tertentu.\nFleksibel digunakan untuk keperluan apa pun mulai dari pengembangan aplikasi atau website hingga tugas perkuliahan."
+  },
+  {
+    "objectID": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html#keharusan-belajar-python",
+    "href": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html#keharusan-belajar-python",
+    "title": "Bahasa Python - Alasannya Layak untuk Dipelajari",
+    "section": "Keharusan belajar Python",
+    "text": "Keharusan belajar Python\nDengan kemajuan teknologi informasi dan penggunaan media sosial yang masif menyebabkan banyak sumber materi pembelajarn Python di berbagai media seperti Youtube dan course dari lembaga tertentu baik yang gratis maupun berbayar. Beberapa kanal YouTube seperti Indonesia Belajar, Dea Afrizal, Corey Schafer dan Tech With Tim merangkum materi mendasar Python untuk pemula. Free courses seperti FreeCodeCamp dan Kaggel memiliki cakupan materi pengelan dasar Python hingga penerapannya di bidang webapp dan machine learning. Melihat penerapan Python yang luas di berbagai bidang dan ketersediaan resources materi cukup menjadi alasan seseorang mempelajari bahasa tersebut. Terlebih di era digital ini kemampuan programming sangat dibutuhkan dalam kegiatan industri."
+  },
+  {
+    "objectID": "posts/pengenalan-pandas/index.html#ukuran-dataset",
+    "href": "posts/pengenalan-pandas/index.html#ukuran-dataset",
+    "title": "Pengenalan Dasar-dasar Pandas",
+    "section": "Ukuran dataset",
+    "text": "Ukuran dataset\nUkuran dataset (jumlah baris dan kolom) dapat diketahui dengan atribut .shape.\n\n\nCode\ndf.shape\n\n\n(891, 15)"
+  },
+  {
+    "objectID": "posts/pengenalan-pandas/index.html#akses-nama-kolom",
+    "href": "posts/pengenalan-pandas/index.html#akses-nama-kolom",
+    "title": "Pengenalan Dasar-dasar Pandas",
+    "section": "Akses nama kolom",
+    "text": "Akses nama kolom\nNama kolom yang terdapat dalam dataset dapat diaksek menggunakan atribut .columns.\n\n\nCode\ndf.columns\n\n\nIndex(['survived', 'pclass', 'sex', 'age', 'sibsp', 'parch', 'fare',\n       'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town',\n       'alive', 'alone'],\n      dtype='object')"
+  },
+  {
+    "objectID": "posts/pengenalan-pandas/index.html#tipe-data-kolom",
+    "href": "posts/pengenalan-pandas/index.html#tipe-data-kolom",
+    "title": "Pengenalan Dasar-dasar Pandas",
+    "section": "Tipe data kolom",
+    "text": "Tipe data kolom\nTipe data setiap kolom dapat diketahui menggunakan atribut .dtypes pada dataset.\n\n\nCode\ndf.dtypes\n\n\nsurvived          int64\npclass            int64\nsex              object\nage             float64\nsibsp             int64\nparch             int64\nfare            float64\nembarked         object\nclass          category\nwho              object\nadult_male         bool\ndeck           category\nembark_town      object\nalive            object\nalone              bool\ndtype: object\n\n\nDari hasil di atas terlihat beberapa tipe data seperti int64 untuk bilangan bulat, float64 untuk bilangan desimal, bool untuk data True atau False, object untuk karakter atau kalimat dan category untuk kategori data."
+  },
+  {
+    "objectID": "posts/pengenalan-pandas/index.html#mengakses-data-pada-kolom-tertentu",
+    "href": "posts/pengenalan-pandas/index.html#mengakses-data-pada-kolom-tertentu",
+    "title": "Pengenalan Dasar-dasar Pandas",
+    "section": "Mengakses data pada kolom tertentu",
+    "text": "Mengakses data pada kolom tertentu\nTerdapat dua cara umum untuk memanggil data pada kolom tertentu, menggunakan nama kolom sebagai indeks dan menggunakan nama kolom sebagai atribut.\n\nNama kolom sebagai indeks\n\n\n\nCode\ndf['age'].head()\n\n\n0    22.0\n1    38.0\n2    26.0\n3    35.0\n4    35.0\nName: age, dtype: float64\n\n\n\nNama kolom sebagai atribut\n\n\n\nCode\ndf.age.head()\n\n\n0    22.0\n1    38.0\n2    26.0\n3    35.0\n4    35.0\nName: age, dtype: float64\n\n\nUntuk memanggil data pada beberapa kolom, cara paling mudah adalah dengan menggunakan list (daftar) yang berisi beberapa nama kolom.\n\n\nCode\ndf[['survived', 'age']].head()\n\n\n\n\n\n\n  \n    \n      \n      survived\n      age\n    \n  \n  \n    \n      0\n      0\n      22.0\n    \n    \n      1\n      1\n      38.0\n    \n    \n      2\n      1\n      26.0\n    \n    \n      3\n      1\n      35.0\n    \n    \n      4\n      0\n      35.0"
+  },
+  {
+    "objectID": "posts/pengenalan-pandas/index.html#nilai-minimum-dan-maksimum",
+    "href": "posts/pengenalan-pandas/index.html#nilai-minimum-dan-maksimum",
+    "title": "Pengenalan Dasar-dasar Pandas",
+    "section": "Nilai minimum dan maksimum",
+    "text": "Nilai minimum dan maksimum\nKedua nilai tersebut dapat ditentukan dengan metode .min() dan .max(). Diambil data pada kolom age sebagai contoh pada bagian ini.\n\n\nCode\nprint(f'Nilai min: {df.age.min()}')\nprint(f'Nilai max: {df.age.max()}')\n\n\nNilai min: 0.42\nNilai max: 80.0"
+  },
+  {
+    "objectID": "posts/pengenalan-pandas/index.html#nilai-rata-rata-dan-standar-deviasi",
+    "href": "posts/pengenalan-pandas/index.html#nilai-rata-rata-dan-standar-deviasi",
+    "title": "Pengenalan Dasar-dasar Pandas",
+    "section": "Nilai rata-rata dan standar deviasi",
+    "text": "Nilai rata-rata dan standar deviasi\nNilai tersebut dapat ditentukan dengan metode .mean() dan .std().\n\n\nCode\nprint(f'Nilai mean: {df.age.mean()}')\nprint(f'Nilai std: {df.age.std()}')\n\n\nNilai mean: 29.69911764705882\nNilai std: 14.526497332334044"
+  },
+  {
+    "objectID": "posts/pengenalan-pandas/index.html#nilai-kuantil",
+    "href": "posts/pengenalan-pandas/index.html#nilai-kuantil",
+    "title": "Pengenalan Dasar-dasar Pandas",
+    "section": "Nilai kuantil",
+    "text": "Nilai kuantil\nNilai kuantil dapat ditentukan dengan metode .quantile(). Q10, Q20 maupun Q30 bisa diketahui dengan memasukkan parameter pada metode .quantile(.10), .quantile(.20) dan .quantile(.30) untuk masing-masing nilai kuantil yang ingin dicari.\n\n\nCode\nprint(f'Nilai Q10: {df.age.quantile(.10)}')\nprint(f'Nilai Q20: {df.age.quantile(.20)}')\nprint(f'Nilai Q30: {df.age.quantile(.30)}')\n\n\nNilai Q10: 14.0\nNilai Q20: 19.0\nNilai Q30: 22.0"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Tentang Saya",
+    "section": "",
+    "text": "Reusehttps://creativecommons.org/licenses/by/4.0/deed.idSitasiSitasi BibTeX:@online{mulyamuhammadsyah,\n  author = {Pandu Mulya Muhammad Syah},\n  editor = {},\n  title = {Tentang Saya},\n  langid = {id}\n}\nSebagai atribusi, silahkan mengutip karya ini sebagai:\nPandu Mulya Muhammad Syah. n.d. “Tentang Saya.”"
+  }
+]

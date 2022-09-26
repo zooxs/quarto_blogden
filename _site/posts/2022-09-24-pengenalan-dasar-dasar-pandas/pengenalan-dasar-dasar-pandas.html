@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id" xml:lang="id"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Pandu Mulya Muhammad Syah">
+<meta name="dcterms.date" content="2022-09-24">
+<meta name="description" content="Dasar-dasar library Pandas yang perlu diketahui.">
+
+<title>BlogDen - Pengenalan Dasar-dasar Pandas</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Tidak ada hasil",
+    "search-matching-documents-text": "dokumen yang cocok",
+    "search-copy-link-title": "Salin tautan untuk mencari",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Bersihkan",
+    "search-detached-cancel-button-title": "Batalkan",
+    "search-submit-button-title": "Kirim"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">BlogDen</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Tentang Saya</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/zooxs"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://instagram.com/atensiden"><i class="bi bi-instagram" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Pengenalan Dasar-dasar Pandas</h1>
+                  <div>
+        <div class="description">
+          <p>Dasar-dasar <em>library</em> Pandas yang perlu diketahui.</p>
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Python</div>
+                <div class="quarto-category">Pandas</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Penulis</div>
+      <div class="quarto-title-meta-contents">
+               <p>Pandu Mulya Muhammad Syah </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Diterbitkan</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">24 September 2022</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Di halaman ini</h2>
+   
+  <ul>
+  <li><a href="#pendahuluan" id="toc-pendahuluan" class="nav-link active" data-scroll-target="#pendahuluan">Pendahuluan</a></li>
+  <li><a href="#memuat-dataset" id="toc-memuat-dataset" class="nav-link" data-scroll-target="#memuat-dataset">Memuat Dataset</a>
+  <ul class="collapse">
+  <li><a href="#ukuran-dataset" id="toc-ukuran-dataset" class="nav-link" data-scroll-target="#ukuran-dataset">Ukuran dataset</a></li>
+  <li><a href="#akses-nama-kolom" id="toc-akses-nama-kolom" class="nav-link" data-scroll-target="#akses-nama-kolom">Akses nama kolom</a></li>
+  <li><a href="#tipe-data-kolom" id="toc-tipe-data-kolom" class="nav-link" data-scroll-target="#tipe-data-kolom">Tipe data kolom</a></li>
+  <li><a href="#mengakses-data-pada-kolom-tertentu" id="toc-mengakses-data-pada-kolom-tertentu" class="nav-link" data-scroll-target="#mengakses-data-pada-kolom-tertentu">Mengakses data pada kolom tertentu</a></li>
+  </ul></li>
+  <li><a href="#pengolahan-dataset" id="toc-pengolahan-dataset" class="nav-link" data-scroll-target="#pengolahan-dataset">Pengolahan Dataset</a>
+  <ul class="collapse">
+  <li><a href="#nilai-minimum-dan-maksimum" id="toc-nilai-minimum-dan-maksimum" class="nav-link" data-scroll-target="#nilai-minimum-dan-maksimum">Nilai minimum dan maksimum</a></li>
+  <li><a href="#nilai-rata-rata-dan-standar-deviasi" id="toc-nilai-rata-rata-dan-standar-deviasi" class="nav-link" data-scroll-target="#nilai-rata-rata-dan-standar-deviasi">Nilai rata-rata dan standar deviasi</a></li>
+  <li><a href="#nilai-kuantil" id="toc-nilai-kuantil" class="nav-link" data-scroll-target="#nilai-kuantil">Nilai kuantil</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p><img src="pandas_logo.png" class="img-fluid"></p>
+<section id="pendahuluan" class="level1">
+<h1>Pendahuluan</h1>
+<p><code>Pandas</code> merupapkan salah satu <em>library</em> Python yang umum digunakan untuk keperluan <em>data analysis</em> karena memiliki banyak fitur yang memudahkan pengguna untuk mengolah data. Terdapat beberapa fitur umum statistik seperti <code>mean()</code>, <code>sum()</code>, <code>max()</code>, <code>min()</code>, dan <code>quantile()</code> sehingga pengguna dapat dengan mudah mendapatkan hasil nilainya. Pada artikel ini akan dibahas secara ringkas penggunaan <code>Pandas</code> pada <em>dataset titanic</em> dari <em>library</em> <code>Seaborn</code>.</p>
+</section>
+<section id="memuat-dataset" class="level1">
+<h1>Memuat Dataset</h1>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> sns.load_dataset(<span class="st">'titanic'</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df.iloc[:<span class="dv">5</span>, :<span class="dv">6</span>]</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="1">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>survived</th>
+      <th>pclass</th>
+      <th>sex</th>
+      <th>age</th>
+      <th>sibsp</th>
+      <th>parch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>3</td>
+      <td>male</td>
+      <td>22.0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>1</td>
+      <td>female</td>
+      <td>38.0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>3</td>
+      <td>female</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>1</td>
+      <td>female</td>
+      <td>35.0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>3</td>
+      <td>male</td>
+      <td>35.0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Dataset berasal dari <em>library</em> <code>Seaborn</code> dan dibaca menggukana <code>Pandas</code>. Metode <code>.iloc[:5, :6]</code> berfungsi untuk menampilkan 5 baris pertama dan 6 kolom pertama dari data.</p>
+<section id="ukuran-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="ukuran-dataset">Ukuran dataset</h2>
+<p>Ukuran dataset (jumlah baris dan kolom) dapat diketahui dengan atribut <code>.shape</code>.</p>
+<div class="cell" data-execution_count="2">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df.shape</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>(891, 15)</code></pre>
+</div>
+</div>
+</section>
+<section id="akses-nama-kolom" class="level2">
+<h2 class="anchored" data-anchor-id="akses-nama-kolom">Akses nama kolom</h2>
+<p>Nama kolom yang terdapat dalam dataset dapat diaksek menggunakan atribut <code>.columns</code>.</p>
+<div class="cell" data-execution_count="3">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df.columns</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>Index(['survived', 'pclass', 'sex', 'age', 'sibsp', 'parch', 'fare',
+       'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town',
+       'alive', 'alone'],
+      dtype='object')</code></pre>
+</div>
+</div>
+</section>
+<section id="tipe-data-kolom" class="level2">
+<h2 class="anchored" data-anchor-id="tipe-data-kolom">Tipe data kolom</h2>
+<p>Tipe data setiap kolom dapat diketahui menggunakan atribut <code>.dtypes</code> pada dataset.</p>
+<div class="cell" data-execution_count="4">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df.dtypes</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>survived          int64
+pclass            int64
+sex              object
+age             float64
+sibsp             int64
+parch             int64
+fare            float64
+embarked         object
+class          category
+who              object
+adult_male         bool
+deck           category
+embark_town      object
+alive            object
+alone              bool
+dtype: object</code></pre>
+</div>
+</div>
+<p>Dari hasil di atas terlihat beberapa tipe data seperti <code>int64</code> untuk bilangan bulat, <code>float64</code> untuk bilangan desimal, <code>bool</code> untuk data <code>True</code> atau <code>False</code>, <code>object</code> untuk karakter atau kalimat dan <code>category</code> untuk kategori data.</p>
+</section>
+<section id="mengakses-data-pada-kolom-tertentu" class="level2">
+<h2 class="anchored" data-anchor-id="mengakses-data-pada-kolom-tertentu">Mengakses data pada kolom tertentu</h2>
+<p>Terdapat dua cara umum untuk memanggil data pada kolom tertentu, menggunakan nama kolom sebagai indeks dan menggunakan nama kolom sebagai atribut.</p>
+<ol type="1">
+<li>Nama kolom sebagai indeks</li>
+</ol>
+<div class="cell" data-execution_count="5">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'age'</span>].head()</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>0    22.0
+1    38.0
+2    26.0
+3    35.0
+4    35.0
+Name: age, dtype: float64</code></pre>
+</div>
+</div>
+<ol start="2" type="1">
+<li>Nama kolom sebagai atribut</li>
+</ol>
+<div class="cell" data-execution_count="6">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df.age.head()</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>0    22.0
+1    38.0
+2    26.0
+3    35.0
+4    35.0
+Name: age, dtype: float64</code></pre>
+</div>
+</div>
+<p>Untuk memanggil data pada beberapa kolom, cara paling mudah adalah dengan menggunakan <code>list</code> (daftar) yang berisi beberapa nama kolom.</p>
+<div class="cell" data-execution_count="7">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df[[<span class="st">'survived'</span>, <span class="st">'age'</span>]].head()</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="7">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>survived</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>22.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>38.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>26.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>35.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>35.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="pengolahan-dataset" class="level1">
+<h1>Pengolahan Dataset</h1>
+<section id="nilai-minimum-dan-maksimum" class="level2">
+<h2 class="anchored" data-anchor-id="nilai-minimum-dan-maksimum">Nilai minimum dan maksimum</h2>
+<p>Kedua nilai tersebut dapat ditentukan dengan metode <code>.min()</code> dan <code>.max()</code>. Diambil data pada kolom <code>age</code> sebagai contoh pada bagian ini.</p>
+<div class="cell" data-execution_count="8">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Nilai min: </span><span class="sc">{</span>df<span class="sc">.</span>age<span class="sc">.</span><span class="bu">min</span>()<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Nilai max: </span><span class="sc">{</span>df<span class="sc">.</span>age<span class="sc">.</span><span class="bu">max</span>()<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Nilai min: 0.42
+Nilai max: 80.0</code></pre>
+</div>
+</div>
+</section>
+<section id="nilai-rata-rata-dan-standar-deviasi" class="level2">
+<h2 class="anchored" data-anchor-id="nilai-rata-rata-dan-standar-deviasi">Nilai rata-rata dan standar deviasi</h2>
+<p>Nilai tersebut dapat ditentukan dengan metode <code>.mean()</code> dan <code>.std()</code>.</p>
+<div class="cell" data-execution_count="9">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Nilai mean: </span><span class="sc">{</span>df<span class="sc">.</span>age<span class="sc">.</span>mean()<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Nilai std: </span><span class="sc">{</span>df<span class="sc">.</span>age<span class="sc">.</span>std()<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Nilai mean: 29.69911764705882
+Nilai std: 14.526497332334044</code></pre>
+</div>
+</div>
+</section>
+<section id="nilai-kuantil" class="level2">
+<h2 class="anchored" data-anchor-id="nilai-kuantil">Nilai kuantil</h2>
+<p>Nilai kuantil dapat ditentukan dengan metode <code>.quantile()</code>. Q10, Q20 maupun Q30 bisa diketahui dengan memasukkan parameter pada metode <code>.quantile(.10)</code>, <code>.quantile(.20)</code> dan <code>.quantile(.30)</code> untuk masing-masing nilai kuantil yang ingin dicari.</p>
+<div class="cell" data-execution_count="10">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Nilai Q10: </span><span class="sc">{</span>df<span class="sc">.</span>age<span class="sc">.</span>quantile(<span class="fl">.10</span>)<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Nilai Q20: </span><span class="sc">{</span>df<span class="sc">.</span>age<span class="sc">.</span>quantile(<span class="fl">.20</span>)<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Nilai Q30: </span><span class="sc">{</span>df<span class="sc">.</span>age<span class="sc">.</span>quantile(<span class="fl">.30</span>)<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Nilai Q10: 14.0
+Nilai Q20: 19.0
+Nilai Q30: 22.0</code></pre>
+</div>
+</div>
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.id">https://creativecommons.org/licenses/by/4.0/deed.id</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Sitasi</h2><div><div class="quarto-appendix-secondary-label">Sitasi BibTeX:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{mulyamuhammadsyah2022,
+  author = {Pandu Mulya Muhammad Syah},
+  editor = {},
+  title = {Pengenalan Dasar-dasar Pandas},
+  date = {2022-09-24},
+  langid = {id}
+}
+</code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Sebagai atribusi, silahkan mengutip karya ini sebagai:</div><div id="ref-mulyamuhammadsyah2022" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+Pandu Mulya Muhammad Syah. 2022. <span>“Pengenalan Dasar-dasar
+Pandas.”</span> September 24, 2022.
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Tersalin!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

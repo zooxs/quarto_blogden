@@ -1,0 +1,36 @@
+---
+title: "Bahasa Python - Alasannya Layak untuk Dipelajari"
+description: |
+  Beberapa alasan kenapa Bahasa Pemrograman Pyhon layak untuk dipelajari
+date: 2022-08-12
+categories: [Python]
+---
+
+## Pengenalan Python
+
+![](python_bg.jpeg)
+
+
+**Python** merupakan salah satu bahasa pemrograman yang populer dalam dekade belakangan ini. Bahasa yang digagas oleh **Guido Van Rossum** pada tahun 1991 ini berfokus pada *code readability* (keterbacaan program) yang memberikan kemudahan kepada pengguna untuk belajar dan mengembangkannya [@2017Python]. Hal ini didukung karena Python termasuk ke dalam *high-level language* (memiliki *syntax* atau aturan penulisan program yang mirip seperti Bahasa Ingris: `print`, `import`, `for i in range(5)`, `if 3 < 4:...`, dll.) dan *interpreted language* (cenderung lebih fleksibel yang menjadikan pengguna lebih leluasa dalam membuat sebuah program) [@Isaac; @2017Python].
+
+
+## Penggunaan Python dalam dunia industri
+
+![](python_general_purpose.jpg)
+Sebagai *general purpose programming language*, Python banyak digunakan pada berbagai bidang mulai dari *data analytics*, *data visualizazion*, *game development* hingga pengembangan *website*. Ketersediaan *library* dalam jumlah yang besar disertai komunitas yang mendukung menjadikan Python banyak diminati oleh programmer. Pada masing-masing bidang terdapat *libraries* yang digemari pengguna karena memiliki banyak fitur mendukung, di antaranya adalah:
+
+1. [Numpy](https://numpy.org/), [Pandas](https://pandas.pydata.org/), [Matplotlib](https://matplotlib.org/) dan [Scikit-learn](https://scikit-learn.org/stable/) yang umum digunakan pada *data analytics*, *data visualization* serta *machine learning* dan turunannya.
+2. [PyGame](https://www.pygame.org/docs/) dan [Kivy](https://kivy.org/) untuk keperluan *game development* dan *apps development*.
+3. [Django](https://www.djangoproject.com/), [Flask](https://flask.palletsprojects.com/en/2.2.x/) dan [Selenium](https://selenium-python.readthedocs.io/) yang umum digunakan untuk keperluan pengembangan *webapp* dan automasinya.
+
+## Alasan Python layak untuk dipelajari
+Dikutip dari [@FutureLearn2021What] terdapat beberap alasan Python layak untuk dipelajari, di anataranya:
+
+1. Mudah untuk digunakan terlebih bagi mereka yang baru belajar dasar-dasar pemrograman.
+2. Memiliki *syntax* yang mirip dengan Bahasa Inggris yang memudahkan pengguna untuk belajar dan memahami program yang dibuat.
+3. Terdapat banyak *library* pendukung untuk berbagai keperluan. Hal ini disebabkan Python yang tergolong ke dalam *open-source language* sehingga memiliki komunitas yang besar dan banyaknya pengguna berkontribusi dalam pengembangan *library* tertentu.
+4. Fleksibel digunakan untuk keperluan apa pun mulai dari pengembangan aplikasi atau *website* hingga tugas perkuliahan.
+
+## Keharusan belajar Python
+Dengan kemajuan teknologi informasi dan penggunaan media sosial yang masif menyebabkan banyak sumber materi pembelajarn Python di berbagai media seperti Youtube dan *course* dari lembaga tertentu baik yang gratis maupun berbayar. Beberapa kanal YouTube seperti [Indonesia Belajar](https://www.youtube.com/c/IndonesiaBelajarKomputer), [Dea Afrizal](https://www.youtube.com/c/DeaAfrizal), [Corey Schafer](https://www.youtube.com/c/Coreyms) dan [Tech With Tim](https://www.youtube.com/c/TechWithTim) merangkum materi mendasar Python untuk pemula. *Free courses* seperti [FreeCodeCamp](https://www.freecodecamp.org/) dan [Kaggel](https://www.kaggle.com/) memiliki cakupan materi pengelan dasar Python hingga penerapannya di bidang *webapp* dan *machine learning*. Melihat penerapan Python yang luas di berbagai bidang dan ketersediaan *resources* materi cukup menjadi alasan seseorang mempelajari bahasa tersebut. Terlebih di era digital ini kemampuan *programming* sangat dibutuhkan dalam kegiatan industri. 
+
