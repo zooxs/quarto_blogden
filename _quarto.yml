@@ -9,7 +9,17 @@ website:
   title: "BlogDen"
   navbar:
     right:
-      - about.qmd
+      - href: about.qmd
+      - icon: github
+        href: https://github.com/zooxs
+      - icon: instagram
+        href: https://instagram.com/atensiden
+      - icon: twitter
+        href: https://twitter.com/pandumulyams
+
+  page-footer: 
+    left: 'Copyright 2022, Pandu Mulya Muhammad Syah'
+    right: 
       - icon: github
         href: https://github.com/zooxs
       - icon: instagram
@@ -19,8 +29,10 @@ format:
     theme: litera
     css: styles.css
     bibliography: ref.bib
-    # csl: https://github.com/citation-style-language/styles/blob/master/apa-6th-edition.csl
-    
+    include-after-body: footer.html
+# collections:
+#   posts:
+#     share: [twitter, linkedin]   
 language: bahasa.yml
 
 

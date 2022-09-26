@@ -2,8 +2,6 @@
 title: "Pengolahan Data Menggunakan Pandas - Part 1"
 description: |
   Mengolah data menggunakan Pandas: membaca data, menambah kolom dan menyimpan ke dalam file baru.
-author:
-  - name: Pandu Mulya Muhammad Syah
 categories: [Python, Pandas]
 date: 2022-09-24
 jupyter: python3
