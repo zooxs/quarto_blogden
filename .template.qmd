@@ -1,0 +1,7 @@
+---
+title: "Judul"
+description: |
+    Deskripsi.
+categories: [Python]
+date: 2022-09-27
+---

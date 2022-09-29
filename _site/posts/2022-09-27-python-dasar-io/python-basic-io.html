@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Pandu Mulya Muhammad Syah">
-<meta name="description" content="Mengolah data menggunakan Pandas: membaca data, menambah kolom dan menyimpan ke dalam file baru.">
+<meta name="description" content="Contoh pemanfaatan fitur input-ouput dalam Python.">
 
-<title>BlogDen - Pengolahan Data Menggunakan Pandas - Part 1</title>
+<title>BlogDen - Pemanfaatan I/O Sederhana pada Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -123,9 +123,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-submit-button-title": "Kirim"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -175,15 +172,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Pengolahan Data Menggunakan Pandas - Part 1</h1>
+      <h1 class="title">Pemanfaatan I/O Sederhana pada Python</h1>
                   <div>
         <div class="description">
-          <p>Mengolah data menggunakan Pandas: membaca data, menambah kolom dan menyimpan ke dalam file baru.</p>
+          <p>Contoh pemanfaatan fitur <em>input-ouput</em> dalam Python.</p>
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">Python</div>
-                <div class="quarto-category">Pandas</div>
+                <div class="quarto-category">I/O</div>
               </div>
                   </div>
   </div>
@@ -201,7 +198,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div>
       <div class="quarto-title-meta-heading">Diterbitkan</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">24/09/22</p>
+        <p class="date">30/09/22</p>
       </div>
     </div>
       
@@ -216,16 +213,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Di halaman ini</h2>
    
   <ul>
-  <li><a href="#pendahuluan" id="toc-pendahuluan" class="nav-link active" data-scroll-target="#pendahuluan">Pendahuluan</a></li>
-  <li><a href="#pengolahan-data" id="toc-pengolahan-data" class="nav-link" data-scroll-target="#pengolahan-data">Pengolahan Data</a>
+  <li><a href="#pengenalan" id="toc-pengenalan" class="nav-link active" data-scroll-target="#pengenalan">Pengenalan</a></li>
+  <li><a href="#menampilkan-output" id="toc-menampilkan-output" class="nav-link" data-scroll-target="#menampilkan-output">Menampilkan Output</a>
   <ul class="collapse">
-  <li><a href="#pembacaan-data" id="toc-pembacaan-data" class="nav-link" data-scroll-target="#pembacaan-data">Pembacaan data</a></li>
-  <li><a href="#menambah-kolom" id="toc-menambah-kolom" class="nav-link" data-scroll-target="#menambah-kolom">Menambah kolom</a></li>
+  <li><a href="#pemanfaatan-fungsi-print" id="toc-pemanfaatan-fungsi-print" class="nav-link" data-scroll-target="#pemanfaatan-fungsi-print">Pemanfaatan fungsi <code>print()</code></a>
+  <ul class="collapse">
+  <li><a href="#output-berupa-str" id="toc-output-berupa-str" class="nav-link" data-scroll-target="#output-berupa-str"><em>Output</em> berupa <code>str</code></a></li>
+  <li><a href="#output-berupa-int" id="toc-output-berupa-int" class="nav-link" data-scroll-target="#output-berupa-int"><em>Output</em> berupa <code>int</code></a></li>
+  <li><a href="#output-berupa-float" id="toc-output-berupa-float" class="nav-link" data-scroll-target="#output-berupa-float"><em>Output</em> berupa <code>float</code></a></li>
   </ul></li>
-  <li><a href="#menyimpan-data" id="toc-menyimpan-data" class="nav-link" data-scroll-target="#menyimpan-data">Menyimpan Data</a>
+  </ul></li>
+  <li><a href="#membaca-input-keyboard" id="toc-membaca-input-keyboard" class="nav-link" data-scroll-target="#membaca-input-keyboard">Membaca Input <em>Keyboard</em></a>
   <ul class="collapse">
-  <li><a href="#format-csv" id="toc-format-csv" class="nav-link" data-scroll-target="#format-csv">Format CSV</a></li>
-  <li><a href="#format-xlsx" id="toc-format-xlsx" class="nav-link" data-scroll-target="#format-xlsx">Format XLSX</a></li>
+  <li><a href="#pemanfaatan-fungsi-input" id="toc-pemanfaatan-fungsi-input" class="nav-link" data-scroll-target="#pemanfaatan-fungsi-input">Pemanfaatan fungsi <code>input()</code></a>
+  <ul class="collapse">
+  <li><a href="#input-data-tipe-str" id="toc-input-data-tipe-str" class="nav-link" data-scroll-target="#input-data-tipe-str"><em>Input</em> data tipe <code>str</code></a></li>
+  <li><a href="#input-data-tipe-int" id="toc-input-data-tipe-int" class="nav-link" data-scroll-target="#input-data-tipe-int"><em>Input</em> data tipe <code>int</code></a></li>
+  <li><a href="#input-data-tipe-float" id="toc-input-data-tipe-float" class="nav-link" data-scroll-target="#input-data-tipe-float"><em>Input</em> data tipe <code>float</code></a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -236,171 +241,108 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<section id="pendahuluan" class="level1">
-<h1>Pendahuluan</h1>
-<p>Pandas menjadi salah satu <em>library</em> yang banyak digunakan dalam pemrosesan data karena memiliki banyak fitur yang mendukung. Penggunaan bahasa pemrograman dalam pemrosesan data menjadi pilihan yang baik terutama jika data yang diolah memiliki ukuran yang besar dan variasi yang beragam. Pada artikel ini akan dijelaskan secara ringkah penggunaan Pandas dalam pemrosesan data mulai dari pembacaan hingga pembuatan berkas hasil pengolahan.</p>
+<section id="pengenalan" class="level1">
+<h1>Pengenalan</h1>
+<p>I/O (<em>Input/Output</em>) merupakan materi dan fitur yang umum dipelajari dan digunakan dalam pemrograman. Programmer biasanya menggunakan fitur ini untuk membaca data masukan dari <em>keyboard</em> atau membaca file tertentu (<em>input</em>) serta menampilkan data tersebut ke dalam format tertentu pada terminal atau ke dalam file lainnya. Pada pembahasan kali ini akan dijabarkan secara ringkas penggunaan I/O menggunakan Python.</p>
 </section>
-<section id="pengolahan-data" class="level1">
-<h1>Pengolahan Data</h1>
-<section id="pembacaan-data" class="level2">
-<h2 class="anchored" data-anchor-id="pembacaan-data">Pembacaan data</h2>
-<p>Data dalam bentuk <em>file</em> seperti <code>csv</code>, <code>json</code> maupun <code>xlsx</code> dapat dibaca menggunakan Pandas menggunakan metode yang tersedia. Data yang digunakan berada dalam format <code>xlsx</code> dan memiliki nama <code>data_anggota.xlsx</code>, untuk membaca file tersebut digunakan metode <code>read_excel()</code>.</p>
-<p><code>{bash, echo=FALSE} ls *xlsx</code></p>
+<section id="menampilkan-output" class="level1">
+<h1>Menampilkan Output</h1>
+<p><em>Output</em> atau luaran dapat ditampilkan pada terminal, hal ini bertujuan agar programmer dapat mengetahui hasil dari program yang ia buat setelah dijalankan. Fungsi yang biasa digunakan adalah <code>print()</code> untuk kegiatan ini.</p>
+<section id="pemanfaatan-fungsi-print" class="level2">
+<h2 class="anchored" data-anchor-id="pemanfaatan-fungsi-print">Pemanfaatan fungsi <code>print()</code></h2>
+<section id="output-berupa-str" class="level3">
+<h3 class="anchored" data-anchor-id="output-berupa-str"><em>Output</em> berupa <code>str</code></h3>
 <div class="cell" data-execution_count="1">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pandas <span class="im">import</span> read_excel</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> read_excel(<span class="st">'data_anggota.xlsx'</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display" data-execution_count="1">
-
-<div>
-
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>nama_depan</th>
-      <th>nama_belakang</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Ani</td>
-      <td>Lestari</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Budi</td>
-      <td>Hermawan</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Cindy</td>
-      <td>Amara</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Dodi</td>
-      <td>Mulyanto</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Eka</td>
-      <td>Saputra</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Halo, nama saya Budi Budiman</span><span class="ch">\n</span><span class="st">Salam Kenal :)'</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Halo, nama saya Budi Budiman
+Salam Kenal :)</code></pre>
 </div>
 </div>
 </section>
-<section id="menambah-kolom" class="level2">
-<h2 class="anchored" data-anchor-id="menambah-kolom">Menambah kolom</h2>
-<p>Pada <code>DataFrame</code> di atas akan ditambahkan kolom baru yang berisi nama lengkap dari masing-masing anggota. Karena tipe data pada kolom nama depan dan belakang sama (<code>str</code> atau <code>object</code>) langkah pemrosesan tipe data <code>str</code> dapat dilakukan seperti di bawah ini.</p>
+<section id="output-berupa-int" class="level3">
+<h3 class="anchored" data-anchor-id="output-berupa-int"><em>Output</em> berupa <code>int</code></h3>
 <div class="cell" data-execution_count="2">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'nama_lengkap'</span>] <span class="op">=</span> df.nama_depan <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> df.nama_belakang</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'email'</span>] <span class="op">=</span> df.nama_depan.<span class="bu">str</span>.lower() <span class="op">+</span> <span class="st">'.'</span> <span class="op">+</span> df.nama_belakang.<span class="bu">str</span>.lower() <span class="op">+</span> <span class="st">'@mail.com'</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display" data-execution_count="2">
-
-<div>
-
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>nama_depan</th>
-      <th>nama_belakang</th>
-      <th>nama_lengkap</th>
-      <th>email</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Ani</td>
-      <td>Lestari</td>
-      <td>Ani Lestari</td>
-      <td>ani.lestari@mail.com</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Budi</td>
-      <td>Hermawan</td>
-      <td>Budi Hermawan</td>
-      <td>budi.hermawan@mail.com</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Cindy</td>
-      <td>Amara</td>
-      <td>Cindy Amara</td>
-      <td>cindy.amara@mail.com</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Dodi</td>
-      <td>Mulyanto</td>
-      <td>Dodi Mulyanto</td>
-      <td>dodi.mulyanto@mail.com</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Eka</td>
-      <td>Saputra</td>
-      <td>Eka Saputra</td>
-      <td>eka.saputra@mail.com</td>
-    </tr>
-  </tbody>
-</table>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">1000</span> <span class="op">+</span> <span class="dv">3</span><span class="op">*</span><span class="dv">100</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1300</code></pre>
 </div>
 </div>
-</div>
-<p>Selain nama lengkap, kolom email juga dapat ditambahkan. Kolom email memiliki format penawaan <code>nama_depan.nama_belakang@mail.com</code>, metode <code>str.lower()</code> pada contoh di atas berfungsi untuk membuat setiap karakter menjadi huruf kecil.</p>
 </section>
-</section>
-<section id="menyimpan-data" class="level1">
-<h1>Menyimpan Data</h1>
-<p>Data yang telah diolah dapat disimpak ke dalam file baru menggunakan metode <code>to_csv()</code> untuk format <code>csv</code> atau <code>to_excel</code> untuk format excel seperti <code>xlsx</code> atau pun <code>xls</code>.</p>
-<section id="format-csv" class="level2">
-<h2 class="anchored" data-anchor-id="format-csv">Format CSV</h2>
+<section id="output-berupa-float" class="level3">
+<h3 class="anchored" data-anchor-id="output-berupa-float"><em>Output</em> berupa <code>float</code></h3>
 <div class="cell" data-execution_count="3">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">'hasil_pengolahan.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>((<span class="dv">99</span>)<span class="op">**</span><span class="fl">0.5</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>9.9498743710662</code></pre>
+</div>
 </div>
 </section>
-<section id="format-xlsx" class="level2">
-<h2 class="anchored" data-anchor-id="format-xlsx">Format XLSX</h2>
-<div class="cell" data-execution_count="4">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df.to_excel(<span class="st">'hasil_pengolahan.xlsx'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+</section>
+</section>
+<section id="membaca-input-keyboard" class="level1">
+<h1>Membaca Input <em>Keyboard</em></h1>
+<p><em>Input</em> atau data masukan dari <em>keyboard</em> dapat dibaca menggunakan fungsi <code>input()</code> pada Python. Secara <em>default</em>, tipe data pada fungsi ini merupakan <code>str</code> sehingga jika ingin melakukan operasi perhitungan perlu dikonversi ke tipe bilangan seperti <code>int</code> dan <code>float</code>.</p>
+<section id="pemanfaatan-fungsi-input" class="level2">
+<h2 class="anchored" data-anchor-id="pemanfaatan-fungsi-input">Pemanfaatan fungsi <code>input()</code></h2>
+<section id="input-data-tipe-str" class="level3">
+<h3 class="anchored" data-anchor-id="input-data-tipe-str"><em>Input</em> data tipe <code>str</code></h3>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>nama <span class="op">=</span> <span class="bu">input</span>(<span class="st">'Masukkan nama: '</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(nama)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Halo nama saya </span><span class="sc">{</span>nama<span class="sc">}</span><span class="ch">\n</span><span class="ss">Salam kenal :)'</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><code>{bash, echo=FALSE} ls hasil_pengolahan*</code></p>
+<div class="cell" data-execution_count="6">
+<div class="cell-output cell-output-stdout">
+<pre><code>Pandu
+Halo nama saya Pandu
+Salam kenal :)</code></pre>
+</div>
+</div>
+</section>
+<section id="input-data-tipe-int" class="level3">
+<h3 class="anchored" data-anchor-id="input-data-tipe-int"><em>Input</em> data tipe <code>int</code></h3>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>bil_bulat <span class="op">=</span> <span class="bu">input</span>(<span class="st">'Masukkan bil. bulat: '</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(bil_bulat)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">int</span>(bil_bulat)<span class="op">*</span><span class="dv">5</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="8">
+<div class="cell-output cell-output-stdout">
+<pre><code>14
+70</code></pre>
+</div>
+</div>
+</section>
+<section id="input-data-tipe-float" class="level3">
+<h3 class="anchored" data-anchor-id="input-data-tipe-float"><em>Input</em> data tipe <code>float</code></h3>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>bil_desimal <span class="op">=</span> <span class="bu">input</span>(<span class="st">'Masukkan bil. desimal: '</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(bil_desimal)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">float</span>(bil_desimal)<span class="op">*</span><span class="dv">7</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="10">
+<div class="cell-output cell-output-stdout">
+<pre><code>12.34
+86.38</code></pre>
+</div>
+</div>
 
 
+</section>
 </section>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.id">https://creativecommons.org/licenses/by/4.0/deed.id</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Sitasi</h2><div><div class="quarto-appendix-secondary-label">Sitasi BibTeX:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{mulyamuhammadsyah2022,
   author = {Pandu Mulya Muhammad Syah},
   editor = {},
-  title = {Pengolahan Data Menggunakan Pandas - Part 1},
-  date = {2022-09-24},
+  title = {Pemanfaatan I/O Sederhana pada Python},
+  date = {2022-09-30},
   langid = {id}
 }
 </code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Sebagai atribusi, silahkan mengutip karya ini sebagai:</div><div id="ref-mulyamuhammadsyah2022" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
-Pandu Mulya Muhammad Syah. 2022. <span>“Pengolahan Data Menggunakan
-Pandas - Part 1.”</span> September 24, 2022.
+Pandu Mulya Muhammad Syah. 2022. <span>“Pemanfaatan I/O Sederhana pada
+Python.”</span> September 30, 2022.
 </div></div></section></div></main> <!-- /main -->
 <div class="share-on-section">
     <hr> 
@@ -509,6 +451,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 });
+</script>
+<script src="https://giscus.app/client.js" data-repo="zooxs/blogden-giscus" data-repo-id="R_kgDOIGDrfQ" data-category="General" data-category-id="DIC_kwDOIGDrfc4CRtFQ" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="id" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">

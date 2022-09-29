@@ -21,7 +21,7 @@ license: ''
 ---
 
 <style>
-  .quarto-title-meta, .share-on-section {
+  .quarto-title-meta, .share-on-section, .giscus {
     visibility: hidden;
   }
 </style>

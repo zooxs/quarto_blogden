@@ -1,0 +1,89 @@
+---
+title: "Pemanfaatan I/O Sederhana pada Python"
+description: |
+   Contoh pemanfaatan fitur *input-ouput* dalam Python. 
+categories: [Python, I/O]
+date: 2022-09-30
+---
+
+# Pengenalan
+I/O (*Input/Output*) merupakan materi dan fitur yang umum dipelajari dan digunakan dalam pemrograman. Programmer biasanya menggunakan fitur ini untuk membaca data masukan dari *keyboard* atau membaca file tertentu (*input*) serta menampilkan data tersebut ke dalam format tertentu pada terminal atau ke dalam file lainnya. Pada pembahasan kali ini akan dijabarkan secara ringkas penggunaan I/O menggunakan Python.
+
+# Menampilkan Output
+*Output* atau luaran dapat ditampilkan pada terminal, hal ini bertujuan agar programmer dapat mengetahui hasil dari program yang ia buat setelah dijalankan. Fungsi yang biasa digunakan adalah `print()` untuk kegiatan ini.
+
+## Pemanfaatan fungsi `print()`
+
+### *Output* berupa `str`
+
+```{python}
+print('Halo, nama saya Budi Budiman\nSalam Kenal :)')
+```
+
+### *Output* berupa `int`
+
+```{python}
+print(1000 + 3*100)
+```
+
+### *Output* berupa `float`
+
+```{python}
+print((99)**0.5)
+```
+
+# Membaca Input *Keyboard*
+
+*Input* atau data masukan dari *keyboard* dapat dibaca menggunakan fungsi `input()` pada Python. Secara *default*, tipe data pada fungsi ini merupakan `str` sehingga jika ingin melakukan operasi perhitungan perlu dikonversi ke tipe bilangan seperti `int` dan `float`.
+
+## Pemanfaatan fungsi `input()`
+
+```{python}
+#| echo: false
+nama = 'Pandu'
+bil_bulat = 14
+bil_desimal = 12.34
+```
+
+### *Input* data tipe `str`
+
+```{python}
+#| eval: false
+nama = input('Masukkan nama: ')
+print(nama)
+print(f'Halo nama saya {nama}\nSalam kenal :)')
+```
+
+```{python}
+#| echo: false
+print(nama)
+print(f'Halo nama saya {nama}\nSalam kenal :)')
+```
+### *Input* data tipe `int`
+
+```{python}
+#| eval: false
+bil_bulat = input('Masukkan bil. bulat: ')
+print(bil_bulat)
+print(int(bil_bulat)*5)
+```
+
+```{python}
+#| echo: false
+print(bil_bulat)
+print(int(bil_bulat)*5)
+```
+
+### *Input* data tipe `float`
+
+```{python}
+#| eval: false
+bil_desimal = input('Masukkan bil. desimal: ')
+print(bil_desimal)
+print(float(bil_desimal)*7)
+```
+```{python}
+#| echo: false
+print(bil_desimal)
+print(float(bil_desimal)*7)
+```

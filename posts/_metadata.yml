@@ -8,7 +8,7 @@ freeze: true
 title-block-banner: true
 
 # code
-code-fold: true
+code-fold: false
 
 # license's type
 license: "CC BY"
@@ -32,3 +32,9 @@ include-after-body: ../footer.html
 author: 
   - name: Pandu Mulya Muhammad Syah
     url: https://linkedin.com/in/pandu-mulya-muhammad-syah-3a6b1b22b/
+
+# comment section
+comments: 
+    giscus: 
+          repo: zooxs/blogden-giscus
+          language: id
