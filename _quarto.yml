@@ -31,6 +31,7 @@ format:
     theme: litera
     css: styles.css
     bibliography: ref.bib
+    csl: apa.csl
     
 # collections:
 #   posts:

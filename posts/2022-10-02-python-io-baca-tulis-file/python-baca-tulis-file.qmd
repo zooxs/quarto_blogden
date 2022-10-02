@@ -1,0 +1,40 @@
+---
+title: "Membuat, Membaca dan Mengedit File Menggunakan Python"
+description: |
+   Ringkasan pengolahan file menggunakan *built-in function* pada Python.
+categories: [Python, I/O]
+date: 2022-10-07
+---
+
+# Pengenalan
+
+Python termasuk ke dalam *general purpose programming languange* sehingga dapat digunakan untuk berbagai keperluan. Salah satu pemanfaatannya adalah pemrosesan file mulai dari pembuatan, pembacaan dan pengeditan dapat dilakukan bergantung jenis file yang diolah. Pada artikel ini ditunjukkan contoh pengolahan file tipe *plain text* atau file sederhana berisi tulisan (`.txt`) yang akan diproses menggunakan *built-in function* pada Python (`open()`) dan *context manager*.
+
+# Fungsi `open()`
+
+`open()` merupakan fungsi *built-in* (bawaan) pada Python. Fungsi ini bertujuan untuk membuka suatu file dengan mode tertentu seperti baca (*read*) atau tulis (*write*). Fungsi ini dapat dituliskan sebagai `open(path_file, mode)` dimana:
+
+- `path_file` merupakan lokasi dari file yang akan digunakan seperti `simpel.txt` atau `folder1/folder2/simpel.txt` jika file berada dalam folder tertentu.
+- `mode` pilihan operasi yang akan digunakan.
+
+| Opsi | Tujuan                                                   |
+|------|----------------------------------------------------------|
+| 'r'  | Membaca file (*default*)                                 |
+| 'w'  | Menulis file                                             |
+| 'x'  | Pembuatan ekslusif, gagal jika file telah ada            |
+| 'a'  | Menambahkan isi file di  akhir baris jika file telah ada |
+| 'b'  | Mode binary                                              |
+| 't'  | Mode teks (*default*)                                    |
+| '+'  | Mengedit file (*write*, *reading*)                       |
+
+: Mode opsi pada fungsi `open()`
+
+# *Context Manager* pada Python
+
+Salah satu permasalah umum dalam pemrograman adalah pengelolaan *external resources* seperti file dan koneksi internet. 
+
+# Pemrosesan File
+
+## Pembuatan (*write*) file
+
+## Pembacaan (*read*) file

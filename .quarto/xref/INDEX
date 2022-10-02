@@ -40,5 +40,8 @@
   },
   "posts/2022-09-27-python-dasar-io/python-basic-io.qmd": {
     "python-basic-io.html": "900414cf"
+  },
+  "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.qmd": {
+    "python-baca-tulis-file.html": "bcb28176"
   }
 }

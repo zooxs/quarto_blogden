@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Pandu Mulya Muhammad Syah">
-<meta name="dcterms.date" content="2022-04-08">
-<meta name="description" content="Alasan menggunakan Linux sebagai Daily Driver">
+<meta name="dcterms.date" content="2022-07-10">
+<meta name="description" content="Ringkasan pengolahan file menggunakan built-in function pada Python.">
 
-<title>BlogDen - 5 Alasan Menggunakan Linux Sebagai Daily Driver</title>
+<title>BlogDen - Membuat, Membaca dan Mengedit File Menggunakan Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,25 +22,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
-}
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
 }
 </style>
 
@@ -129,14 +110,15 @@ div.csl-indent {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">5 Alasan Menggunakan Linux Sebagai Daily Driver</h1>
+      <h1 class="title">Membuat, Membaca dan Mengedit File Menggunakan Python</h1>
                   <div>
         <div class="description">
-          <p>Alasan menggunakan Linux sebagai Daily Driver</p>
+          <p>Ringkasan pengolahan file menggunakan <em>built-in function</em> pada Python.</p>
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Linux</div>
+                <div class="quarto-category">Python</div>
+                <div class="quarto-category">I/O</div>
               </div>
                   </div>
   </div>
@@ -154,7 +136,7 @@ div.csl-indent {
       <div>
       <div class="quarto-title-meta-heading">Diterbitkan</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">04/08/22</p>
+        <p class="date">07/10/22</p>
       </div>
     </div>
       
@@ -165,7 +147,20 @@ div.csl-indent {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Di halaman ini</h2>
+   
+  <ul>
+  <li><a href="#pengenalan" id="toc-pengenalan" class="nav-link active" data-scroll-target="#pengenalan">Pengenalan</a></li>
+  <li><a href="#fungsi-open" id="toc-fungsi-open" class="nav-link" data-scroll-target="#fungsi-open">Fungsi <code>open()</code></a></li>
+  <li><a href="#context-manager-pada-python" id="toc-context-manager-pada-python" class="nav-link" data-scroll-target="#context-manager-pada-python"><em>Context Manager</em> pada Python</a></li>
+  <li><a href="#pemrosesan-file" id="toc-pemrosesan-file" class="nav-link" data-scroll-target="#pemrosesan-file">Pemrosesan File</a>
+  <ul class="collapse">
+  <li><a href="#pembuatan-write-file" id="toc-pembuatan-write-file" class="nav-link" data-scroll-target="#pembuatan-write-file">Pembuatan (<em>write</em>) file</a></li>
+  <li><a href="#pembacaan-read-file" id="toc-pembacaan-read-file" class="nav-link" data-scroll-target="#pembacaan-read-file">Pembacaan (<em>read</em>) file</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -173,36 +168,83 @@ div.csl-indent {
 
 
 
-<p><img src="linux.jpg" class="img-fluid"></p>
-<p>Hampir 2 tahun yang lalu saya memutuskan untuk berpindah dari Windows ke sistem operasi berbasis Linux seperti <em>Ubuntu</em> atau <em>Manjaro</em>. Keputusan ini didasari karena kondisi <em>device</em> yang tidak memungkinkan untuk digunakan sebagai <em>daily driver</em> karena keterbatasan spesifikasi <em>device</em>. Usia <em>device</em> yang hampir mencapai masa layannya disertai keterbatasan dalam pilihan <em>upgrade</em> bagian <em>device</em> menjadi alasan utama, di lain sisi harga lisensi Windows 10 yang termasuk tidak murah ikut menjadi bahan pertimbangan kala itu. Setelah mencari beberapa solusi, akhirnya saya memutuskan untuk berpindah ke sistem operasi berbasis Linux karena dapat dijalankan pada device dengan spesifikasi <em>low-end</em> serta lisensi yang bersifat <em>free</em> dan <em>open source</em>. Selama menggunakan Linux berbagai pengalaman sudah saya alami mulai dari adaptasi sistem folder yang berbeda dengan Windows, pembiasaan menggunakan <em>Command Line Interface</em> (CLI), <em>troubleshooting</em> jika terjadi masalah hingga nge-<em>custom</em> tampilan distro yang saya gunakan agar terlihat lebih menarik dan nyaman untuk dipakai. Sebagai <em>daily driver</em>, Linux mampu memenuhi hampir seluruh kebutuhan saya sebagai mahasiswa kala itu. Ketersediaan alternatif aplikasi untuk kebutuhan pengolahan dokumen seperti <em>Libreoffice</em> cukup membantu dalam menyelesaikan tugas-tugas perkuliahan. <em>Compatible</em> terhadap berbagai bahasa pemrograman menjadi kelebihan tersendiri yang turut memudahkan aktivitas saya selama mengerjakan tugas tertentu. Selain itu ada beberapa alasan lainnya Linux cocok digunakan sebagai <em>daily driver</em>, di antaranya:</p>
+<section id="pengenalan" class="level1">
+<h1>Pengenalan</h1>
+<p>Python termasuk ke dalam <em>general purpose programming languange</em> sehingga dapat digunakan untuk berbagai keperluan. Salah satu pemanfaatannya adalah pemrosesan file mulai dari pembuatan, pembacaan dan pengeditan dapat dilakukan bergantung jenis file yang diolah. Pada artikel ini ditunjukkan contoh pengolahan file tipe <em>plain text</em> atau file sederhana berisi tulisan (<code>.txt</code>) yang akan diproses menggunakan <em>built-in function</em> pada Python (<code>open()</code>) dan <em>context manager</em>.</p>
+</section>
+<section id="fungsi-open" class="level1">
+<h1>Fungsi <code>open()</code></h1>
+<p><code>open()</code> merupakan fungsi <em>built-in</em> (bawaan) pada Python. Fungsi ini bertujuan untuk membuka suatu file dengan mode tertentu seperti baca (<em>read</em>) atau tulis (<em>write</em>). Fungsi ini dapat dituliskan sebagai <code>open(path_file, mode)</code> dimana:</p>
 <ul>
-<li><p><em>Free and Open Source</em>. Sistem operasi berbasi Linux termasuk ke dalam <em>Free and Open Source Software</em> di mana pengguna dapat bebas menggunakan perangkat lunak tersebut sesuai kebutuhan dan tujuan apapun serta <em>source code</em> yang terbuka untuk umum sehingga dapat diakses oleh banyak orang. Kelebihan dari perangkat lunak yang termasuk ke dalam ini adalah pengguna dapat dengan bebas menggunakan, belajar, memodifikasi <em>source code</em> sesuai kebutuhan pengguna serta mendistribusikan kembali perangkat lunak tersebut terlepas dari adanya aktivitas modifikasi atau tidak. Selain itu, sifatnya yang terbuka untuk umum menjadikan perangkat lunak tersebut memiliki tingkat keamanan yang tinggi dibanding perangkat lunak milik individu (<em>proprietary software</em>) karena tidak dapat menyembunyikan fitur tertentu di dalam <em>source code</em>-nya. Di samping itu, kehadiran <em>open source</em> mengundang banyak <em>software developer</em> yang tertarik untuk mengembangkan <em>software</em> tersebut menjadi lebih baik lagi <span class="citation" data-cites="Boval-2019">(<a href="#ref-Boval-2019" role="doc-biblioref">Boval, 2019</a>)</span>.</p></li>
-<li><p>Dapat dijalankan pada <em>device</em> dengan spesifikasi <em>low-end</em>. Permasalahan spesifikasi <em>device</em> yang tidak mencukupi untuk menjalankan sistem operasi Windows 10 menyebabkan banyak <em>device</em> lama (umur 5 - 10 tahun) tidak mampu menjalankannya. Hal ini menjadi dilema tersendiri bagi pengguna laptop atau komputer lama antara membeli perangkat baru atau <em>upgarding</em> beberapa bagian pada <em>device</em> mereka. Berbeda dengan Windows, sistem operasi berbasis Linux mampu dijalankan pada perangkat lama karena sebagian <em>developer</em> telah memodifikasi OS ini agar dapat dijalankan pada perangkat dengan spesifikasi <em>low-end</em>. OS berbasis Linux yang banyak beredar saat ini berada dalam bentuk distro, di mana sekelompok <em>developer</em> memodifikasi <em>source code</em> awal untuk disesuaikan dengan kebutuhanan mereka. Salah satu distro yang dapat dijalankan pada <em>device</em> lama adalah <strong>Xubuntu</strong>, <strong>Lubuntu</strong>, <strong>Zorin OS Lite</strong>, <strong>Arch Linux</strong>, <strong>BunshenLabs Linux Lithium</strong>, dan <strong>Puppy Linux</strong> <span class="citation" data-cites="Cawley-2022">(<a href="#ref-Cawley-2022" role="doc-biblioref">Cawley, 2022</a>)</span>.</p></li>
-<li><p><em>Compatible</em> untuk <em>programming</em>. Secara umum Linux mendukung banyak bahasa pemrograman (Python, C++, C, R, dll.) sehingga cocok digunakan untuk <em>programming</em>. Selain itu, fitur <em>package manager</em> (pacman dan apt) pada Linux memberikan kemudahan bagi pengguna jika ingin meng-install suatu aplikasi melalui terminal. Kehadiran <em>software</em> pendukung <em>programming</em> seperti <strong>curl</strong> dan <strong>git</strong>. juga menjadi kelebihan tersendiri pada Linux–mengingat kemudahan yang ditawarkan dalam proses instalasi dibanding sistem operasi lainnya jika <em>software</em> tersebut tidak terpasang pada perangkat. Terminal pada Linux juga memiliki fitur automasi berupa <em>bash scripting</em> yang merupakan sebuah <em>script</em> berisi kumpulan perintah untuk menjalankan suatu tugas. Terminal bawaan pada Windows (<em>PowerShell</em> atau <em>Command Prompt</em>) tidak memiliki keefektifan automasi seperti terminal pada Linux sehingga perlu instalasi <em>software</em> tertentu (emulator atau WSL).</p></li>
-<li><p><em>Highly customable</em>. Linux dapat di-<em>custom</em> sesuai kebutuhan dan keinginan penggunanya mulai dari penyesuaian tampilan seperti penggantian <em>theme</em>, <em>icons</em>, <em>wallpaper</em> dan aplikasi pendukung lainnya hingga mendesain sistem operasi tersebut untuk tujuan tertentu seperi <em>lightweight distribution</em> (Xubuntu dan Lubuntu) agar dapat dijalankan pada perangkat lama.</p></li>
-<li><p>Memiliki kontrol penuh terhadap sistem operasi. Pengguna Linux dapat juga bertindak sebagai <em>admin</em> bagi sistem operasinya di mana pengguna diberikan kontrol penuh terhadap perangkat yang dia jalankan. Salah satu contohnya adalah pengguna dapat menghapus aplikasi bawaan yang sekiranya tidak berguna. Hal ini akan memberikan ruang penyimpanan lebih besar bagi <em>device</em> terutama yang memiliki spesifikasi <em>low-end</em>.</p></li>
+<li><code>path_file</code> merupakan lokasi dari file yang akan digunakan seperti <code>simpel.txt</code> atau <code>folder1/folder2/simpel.txt</code> jika file berada dalam folder tertentu.</li>
+<li><code>mode</code> pilihan operasi yang akan digunakan.</li>
 </ul>
+<table class="table">
+<caption>Mode opsi pada fungsi <code>open()</code></caption>
+<thead>
+<tr class="header">
+<th>Opsi</th>
+<th>Tujuan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>‘r’</td>
+<td>Membaca file (<em>default</em>)</td>
+</tr>
+<tr class="even">
+<td>‘w’</td>
+<td>Menulis file</td>
+</tr>
+<tr class="odd">
+<td>‘x’</td>
+<td>Pembuatan ekslusif, gagal jika file telah ada</td>
+</tr>
+<tr class="even">
+<td>‘a’</td>
+<td>Menambahkan isi file di akhir baris jika file telah ada</td>
+</tr>
+<tr class="odd">
+<td>‘b’</td>
+<td>Mode binary</td>
+</tr>
+<tr class="even">
+<td>‘t’</td>
+<td>Mode teks (<em>default</em>)</td>
+</tr>
+<tr class="odd">
+<td>‘+’</td>
+<td>Mengedit file (<em>write</em>, <em>reading</em>)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="context-manager-pada-python" class="level1">
+<h1><em>Context Manager</em> pada Python</h1>
+<p>Salah satu permasalah umum dalam pemrograman adalah pengelolaan <em>external resources</em> seperti file dan koneksi internet.</p>
+</section>
+<section id="pemrosesan-file" class="level1">
+<h1>Pemrosesan File</h1>
+<section id="pembuatan-write-file" class="level2">
+<h2 class="anchored" data-anchor-id="pembuatan-write-file">Pembuatan (<em>write</em>) file</h2>
+</section>
+<section id="pembacaan-read-file" class="level2">
+<h2 class="anchored" data-anchor-id="pembacaan-read-file">Pembacaan (<em>read</em>) file</h2>
 
 
+</section>
+</section>
 
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Referensi</h2><div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
-<div id="ref-Boval-2019" class="csl-entry" role="doc-biblioentry">
-Boval, M. (2019, Juli 8). <em>Apa Itu Free and Open Source Software?</em> <a href="https://mochboval.wordpress.com/2019/07/08/apa-itu-free-and-open-source-software/">https://mochboval.wordpress.com/2019/07/08/apa-itu-free-and-open-source-software/</a>
-</div>
-<div id="ref-Cawley-2022" class="csl-entry" role="doc-biblioentry">
-Cawley, C. (2022, Juni 4). <em>10 Lightweight Linux Distributions to Give Your Old PC New Life</em>. <a href="https://www.makeuseof.com/tag/6-lightweight-linux-distributions-give-pc-lease-life/">https://www.makeuseof.com/tag/6-lightweight-linux-distributions-give-pc-lease-life/</a>
-</div>
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.id">https://creativecommons.org/licenses/by/4.0/deed.id</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Sitasi</h2><div><div class="quarto-appendix-secondary-label">Sitasi BibTeX:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{mulyamuhammadsyah2022,
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.id">https://creativecommons.org/licenses/by/4.0/deed.id</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Sitasi</h2><div><div class="quarto-appendix-secondary-label">Sitasi BibTeX:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{mulyamuhammadsyah2022,
   author = {Pandu Mulya Muhammad Syah},
   editor = {},
-  title = {5 Alasan Menggunakan Linux Sebagai Daily Driver},
-  date = {2022-08-04},
+  title = {Membuat, Membaca dan Mengedit File Menggunakan Python},
+  date = {2022-10-07},
   langid = {id}
 }
 </code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Sebagai atribusi, silahkan mengutip karya ini sebagai:</div><div id="ref-mulyamuhammadsyah2022" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
-Pandu Mulya Muhammad Syah. (2022, August 4). <em>5 Alasan Menggunakan
-Linux Sebagai Daily Driver</em>.
+Pandu Mulya Muhammad Syah. (2022, October 7). <em>Membuat, Membaca dan
+Mengedit File Menggunakan Python</em>.
 </div></div></section></div></main> <!-- /main -->
 <div class="share-on-section">
     <hr> 

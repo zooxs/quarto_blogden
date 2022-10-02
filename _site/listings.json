@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html",
       "/posts/2022-09-27-python-dasar-io/python-basic-io.html",
       "/posts/2022-09-25-filter-data-menggunakan-pandas/filter-data-menggunakan-pandas.html",
       "/posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html",
