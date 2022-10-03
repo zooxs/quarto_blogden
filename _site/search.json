@@ -257,5 +257,33 @@
     "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
     "section": "Pembacaan (read) file",
     "text": "Pembacaan (read) file\n\nwith open('simpel.txt', 'w+') as teks:\n   print(teks.read())\n   teks.write('100 + 200 = 300')\n   print(teks.read())"
+  },
+  {
+    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#membuat-writing-file",
+    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#membuat-writing-file",
+    "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
+    "section": "Membuat (writing) file",
+    "text": "Membuat (writing) file\n\nwith open('simpel.txt', 'w') as teks:\n   teks.write('Baris satu\\n')\n   teks.write('Baris dua\\n')\n\nProgram di atas ditujukan untuk membuat file dengan nama simpel.txt menggunakan fungsi open(). Statmen with digunakan untuk mengimplementasikan context manager pada Python. Terlihat pada kode di atas mode w digunakan untuk menulis file baru. Metode write() digunakan untuk menulis isi pada file tersebut."
+  },
+  {
+    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#membaca-reading-file",
+    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#membaca-reading-file",
+    "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
+    "section": "Membaca (reading) file",
+    "text": "Membaca (reading) file\n\nwith open('simpel.txt', 'r') as teks:\n   print(teks.read())\n\nBaris satu\nBaris dua\n\n\n\nUntuk membaca suatu file dapat menggunakan statmen with yang sama dengan sedikit perubahan pada mode r. Teks pada file tersebut dapat diakses menggunakan metode read()."
+  },
+  {
+    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#menambahkan-isi-file",
+    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#menambahkan-isi-file",
+    "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
+    "section": "Menambahkan isi file",
+    "text": "Menambahkan isi file\n\nwith open('simpel.txt', 'a') as teks:\n   teks.write('Baris tiga\\n')\n\nPenambahan isi file dapat dilakukan dengan menggunakan mode a dan menuliskan baris baru melalui metode .write().\n\nwith open('simpel.txt', 'r') as teks:\n   print(teks.read())\n\nBaris satu\nBaris dua\nBaris tiga"
+  },
+  {
+    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#mengedit-isi-file",
+    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#mengedit-isi-file",
+    "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
+    "section": "Mengedit isi file",
+    "text": "Mengedit isi file\n\nwith open('simpel.txt', 'r') as fl:\n   line = fl.readlines()\nline[1] = line[1].upper()\nbaris_baru = ''.join(line)\n\nwith open('simpel.txt', 'w') as fl:\n   fl.write(baris_baru)\n\nwith open('simpel.txt', 'r') as fl:\n   print(fl.read())\n\nBaris satu\nBARIS DUA\nBaris tiga\n\n\n\nUntuk mengedit isi file pada baris tertentu dapat menggunakan pendektan di atas.\n\nMembaca file, kemudian membuat variabel line yang berisi isi file dalam bentuk list melalui metode readlines().\nMembuat baris kedua pada file menjadi huruf kapital. Langkah ini dapat dilakukan dengan mengganti nilai indeks kedua pada list (bernilai 1 karena indek pada list dimulai dari 0) menggunakan metode upper().\nMembuat file yang sama dengan mengganti isinya dengan nilai yang baru menggunakan variabel baris_baru."
   }
 ]

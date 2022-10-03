@@ -37,18 +37,56 @@ Lebih lengkap dapat dilihat pada [sumber berikut](https://docs.python.org/3/libr
 
 # Pemrosesan File
 
-## Pembuatan (*write*) file
+## Membuat (*writing*) file
 
 ```{python}
 with open('simpel.txt', 'w') as teks:
-   teks.write('Ini contoh teks')
+   teks.write('Baris satu\n')
+   teks.write('Baris dua\n')
 ```
 
-## Pembacaan (*read*) file
+Program di atas ditujukan untuk membuat file dengan nama `simpel.txt` menggunakan fungsi `open()`. Statmen `with` digunakan untuk mengimplementasikan *context manager* pada Python. Terlihat pada kode di atas mode `w` digunakan untuk menulis file baru. Metode `write()` digunakan untuk menulis isi pada file tersebut.
+
+## Membaca (*reading*) file
 
 ```{python}
-with open('simpel.txt', 'w+') as teks:
-   print(teks.read())
-   teks.write('100 + 200 = 300')
+with open('simpel.txt', 'r') as teks:
    print(teks.read())
 ```
+
+Untuk membaca suatu file dapat menggunakan statmen `with` yang sama dengan sedikit perubahan pada mode `r`. Teks pada file tersebut dapat diakses menggunakan metode `read()`.
+
+## Menambahkan isi file
+
+```{python}
+with open('simpel.txt', 'a') as teks:
+   teks.write('Baris tiga\n')
+```
+
+Penambahan isi file dapat dilakukan dengan menggunakan mode `a` dan menuliskan baris baru melalui metode `.write()`.
+
+```{python}
+with open('simpel.txt', 'r') as teks:
+   print(teks.read())
+```
+
+## Mengedit isi file
+
+```{python}
+with open('simpel.txt', 'r') as fl:
+   line = fl.readlines()
+line[1] = line[1].upper()
+baris_baru = ''.join(line)
+
+with open('simpel.txt', 'w') as fl:
+   fl.write(baris_baru)
+
+with open('simpel.txt', 'r') as fl:
+   print(fl.read())
+```
+
+Untuk mengedit isi file pada baris tertentu dapat menggunakan pendektan di atas.
+
+- Membaca file, kemudian membuat variabel `line` yang berisi isi file dalam bentuk `list` melalui metode `readlines()`.
+- Membuat baris kedua pada file menjadi huruf kapital. Langkah ini dapat dilakukan dengan mengganti nilai indeks kedua pada list (bernilai 1 karena indek pada list dimulai dari 0) menggunakan metode `upper()`.
+- Membuat file yang sama dengan mengganti isinya dengan nilai yang baru menggunakan variabel `baris_baru`. 

@@ -238,8 +238,10 @@ div.csl-indent {
   <li><a href="#context-manager-pada-python" id="toc-context-manager-pada-python" class="nav-link" data-scroll-target="#context-manager-pada-python"><em>Context Manager</em> pada Python</a></li>
   <li><a href="#pemrosesan-file" id="toc-pemrosesan-file" class="nav-link" data-scroll-target="#pemrosesan-file">Pemrosesan File</a>
   <ul class="collapse">
-  <li><a href="#pembuatan-write-file" id="toc-pembuatan-write-file" class="nav-link" data-scroll-target="#pembuatan-write-file">Pembuatan (<em>write</em>) file</a></li>
-  <li><a href="#pembacaan-read-file" id="toc-pembacaan-read-file" class="nav-link" data-scroll-target="#pembacaan-read-file">Pembacaan (<em>read</em>) file</a></li>
+  <li><a href="#membuat-writing-file" id="toc-membuat-writing-file" class="nav-link" data-scroll-target="#membuat-writing-file">Membuat (<em>writing</em>) file</a></li>
+  <li><a href="#membaca-reading-file" id="toc-membaca-reading-file" class="nav-link" data-scroll-target="#membaca-reading-file">Membaca (<em>reading</em>) file</a></li>
+  <li><a href="#menambahkan-isi-file" id="toc-menambahkan-isi-file" class="nav-link" data-scroll-target="#menambahkan-isi-file">Menambahkan isi file</a></li>
+  <li><a href="#mengedit-isi-file" id="toc-mengedit-isi-file" class="nav-link" data-scroll-target="#mengedit-isi-file">Mengedit isi file</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -308,25 +310,72 @@ div.csl-indent {
 </section>
 <section id="pemrosesan-file" class="level1">
 <h1>Pemrosesan File</h1>
-<section id="pembuatan-write-file" class="level2">
-<h2 class="anchored" data-anchor-id="pembuatan-write-file">Pembuatan (<em>write</em>) file</h2>
+<section id="membuat-writing-file" class="level2">
+<h2 class="anchored" data-anchor-id="membuat-writing-file">Membuat (<em>writing</em>) file</h2>
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'simpel.txt'</span>, <span class="st">'w'</span>) <span class="im">as</span> teks:</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>   teks.write(<span class="st">'Ini contoh teks'</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>   teks.write(<span class="st">'Baris satu</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>   teks.write(<span class="st">'Baris dua</span><span class="ch">\n</span><span class="st">'</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Program di atas ditujukan untuk membuat file dengan nama <code>simpel.txt</code> menggunakan fungsi <code>open()</code>. Statmen <code>with</code> digunakan untuk mengimplementasikan <em>context manager</em> pada Python. Terlihat pada kode di atas mode <code>w</code> digunakan untuk menulis file baru. Metode <code>write()</code> digunakan untuk menulis isi pada file tersebut.</p>
 </section>
-<section id="pembacaan-read-file" class="level2">
-<h2 class="anchored" data-anchor-id="pembacaan-read-file">Pembacaan (<em>read</em>) file</h2>
+<section id="membaca-reading-file" class="level2">
+<h2 class="anchored" data-anchor-id="membaca-reading-file">Membaca (<em>reading</em>) file</h2>
 <div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'simpel.txt'</span>, <span class="st">'w+'</span>) <span class="im">as</span> teks:</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>   <span class="bu">print</span>(teks.read())</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>   teks.write(<span class="st">'100 + 200 = 300'</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>   <span class="bu">print</span>(teks.read())</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'simpel.txt'</span>, <span class="st">'r'</span>) <span class="im">as</span> teks:</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>   <span class="bu">print</span>(teks.read())</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>
+<pre><code>Baris satu
+Baris dua
 </code></pre>
 </div>
 </div>
+<p>Untuk membaca suatu file dapat menggunakan statmen <code>with</code> yang sama dengan sedikit perubahan pada mode <code>r</code>. Teks pada file tersebut dapat diakses menggunakan metode <code>read()</code>.</p>
+</section>
+<section id="menambahkan-isi-file" class="level2">
+<h2 class="anchored" data-anchor-id="menambahkan-isi-file">Menambahkan isi file</h2>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'simpel.txt'</span>, <span class="st">'a'</span>) <span class="im">as</span> teks:</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>   teks.write(<span class="st">'Baris tiga</span><span class="ch">\n</span><span class="st">'</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Penambahan isi file dapat dilakukan dengan menggunakan mode <code>a</code> dan menuliskan baris baru melalui metode <code>.write()</code>.</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'simpel.txt'</span>, <span class="st">'r'</span>) <span class="im">as</span> teks:</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>   <span class="bu">print</span>(teks.read())</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Baris satu
+Baris dua
+Baris tiga
+</code></pre>
+</div>
+</div>
+</section>
+<section id="mengedit-isi-file" class="level2">
+<h2 class="anchored" data-anchor-id="mengedit-isi-file">Mengedit isi file</h2>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'simpel.txt'</span>, <span class="st">'r'</span>) <span class="im">as</span> fl:</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>   line <span class="op">=</span> fl.readlines()</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>line[<span class="dv">1</span>] <span class="op">=</span> line[<span class="dv">1</span>].upper()</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>baris_baru <span class="op">=</span> <span class="st">''</span>.join(line)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'simpel.txt'</span>, <span class="st">'w'</span>) <span class="im">as</span> fl:</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>   fl.write(baris_baru)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'simpel.txt'</span>, <span class="st">'r'</span>) <span class="im">as</span> fl:</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>   <span class="bu">print</span>(fl.read())</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Baris satu
+BARIS DUA
+Baris tiga
+</code></pre>
+</div>
+</div>
+<p>Untuk mengedit isi file pada baris tertentu dapat menggunakan pendektan di atas.</p>
+<ul>
+<li>Membaca file, kemudian membuat variabel <code>line</code> yang berisi isi file dalam bentuk <code>list</code> melalui metode <code>readlines()</code>.</li>
+<li>Membuat baris kedua pada file menjadi huruf kapital. Langkah ini dapat dilakukan dengan mengganti nilai indeks kedua pada list (bernilai 1 karena indek pada list dimulai dari 0) menggunakan metode <code>upper()</code>.</li>
+<li>Membuat file yang sama dengan mengganti isinya dengan nilai yang baru menggunakan variabel <code>baris_baru</code>.</li>
+</ul>
 
 
 
