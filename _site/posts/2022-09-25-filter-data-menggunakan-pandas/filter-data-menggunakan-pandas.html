@@ -231,12 +231,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="pandas_tb_filter.png" class="img-fluid"></p>
 <p>Penyaringan (<em>filter</em>) data merupakan salah satu langkah yang sering dilakukan dalam pemrosesan suatu data. Pandas memiliki beberapa cara dalam melakukan penyaringan di antaranya adalah <code>logical_operator</code>, metode <code>loc</code>, <code>iloc</code> dan <code>query</code>. Data yang diguanakan pada contoh pembahasan di bawah ini merupakan data <em>dummy</em> berupa nilai hasil ulangan dari beberapa mata pelajaran.</p>
 <div class="cell" data-execution_count="1">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pandas <span class="im">import</span> read_csv</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> read_csv(<span class="st">'nilai_ulangan.csv'</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="1">
 
 <div>
@@ -296,10 +293,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="menggunakan-logical-operator">Menggunakan logical operator</h2>
 <p>Langkah di bawah ini menampilkan nama siswa yang memiliki nilai ulangan matematika di atas 50. Logical operator dapat juga dituliskan <code>df[df['matematika'] &gt; 50]</code>.</p>
 <div class="cell" data-execution_count="2">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df[df.matematika <span class="op">&gt;</span> <span class="dv">50</span>]</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="2">
 
 <div>
@@ -385,10 +379,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>Penyaringan dengan cara ini juga dapat diaplikasikan pada beberapa kondisi operator. Langkah di bawah ini menampilkan siswa yang memiliki nilai matematika di atas 60 dan nilai fisika di atas 55. Operator ganda tersebut dapat digunakan dengan format <code>[(operator_1) &amp; (operator_2)]</code>, tanda <code>&amp;</code> (<code>and</code>) berfungsi untuk mengharuskan kedua kondisi operator terpenuhi. Untuk kondisi yang terpenuhi hanya salah satu saja dapat digunakan tanda <code>|</code> atau <code>or</code>.</p>
 <div class="cell" data-execution_count="3">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df[(df.matematika <span class="op">&gt;</span> <span class="dv">60</span>) <span class="op">&amp;</span> (df.fisika <span class="op">&gt;</span> <span class="dv">55</span>)]</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="3">
 
 <div>
@@ -459,10 +450,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <div class="cell" data-execution_count="4">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df[(df.matematika <span class="op">&gt;</span> <span class="dv">60</span>) <span class="op">|</span> (df.fisika <span class="op">&gt;</span> <span class="dv">55</span>)]</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="4">
 
 <div>
@@ -569,10 +557,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>Untuk menampilkan data dengan nama siswa yang memiliki kesamaan tertentu dapat menggunakan langkah di bawah ini. Hasil pada langkah ini menampilkan nama siswa yang berawalan <code>E</code>.</p>
 <div class="cell" data-execution_count="5">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df[df.nama.<span class="bu">str</span>.startswith(<span class="st">'E'</span>)]</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="5">
 
 <div>
@@ -620,10 +605,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Metode <code>loc</code> dan <code>iloc</code> pada Pandas berfungsi memfilter data berdasarkan baris dan kolom tertentu. Perbedaan mendasar pada kedua metode ini terletak pada parameter kolom di mana <code>loc</code> menggunakan label seperti nama kolom sedangkan <code>iloc</code> menggunakan indeks berupa nomor. Untuk parameter baris tetap menggunakan indeks berupa angka selama indeks tersebut tidak dirubah. Secara umum format parameter baris dan kolom pada kedua metode ini adalah <code>[awal_baris:akhir_baris, awal_kolom:akhir_kolom]</code>.</p>
 <p>Langkah di bawah ini menampilkan 5 baris pertama data dengan kolom berlabel <code>nama</code> hingga <code>fisika</code> menggunakan metode <code>loc</code>.</p>
 <div class="cell" data-execution_count="6">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df.loc[:<span class="dv">5</span>, <span class="st">'nama'</span>:<span class="st">'fisika'</span>]</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="6">
 
 <div>
@@ -681,10 +663,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>Hasil yang sama dapat dilakukan dengan menggunakan list pada parameter kolom. Urutan elemen pada list tersebut tidak harus sama dengan urutan kolom pada data asalkan elemen tersebut berada di dalam kolom.</p>
 <div class="cell" data-execution_count="7">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df.loc[:<span class="dv">5</span>, [<span class="st">'nama'</span>, <span class="st">'matematika'</span>, <span class="st">'fisika'</span>]]</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="7">
 
 <div>
@@ -742,10 +721,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>Langkah di bawah ini menampilkan 5 baris pertam dan 3 kolom pertama pada data menggunakan metode <code>iloc</code>. Perlu diketahui, baik parameter baris maupun kolom parameter awalnya tidak perlu diisi karena sudah mengindikasikan titik awal dari masing-masing parameter.</p>
 <div class="cell" data-execution_count="8">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df.iloc[:<span class="dv">5</span>, :<span class="dv">3</span>]</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="8">
 
 <div>
@@ -797,10 +773,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>Untuk menampilkan kolom ke-1 dan kolom ke-3 dari baris 3 hingga ke-7 dapat menggunakan langkah di bawah ini. Indeks berupa angka dimulai dari 0, sehingga kolom ke-1 dan kolom ke-3 dapat direpresentasikan sebagai indeks 0 dan 2.</p>
 <div class="cell" data-execution_count="9">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df.iloc[<span class="dv">3</span>:<span class="dv">7</span>, [<span class="dv">0</span>,<span class="dv">2</span>]]</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="9">
 
 <div>
@@ -844,10 +817,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="menggunakan-query">Menggunakan <code>query</code></h2>
 <p>Metode <code>query</code> menggunakan parameter dalam bentuk <code>str</code> sehingga lebih memudahkan dalam memfilter data. Langkah di bawah menampilkan siswa yang memiliki nilia matematika dan fisika di atas 60 dan 75 secara bersamaan.</p>
 <div class="cell" data-execution_count="10">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df.query(<span class="st">'matematika &gt; 60 and fisika &gt; 75'</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="10">
 
 <div>
@@ -901,8 +871,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   langid = {id}
 }
 </code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Sebagai atribusi, silahkan mengutip karya ini sebagai:</div><div id="ref-mulyamuhammadsyah2022" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
-Pandu Mulya Muhammad Syah. 2022. <span>“Filter Data Menggunakan
-Pandas.”</span> September 25, 2022.
+Pandu Mulya Muhammad Syah. (2022, September 25). <em>Filter Data
+Menggunakan Pandas</em>.
 </div></div></section></div></main> <!-- /main -->
 <div class="share-on-section">
     <hr> 
@@ -1011,6 +981,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 });
+</script>
+<script src="https://giscus.app/client.js" data-repo="zooxs/blogden-giscus" data-repo-id="R_kgDOIGDrfQ" data-category="General" data-category-id="DIC_kwDOIGDrfc4CRtFQ" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="id" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">

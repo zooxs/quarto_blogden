@@ -29,12 +29,26 @@ Python termasuk ke dalam *general purpose programming languange* sehingga dapat 
 
 : Mode opsi pada fungsi `open()`
 
+Lebih lengkap dapat dilihat pada [sumber berikut](https://docs.python.org/3/library/functions.html#open) 
+
 # *Context Manager* pada Python
 
-Salah satu permasalah umum dalam pemrograman adalah pengelolaan *external resources* seperti file dan koneksi internet. 
+*Context manager* merupakan salah satu metode yang digunakan untuk mengatasi *memory leak* dari *external resources* (file dan koneksi internet). Metode ini dapat mengelolah *external resources* dengan menutupnya setelah tidak digunakan lagi sehingga dapat menghindari terjadinya *memory leak*. Salah satu pendekatan yang umum digunakan pada metode ini adalah menggunakan konstruktor `with` [@Python2021Context].
 
 # Pemrosesan File
 
 ## Pembuatan (*write*) file
 
+```{python}
+with open('simpel.txt', 'w') as teks:
+   teks.write('Ini contoh teks')
+```
+
 ## Pembacaan (*read*) file
+
+```{python}
+with open('simpel.txt', 'w+') as teks:
+   print(teks.read())
+   teks.write('100 + 200 = 300')
+   print(teks.read())
+```

@@ -247,12 +247,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Data dalam bentuk <em>file</em> seperti <code>csv</code>, <code>json</code> maupun <code>xlsx</code> dapat dibaca menggunakan Pandas menggunakan metode yang tersedia. Data yang digunakan berada dalam format <code>xlsx</code> dan memiliki nama <code>data_anggota.xlsx</code>, untuk membaca file tersebut digunakan metode <code>read_excel()</code>.</p>
 <p><code>{bash, echo=FALSE} ls *xlsx</code></p>
 <div class="cell" data-execution_count="1">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pandas <span class="im">import</span> read_excel</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> read_excel(<span class="st">'data_anggota.xlsx'</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="1">
 
 <div>
@@ -301,12 +298,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="menambah-kolom">Menambah kolom</h2>
 <p>Pada <code>DataFrame</code> di atas akan ditambahkan kolom baru yang berisi nama lengkap dari masing-masing anggota. Karena tipe data pada kolom nama depan dan belakang sama (<code>str</code> atau <code>object</code>) langkah pemrosesan tipe data <code>str</code> dapat dilakukan seperti di bawah ini.</p>
 <div class="cell" data-execution_count="2">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'nama_lengkap'</span>] <span class="op">=</span> df.nama_depan <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> df.nama_belakang</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'email'</span>] <span class="op">=</span> df.nama_depan.<span class="bu">str</span>.lower() <span class="op">+</span> <span class="st">'.'</span> <span class="op">+</span> df.nama_belakang.<span class="bu">str</span>.lower() <span class="op">+</span> <span class="st">'@mail.com'</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="2">
 
 <div>
@@ -371,19 +365,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="format-csv" class="level2">
 <h2 class="anchored" data-anchor-id="format-csv">Format CSV</h2>
 <div class="cell" data-execution_count="3">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">'hasil_pengolahan.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 </section>
 <section id="format-xlsx" class="level2">
 <h2 class="anchored" data-anchor-id="format-xlsx">Format XLSX</h2>
 <div class="cell" data-execution_count="4">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df.to_excel(<span class="st">'hasil_pengolahan.xlsx'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <p><code>{bash, echo=FALSE} ls hasil_pengolahan*</code></p>
 
@@ -399,8 +387,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   langid = {id}
 }
 </code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Sebagai atribusi, silahkan mengutip karya ini sebagai:</div><div id="ref-mulyamuhammadsyah2022" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
-Pandu Mulya Muhammad Syah. 2022. <span>“Pengolahan Data Menggunakan
-Pandas - Part 1.”</span> September 24, 2022.
+Pandu Mulya Muhammad Syah. (2022, September 24). <em>Pengolahan Data
+Menggunakan Pandas - Part 1</em>.
 </div></div></section></div></main> <!-- /main -->
 <div class="share-on-section">
     <hr> 
@@ -509,6 +497,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 });
+</script>
+<script src="https://giscus.app/client.js" data-repo="zooxs/blogden-giscus" data-repo-id="R_kgDOIGDrfQ" data-category="General" data-category-id="DIC_kwDOIGDrfc4CRtFQ" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="id" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">

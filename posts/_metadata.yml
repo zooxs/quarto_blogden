@@ -39,3 +39,8 @@ comments:
     giscus: 
           repo: zooxs/blogden-giscus
           language: id
+
+# crossref
+crossref: 
+  fig-title: Gambar
+  tbl-title: Tabel

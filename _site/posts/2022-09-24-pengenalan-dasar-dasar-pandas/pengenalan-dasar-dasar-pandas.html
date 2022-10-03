@@ -247,14 +247,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="memuat-dataset" class="level1">
 <h1>Memuat Dataset</h1>
 <div class="cell" data-execution_count="1">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> sns.load_dataset(<span class="st">'titanic'</span>)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df.iloc[:<span class="dv">5</span>, :<span class="dv">6</span>]</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="1">
 
 <div>
@@ -327,10 +324,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="ukuran-dataset">Ukuran dataset</h2>
 <p>Ukuran dataset (jumlah baris dan kolom) dapat diketahui dengan atribut <code>.shape</code>.</p>
 <div class="cell" data-execution_count="2">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df.shape</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>(891, 15)</code></pre>
 </div>
@@ -340,10 +334,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="akses-nama-kolom">Akses nama kolom</h2>
 <p>Nama kolom yang terdapat dalam dataset dapat diaksek menggunakan atribut <code>.columns</code>.</p>
 <div class="cell" data-execution_count="3">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df.columns</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>Index(['survived', 'pclass', 'sex', 'age', 'sibsp', 'parch', 'fare',
        'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town',
@@ -356,10 +347,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="tipe-data-kolom">Tipe data kolom</h2>
 <p>Tipe data setiap kolom dapat diketahui menggunakan atribut <code>.dtypes</code> pada dataset.</p>
 <div class="cell" data-execution_count="4">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df.dtypes</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>survived          int64
 pclass            int64
@@ -388,10 +376,7 @@ dtype: object</code></pre>
 <li>Nama kolom sebagai indeks</li>
 </ol>
 <div class="cell" data-execution_count="5">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'age'</span>].head()</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>0    22.0
 1    38.0
@@ -405,10 +390,7 @@ Name: age, dtype: float64</code></pre>
 <li>Nama kolom sebagai atribut</li>
 </ol>
 <div class="cell" data-execution_count="6">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df.age.head()</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>0    22.0
 1    38.0
@@ -420,10 +402,7 @@ Name: age, dtype: float64</code></pre>
 </div>
 <p>Untuk memanggil data pada beberapa kolom, cara paling mudah adalah dengan menggunakan <code>list</code> (daftar) yang berisi beberapa nama kolom.</p>
 <div class="cell" data-execution_count="7">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df[[<span class="st">'survived'</span>, <span class="st">'age'</span>]].head()</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-display" data-execution_count="7">
 
 <div>
@@ -475,11 +454,8 @@ Name: age, dtype: float64</code></pre>
 <h2 class="anchored" data-anchor-id="nilai-minimum-dan-maksimum">Nilai minimum dan maksimum</h2>
 <p>Kedua nilai tersebut dapat ditentukan dengan metode <code>.min()</code> dan <code>.max()</code>. Diambil data pada kolom <code>age</code> sebagai contoh pada bagian ini.</p>
 <div class="cell" data-execution_count="8">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Nilai min: </span><span class="sc">{</span>df<span class="sc">.</span>age<span class="sc">.</span><span class="bu">min</span>()<span class="sc">}</span><span class="ss">'</span>)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Nilai max: </span><span class="sc">{</span>df<span class="sc">.</span>age<span class="sc">.</span><span class="bu">max</span>()<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Nilai min: 0.42
 Nilai max: 80.0</code></pre>
@@ -490,11 +466,8 @@ Nilai max: 80.0</code></pre>
 <h2 class="anchored" data-anchor-id="nilai-rata-rata-dan-standar-deviasi">Nilai rata-rata dan standar deviasi</h2>
 <p>Nilai tersebut dapat ditentukan dengan metode <code>.mean()</code> dan <code>.std()</code>.</p>
 <div class="cell" data-execution_count="9">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Nilai mean: </span><span class="sc">{</span>df<span class="sc">.</span>age<span class="sc">.</span>mean()<span class="sc">}</span><span class="ss">'</span>)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Nilai std: </span><span class="sc">{</span>df<span class="sc">.</span>age<span class="sc">.</span>std()<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Nilai mean: 29.69911764705882
 Nilai std: 14.526497332334044</code></pre>
@@ -505,12 +478,9 @@ Nilai std: 14.526497332334044</code></pre>
 <h2 class="anchored" data-anchor-id="nilai-kuantil">Nilai kuantil</h2>
 <p>Nilai kuantil dapat ditentukan dengan metode <code>.quantile()</code>. Q10, Q20 maupun Q30 bisa diketahui dengan memasukkan parameter pada metode <code>.quantile(.10)</code>, <code>.quantile(.20)</code> dan <code>.quantile(.30)</code> untuk masing-masing nilai kuantil yang ingin dicari.</p>
 <div class="cell" data-execution_count="10">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Nilai Q10: </span><span class="sc">{</span>df<span class="sc">.</span>age<span class="sc">.</span>quantile(<span class="fl">.10</span>)<span class="sc">}</span><span class="ss">'</span>)</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Nilai Q20: </span><span class="sc">{</span>df<span class="sc">.</span>age<span class="sc">.</span>quantile(<span class="fl">.20</span>)<span class="sc">}</span><span class="ss">'</span>)</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Nilai Q30: </span><span class="sc">{</span>df<span class="sc">.</span>age<span class="sc">.</span>quantile(<span class="fl">.30</span>)<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Nilai Q10: 14.0
 Nilai Q20: 19.0
@@ -530,8 +500,8 @@ Nilai Q30: 22.0</code></pre>
   langid = {id}
 }
 </code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Sebagai atribusi, silahkan mengutip karya ini sebagai:</div><div id="ref-mulyamuhammadsyah2022" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
-Pandu Mulya Muhammad Syah. 2022. <span>“Pengenalan Dasar-dasar
-Pandas.”</span> September 24, 2022.
+Pandu Mulya Muhammad Syah. (2022, September 24). <em>Pengenalan
+Dasar-dasar Pandas</em>.
 </div></div></section></div></main> <!-- /main -->
 <div class="share-on-section">
     <hr> 
@@ -640,6 +610,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 });
+</script>
+<script src="https://giscus.app/client.js" data-repo="zooxs/blogden-giscus" data-repo-id="R_kgDOIGDrfQ" data-category="General" data-category-id="DIC_kwDOIGDrfc4CRtFQ" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="id" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">
