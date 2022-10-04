@@ -6,6 +6,8 @@ categories: [Python, I/O]
 date: 2022-10-07
 ---
 
+![](tb-python-context-manager.png)
+
 # Pengenalan
 
 Python termasuk ke dalam *general purpose programming languange* sehingga dapat digunakan untuk berbagai keperluan. Salah satu pemanfaatannya adalah pemrosesan file mulai dari pembuatan, pembacaan dan pengeditan dapat dilakukan bergantung jenis file yang diolah. Pada artikel ini ditunjukkan contoh pengolahan file tipe *plain text* atau file sederhana berisi tulisan (`.txt`) yang akan diproses menggunakan *built-in function* pada Python (`open()`) dan *context manager*.
