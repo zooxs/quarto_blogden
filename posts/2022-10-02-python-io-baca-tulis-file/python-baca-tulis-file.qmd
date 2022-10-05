@@ -3,7 +3,7 @@ title: "Membuat, Membaca dan Mengedit File Menggunakan Python"
 description: |
    Ringkasan pengolahan file menggunakan *built-in function* pada Python.
 categories: [Python, I/O]
-date: 2022-10-07
+date: 2022-10-05
 ---
 
 ![](tb-python-context-manager.png)

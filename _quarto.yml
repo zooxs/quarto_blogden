@@ -7,6 +7,7 @@ metadata-files:
 toc: true
 website:
   title: "BlogDen"
+  google-analytics: "G-B8MH87QSQ9"
   navbar:
     right:
       - href: about.qmd

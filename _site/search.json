@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "BlogDen",
     "section": "",
-    "text": "Python\n\n\nI/O\n\n\n\n\nRingkasan pengolahan file menggunakan built-in function pada Python.\n\n\n\n\n\n\n07/10/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPython\n\n\nI/O\n\n\n\n\nContoh pemanfaatan fitur input-ouput dalam Python.\n\n\n\n\n\n\n30/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nPython\n\n\nPandas\n\n\n\n\nBeberapa cara yang digunakan dalam memfilter data menggunakan Pandas.\n\n\n\n\n\n\n25/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPython\n\n\nPandas\n\n\n\n\nMengolah data menggunakan Pandas: membaca data, menambah kolom dan menyimpan ke dalam file baru.\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nPython\n\n\nPandas\n\n\n\n\nDasar-dasar library Pandas yang perlu diketahui.\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPython\n\n\nPandas\n\n\n\n\nMembuat Pandas Dataframe\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nPython\n\n\n\n\nBeberapa environtmen umum yang digunakan programmer untuk membuat dan mengembangkan program Python\n\n\n\n\n\n\n19/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nPython\n\n\n\n\nBeberapa alasan kenapa Bahasa Pemrograman Pyhon layak untuk dipelajari\n\n\n\n\n\n\n12/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nLinux\n\n\n\n\nAlasan menggunakan Linux sebagai Daily Driver\n\n\n\n\n\n\n04/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\nTidak ada item yang cocok"
+    "text": "Python\n\n\nI/O\n\n\n\n\nRingkasan pengolahan file menggunakan built-in function pada Python.\n\n\n\n\n\n\n05/10/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPython\n\n\nI/O\n\n\n\n\nContoh pemanfaatan fitur input-ouput dalam Python.\n\n\n\n\n\n\n30/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nPython\n\n\nPandas\n\n\n\n\nBeberapa cara yang digunakan dalam memfilter data menggunakan Pandas.\n\n\n\n\n\n\n25/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPython\n\n\nPandas\n\n\n\n\nMengolah data menggunakan Pandas: membaca data, menambah kolom dan menyimpan ke dalam file baru.\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nPython\n\n\nPandas\n\n\n\n\nDasar-dasar library Pandas yang perlu diketahui.\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPython\n\n\nPandas\n\n\n\n\nMembuat Pandas Dataframe\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nPython\n\n\n\n\nBeberapa environtmen umum yang digunakan programmer untuk membuat dan mengembangkan program Python\n\n\n\n\n\n\n19/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nPython\n\n\n\n\nBeberapa alasan kenapa Bahasa Pemrograman Pyhon layak untuk dipelajari\n\n\n\n\n\n\n12/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nLinux\n\n\n\n\nAlasan menggunakan Linux sebagai Daily Driver\n\n\n\n\n\n\n04/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n\n\n\n\nTidak ada item yang cocok"
   },
   {
     "objectID": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html",
@@ -91,18 +91,32 @@
     "text": "Nilai kuantil\nNilai kuantil dapat ditentukan dengan metode .quantile(). Q10, Q20 maupun Q30 bisa diketahui dengan memasukkan parameter pada metode .quantile(.10), .quantile(.20) dan .quantile(.30) untuk masing-masing nilai kuantil yang ingin dicari.\n\nprint(f'Nilai Q10: {df.age.quantile(.10)}')\nprint(f'Nilai Q20: {df.age.quantile(.20)}')\nprint(f'Nilai Q30: {df.age.quantile(.30)}')\n\nNilai Q10: 14.0\nNilai Q20: 19.0\nNilai Q30: 22.0"
   },
   {
-    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html",
-    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html",
+    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#membuat-writing-file",
+    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#membuat-writing-file",
     "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
-    "section": "",
-    "text": "Python termasuk ke dalam general purpose programming languange sehingga dapat digunakan untuk berbagai keperluan. Salah satu pemanfaatannya adalah pemrosesan file mulai dari pembuatan, pembacaan dan pengeditan dapat dilakukan bergantung jenis file yang diolah. Pada artikel ini ditunjukkan contoh pengolahan file tipe plain text atau file sederhana berisi tulisan (.txt) yang akan diproses menggunakan built-in function pada Python (open()) dan context manager."
+    "section": "Membuat (writing) file",
+    "text": "Membuat (writing) file\n\nwith open('simpel.txt', 'w') as teks:\n   teks.write('Baris satu\\n')\n   teks.write('Baris dua\\n')\n\nProgram di atas ditujukan untuk membuat file dengan nama simpel.txt menggunakan fungsi open(). Statmen with digunakan untuk mengimplementasikan context manager pada Python. Terlihat pada kode di atas mode w digunakan untuk menulis file baru. Metode write() digunakan untuk menulis isi pada file tersebut."
   },
   {
-    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#pembuatan-write-file",
-    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#pembuatan-write-file",
+    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#membaca-reading-file",
+    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#membaca-reading-file",
     "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
-    "section": "Pembuatan (write) file",
-    "text": "Pembuatan (write) file\n\nwith open('simpel.txt', 'w') as teks:\n   teks.write('Ini contoh teks')"
+    "section": "Membaca (reading) file",
+    "text": "Membaca (reading) file\n\nwith open('simpel.txt', 'r') as teks:\n   print(teks.read())\n\nBaris satu\nBaris dua\n\n\n\nUntuk membaca suatu file dapat menggunakan statmen with yang sama dengan sedikit perubahan pada mode r. Teks pada file tersebut dapat diakses menggunakan metode read()."
+  },
+  {
+    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#menambahkan-isi-file",
+    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#menambahkan-isi-file",
+    "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
+    "section": "Menambahkan isi file",
+    "text": "Menambahkan isi file\n\nwith open('simpel.txt', 'a') as teks:\n   teks.write('Baris tiga\\n')\n\nPenambahan isi file dapat dilakukan dengan menggunakan mode a dan menuliskan baris baru melalui metode .write().\n\nwith open('simpel.txt', 'r') as teks:\n   print(teks.read())\n\nBaris satu\nBaris dua\nBaris tiga"
+  },
+  {
+    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#mengedit-isi-file",
+    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#mengedit-isi-file",
+    "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
+    "section": "Mengedit isi file",
+    "text": "Mengedit isi file\n\nwith open('simpel.txt', 'r') as fl:\n   line = fl.readlines()\nline[1] = line[1].upper()\nbaris_baru = ''.join(line)\n\nwith open('simpel.txt', 'w') as fl:\n   fl.write(baris_baru)\n\nwith open('simpel.txt', 'r') as fl:\n   print(fl.read())\n\nBaris satu\nBARIS DUA\nBaris tiga\n\n\n\nUntuk mengedit isi file pada baris tertentu dapat menggunakan pendektan di atas.\n\nMembaca file, kemudian membuat variabel line yang berisi isi file dalam bentuk list melalui metode readlines().\nMembuat baris kedua pada file menjadi huruf kapital. Langkah ini dapat dilakukan dengan mengganti nilai indeks kedua pada list (bernilai 1 karena indek pada list dimulai dari 0) menggunakan metode upper().\nMembuat file yang sama dengan mengganti isinya dengan nilai yang baru menggunakan variabel baris_baru."
   },
   {
     "objectID": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html",
@@ -250,40 +264,5 @@
     "title": "Tentang Saya",
     "section": "",
     "text": "Mahasiswa tingkat akhir yang tertarik dengan pemrograman, data analysis dan sistem operasi Linux."
-  },
-  {
-    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#pembacaan-read-file",
-    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#pembacaan-read-file",
-    "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
-    "section": "Pembacaan (read) file",
-    "text": "Pembacaan (read) file\n\nwith open('simpel.txt', 'w+') as teks:\n   print(teks.read())\n   teks.write('100 + 200 = 300')\n   print(teks.read())"
-  },
-  {
-    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#membuat-writing-file",
-    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#membuat-writing-file",
-    "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
-    "section": "Membuat (writing) file",
-    "text": "Membuat (writing) file\n\nwith open('simpel.txt', 'w') as teks:\n   teks.write('Baris satu\\n')\n   teks.write('Baris dua\\n')\n\nProgram di atas ditujukan untuk membuat file dengan nama simpel.txt menggunakan fungsi open(). Statmen with digunakan untuk mengimplementasikan context manager pada Python. Terlihat pada kode di atas mode w digunakan untuk menulis file baru. Metode write() digunakan untuk menulis isi pada file tersebut."
-  },
-  {
-    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#membaca-reading-file",
-    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#membaca-reading-file",
-    "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
-    "section": "Membaca (reading) file",
-    "text": "Membaca (reading) file\n\nwith open('simpel.txt', 'r') as teks:\n   print(teks.read())\n\nBaris satu\nBaris dua\n\n\n\nUntuk membaca suatu file dapat menggunakan statmen with yang sama dengan sedikit perubahan pada mode r. Teks pada file tersebut dapat diakses menggunakan metode read()."
-  },
-  {
-    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#menambahkan-isi-file",
-    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#menambahkan-isi-file",
-    "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
-    "section": "Menambahkan isi file",
-    "text": "Menambahkan isi file\n\nwith open('simpel.txt', 'a') as teks:\n   teks.write('Baris tiga\\n')\n\nPenambahan isi file dapat dilakukan dengan menggunakan mode a dan menuliskan baris baru melalui metode .write().\n\nwith open('simpel.txt', 'r') as teks:\n   print(teks.read())\n\nBaris satu\nBaris dua\nBaris tiga"
-  },
-  {
-    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#mengedit-isi-file",
-    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#mengedit-isi-file",
-    "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
-    "section": "Mengedit isi file",
-    "text": "Mengedit isi file\n\nwith open('simpel.txt', 'r') as fl:\n   line = fl.readlines()\nline[1] = line[1].upper()\nbaris_baru = ''.join(line)\n\nwith open('simpel.txt', 'w') as fl:\n   fl.write(baris_baru)\n\nwith open('simpel.txt', 'r') as fl:\n   print(fl.read())\n\nBaris satu\nBARIS DUA\nBaris tiga\n\n\n\nUntuk mengedit isi file pada baris tertentu dapat menggunakan pendektan di atas.\n\nMembaca file, kemudian membuat variabel line yang berisi isi file dalam bentuk list melalui metode readlines().\nMembuat baris kedua pada file menjadi huruf kapital. Langkah ini dapat dilakukan dengan mengganti nilai indeks kedua pada list (bernilai 1 karena indek pada list dimulai dari 0) menggunakan metode upper().\nMembuat file yang sama dengan mengganti isinya dengan nilai yang baru menggunakan variabel baris_baru."
   }
 ]
