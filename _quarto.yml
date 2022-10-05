@@ -7,7 +7,9 @@ metadata-files:
 toc: true
 website:
   title: "BlogDen"
-  google-analytics: "G-B8MH87QSQ9"
+  google-analytics:
+    tracking-id: "G-B8MH87QSQ9"
+    anonymize-ip: true
   navbar:
     right:
       - href: about.qmd
