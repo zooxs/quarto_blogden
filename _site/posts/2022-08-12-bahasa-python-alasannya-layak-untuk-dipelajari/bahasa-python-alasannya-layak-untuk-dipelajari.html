@@ -244,16 +244,61 @@ FutureLearn. (2021). <em>What is <span>Python</span> used for?</em> https://www.
 Pandu Mulya Muhammad Syah. (2022, August 12). <em>Bahasa Python -
 Alasannya Layak untuk Dipelajari</em>.
 </div></div></section></div></main> <!-- /main -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 <div class="share-on-section">
-    <hr> 
-        
-    <h3> Bagikan </h3>
-    
-    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-hashtags="#rstats" data-show-count="false">Tweet</a><script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+    <a href="#" class="facebook-btn">
+        <i class="fab fa-facebook"></i>
+      </a>
+
+      <a href="#" class="twitter-btn">
+        <i class="fab fa-twitter"></i>
+      </a>
+
+      <a href="#" class="linkedin-btn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+
+      <a href="#" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+      </a>
     
-    <hr>
 </div>
+
+<script>
+    const facebookBtn = document.querySelector(".facebook-btn");
+    const twitterBtn = document.querySelector(".twitter-btn");
+    const linkedinBtn = document.querySelector(".linkedin-btn");
+    const whatsappBtn = document.querySelector(".whatsapp-btn");
+
+    function init() {
+
+    let postUrl = encodeURI(document.location.href);
+    let postTitle = encodeURI("Hi ada artikel baru nih, ayo dicek: ");
+
+    facebookBtn.setAttribute(
+        "href",
+        `https://www.facebook.com/sharer.php?u=${postUrl}`
+    );
+
+    twitterBtn.setAttribute(
+        "href",
+        `https://twitter.com/share?url=${postUrl}&text=${postTitle}`
+    );
+
+    linkedinBtn.setAttribute(
+        "href",
+        `https://www.linkedin.com/shareArticle?url=${postUrl}&title=${postTitle}`
+    );
+
+    whatsappBtn.setAttribute(
+        "href",
+        `https://api.whatsapp.com/send?text=${postTitle} ${postUrl}`
+    );
+    }
+
+    init();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
