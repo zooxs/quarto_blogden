@@ -7,7 +7,7 @@ p {
     background: #fff;
     display: flex;
     flex-direction: column;
-    padding: 16px;
+    padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     position: fixed;
     top: 50%;
@@ -46,3 +46,27 @@ p {
   .share-on-section .fa-whatsapp {
     color: #25d366;
   }
+
+  /* Media Queries */
+
+@media (max-width: 1000px) {
+  .content {
+    padding: 10px;
+  }
+
+  .share-on-section {
+    left: 50%;
+    top: unset;
+    transform: translateX(-50%);
+    width: 50%;
+    bottom: 0;
+    flex-direction: row;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+    justify-content: center;
+  }
+
+  .share-on-section a {
+    margin: 10px 10px;
+  }
+}
