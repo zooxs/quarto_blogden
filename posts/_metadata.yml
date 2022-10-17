@@ -19,6 +19,11 @@ lang: id
 # citation
 citation: true
 
+# listing customize
+listing: 
+  type: default
+  fields: [image, date, title, author, reading-time]
+
 
 # caption location
 fig-cap-location: bottom
