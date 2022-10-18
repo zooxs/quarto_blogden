@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "BlogDen",
     "section": "",
-    "text": "21/10/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n05/10/22\n\n\nPandu Mulya Muhammad Syah\n\n\n3 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n30/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n25/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n2 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n19/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n12/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n04/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n3 min\n\n\n\n\n\n\nTidak ada item yang cocok"
+    "text": "21/10/22\n\n\nPandu Mulya Muhammad Syah\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n05/10/22\n\n\nPandu Mulya Muhammad Syah\n\n\n3 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n30/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n25/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n2 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n19/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n12/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n04/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n3 min\n\n\n\n\n\n\nTidak ada item yang cocok"
   },
   {
     "objectID": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html",
@@ -299,5 +299,12 @@
     "title": "Rangkuman Pengolahan Data Tipe String Menggunakan Python",
     "section": "Change case",
     "text": "Change case\nPada contoh di atas, variabel nama_lengkap berada dalam bentuk huruf kecil. Untuk menggantinya menjadi penulisan nama yang baku (setiap awal kata menjadi kapital) dapat menggunakan pendekatan di bawah ini.\n\nnama_lengkap.title()\n\n'Budi Budiman'\n\n\nSelain title() terdapat metode change case lainnya seperti capitalize(), upper(), lower() dan swapcase()."
+  },
+  {
+    "objectID": "posts/2022-10-17-python-rangkuman-pengolahan-data-string/rangkuman-pengolahan-string.html#metode-format",
+    "href": "posts/2022-10-17-python-rangkuman-pengolahan-data-string/rangkuman-pengolahan-string.html#metode-format",
+    "title": "Rangkuman Pengolahan Data Tipe String Menggunakan Python",
+    "section": "Metode format()",
+    "text": "Metode format()\nMetode ini berfungsi untuk mengkustomasi format dari string yang akan dihasilkan.\n\n\"Halo nama saya {0}, umur saya {1} tahun.\".format(nama_lengkap, 22)\n\n'Halo nama saya budi budiman, umur saya 22 tahun.'\n\n\nIndeks 0 dan 1 merujuk pada variabel atau nilai dari nama_lengkap dan 22 secara berurutan. Indeks tersebut dapat disebut sebagai placeholder. Nilai dari placeholder ini dapat diganti menjadi suatu variabel tertentu.\n\n\"Halo nama saya {nama}, umur saya {umur} tahun.\".format(nama=nama_lengkap, umur=22)\n\n'Halo nama saya budi budiman, umur saya 22 tahun.'\n\n\nSelain 2 pendekatan di atas, Python juga menyediakan fitur yang biasa disebut sebagai f-string. Fitur ini biasa digunakan karena dapat menyederhanakan penulisan code.\n\nf\"Halo nama saya {nama_lengkap}, umur saya {22} tahun.\"\n\n'Halo nama saya budi budiman, umur saya 22 tahun.'"
   }
 ]

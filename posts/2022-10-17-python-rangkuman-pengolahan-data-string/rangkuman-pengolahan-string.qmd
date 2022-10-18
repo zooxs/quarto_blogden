@@ -6,6 +6,8 @@ categories: [Python, Struktur Data, String]
 date: 2022-10-21
 ---
 
+![](tb-python-string.png)
+
 # Pengenalan
 
 `string` merupakan salah satu tipe data yang umum digunakan pada bahasa Python selain `int`, `float` dan `boolen`. Tipe data: ini banyak digunakan untuk menampilkan informasi berupa pesan singkat maupun panjang terkait suatu hal. Pesan yang disampaikan dapat berupa peringanatan (`warning`), kesalahan (`error`) ataupun digunakan sebagai *debugger*.
@@ -61,3 +63,24 @@ nama_lengkap.title()
 ```
 
 Selain `title()` terdapat metode *change case* lainnya seperti `capitalize()`, `upper()`, `lower()` dan `swapcase()`.
+
+
+## Metode `format()`
+
+Metode ini berfungsi untuk mengkustomasi format dari string yang akan dihasilkan.
+
+```{python}
+"Halo nama saya {0}, umur saya {1} tahun.".format(nama_lengkap, 22)
+```
+
+Indeks `0` dan `1` merujuk pada variabel atau nilai dari `nama_lengkap` dan `22` secara berurutan. Indeks tersebut dapat disebut sebagai *placeholder*. Nilai dari *placeholder* ini dapat diganti menjadi suatu variabel tertentu.
+
+```{python}
+"Halo nama saya {nama}, umur saya {umur} tahun.".format(nama=nama_lengkap, umur=22)
+```
+
+Selain 2 pendekatan di atas, Python juga menyediakan fitur yang biasa disebut sebagai `f-string`. Fitur ini biasa digunakan karena dapat menyederhanakan penulisan *code*.
+
+```{python}
+f"Halo nama saya {nama_lengkap}, umur saya {22} tahun."
+```

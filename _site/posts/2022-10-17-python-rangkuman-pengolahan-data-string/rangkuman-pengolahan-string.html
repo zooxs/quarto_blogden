@@ -262,6 +262,7 @@ gtag('config', 'G-B8MH87QSQ9', { 'anonymize_ip': true});
   <li><a href="#metode-split" id="toc-metode-split" class="nav-link" data-scroll-target="#metode-split">Metode <code>split()</code></a></li>
   <li><a href="#metode-join" id="toc-metode-join" class="nav-link" data-scroll-target="#metode-join">Metode <code>join()</code></a></li>
   <li><a href="#change-case" id="toc-change-case" class="nav-link" data-scroll-target="#change-case"><em>Change case</em></a></li>
+  <li><a href="#metode-format" id="toc-metode-format" class="nav-link" data-scroll-target="#metode-format">Metode <code>format()</code></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -272,6 +273,7 @@ gtag('config', 'G-B8MH87QSQ9', { 'anonymize_ip': true});
 
 
 
+<p><img src="tb-python-string.png" class="img-fluid"></p>
 <section id="pengenalan" class="level1">
 <h1>Pengenalan</h1>
 <p><code>string</code> merupakan salah satu tipe data yang umum digunakan pada bahasa Python selain <code>int</code>, <code>float</code> dan <code>boolen</code>. Tipe data: ini banyak digunakan untuk menampilkan informasi berupa pesan singkat maupun panjang terkait suatu hal. Pesan yang disampaikan dapat berupa peringanatan (<code>warning</code>), kesalahan (<code>error</code>) ataupun digunakan sebagai <em>debugger</em>.</p>
@@ -287,7 +289,7 @@ gtag('config', 'G-B8MH87QSQ9', { 'anonymize_ip': true});
 <p>Setiap karakter (huruf, angka, tanda baca, atau simbol) pada <code>string</code> memiliki indeks atau posisi masing-masing. Indeks ini dimulai dari 0, 1, 2 hingga n - 1 (n merupakan panjang <code>string</code>). Untuk menampilkan nama depan dari variabel <code>nama</code> di atas dapat menggunakan pendekatan seperti di bawah ini.</p>
 <div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>nama[<span class="dv">0</span>:<span class="dv">4</span>]</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
+<div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>'Budi'</code></pre>
 </div>
 </div>
@@ -298,14 +300,14 @@ gtag('config', 'G-B8MH87QSQ9', { 'anonymize_ip': true});
 <p>Hasil yang serupa juga didapatkan dengan menggunakan metode <code>split(delimiter)</code>, di mana pendekatan ini memisahkan <code>string</code> berdasarkan karakter yang digunakan (<em>delimiter</em> yang umumn digunakan <code></code>, <code>,</code>, <code>.</code>, <code>-</code> atau <code>_</code>). Luaran dari metode ini adalah objek <code>list</code>.</p>
 <div class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>nama.split(<span class="st">' '</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>['Budi', 'Budiman']</code></pre>
 </div>
 </div>
 <p>Untuk menampilkan nama depan saja dapat menggunakan indeks 0.</p>
 <div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>nama.split(<span class="st">' '</span>)[<span class="dv">0</span>]</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>'Budi'</code></pre>
 </div>
 </div>
@@ -317,7 +319,7 @@ gtag('config', 'G-B8MH87QSQ9', { 'anonymize_ip': true});
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>daftar_nama <span class="op">=</span> [<span class="st">'budi'</span>, <span class="st">'budiman'</span>]</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>nama_lengkap <span class="op">=</span> <span class="st">' '</span>.join(daftar_nama)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>nama_lengkap</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>'budi budiman'</code></pre>
 </div>
 </div>
@@ -327,11 +329,35 @@ gtag('config', 'G-B8MH87QSQ9', { 'anonymize_ip': true});
 <p>Pada contoh di atas, variabel <code>nama_lengkap</code> berada dalam bentuk huruf kecil. Untuk menggantinya menjadi penulisan nama yang baku (setiap awal kata menjadi kapital) dapat menggunakan pendekatan di bawah ini.</p>
 <div class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>nama_lengkap.title()</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="12">
+<div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>'Budi Budiman'</code></pre>
 </div>
 </div>
 <p>Selain <code>title()</code> terdapat metode <em>change case</em> lainnya seperti <code>capitalize()</code>, <code>upper()</code>, <code>lower()</code> dan <code>swapcase()</code>.</p>
+</section>
+<section id="metode-format" class="level2">
+<h2 class="anchored" data-anchor-id="metode-format">Metode <code>format()</code></h2>
+<p>Metode ini berfungsi untuk mengkustomasi format dari string yang akan dihasilkan.</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">"Halo nama saya {0}, umur saya {1} tahun."</span>.<span class="bu">format</span>(nama_lengkap, <span class="dv">22</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>'Halo nama saya budi budiman, umur saya 22 tahun.'</code></pre>
+</div>
+</div>
+<p>Indeks <code>0</code> dan <code>1</code> merujuk pada variabel atau nilai dari <code>nama_lengkap</code> dan <code>22</code> secara berurutan. Indeks tersebut dapat disebut sebagai <em>placeholder</em>. Nilai dari <em>placeholder</em> ini dapat diganti menjadi suatu variabel tertentu.</p>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">"Halo nama saya {nama}, umur saya {umur} tahun."</span>.<span class="bu">format</span>(nama<span class="op">=</span>nama_lengkap, umur<span class="op">=</span><span class="dv">22</span>)</span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>'Halo nama saya budi budiman, umur saya 22 tahun.'</code></pre>
+</div>
+</div>
+<p>Selain 2 pendekatan di atas, Python juga menyediakan fitur yang biasa disebut sebagai <code>f-string</code>. Fitur ini biasa digunakan karena dapat menyederhanakan penulisan <em>code</em>.</p>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ss">f"Halo nama saya </span><span class="sc">{</span>nama_lengkap<span class="sc">}</span><span class="ss">, umur saya </span><span class="sc">{</span><span class="dv">22</span><span class="sc">}</span><span class="ss"> tahun."</span></span></code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>'Halo nama saya budi budiman, umur saya 22 tahun.'</code></pre>
+</div>
+</div>
 
 
 
