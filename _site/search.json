@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Tentang Saya",
+    "section": "",
+    "text": "Mahasiswa tingkat akhir yang tertarik dengan pemrograman, data analysis dan sistem operasi Linux.\n\n\n\n\n\n\n  \n\n\n\n\n5 Alasan Menggunakan Linux Sebagai Daily Driver\n\n\n\n\n\n\n\n\n04/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n3 min\n\n\n\n\n\n\n  \n\n\n\n\nBahasa Python - Alasannya Layak untuk Dipelajari\n\n\n\n\n\n\n\n\n12/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlogDen\n\n\n\n\n\n\n\n\n0 min\n\n\n\n\n\n\n  \n\n\n\n\nFilter Data Menggunakan Pandas\n\n\n\n\n\n\n\n\n25/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\nMembuat, Membaca dan Mengedit File Menggunakan Python\n\n\n\n\n\n\n\n\n05/10/22\n\n\nPandu Mulya Muhammad Syah\n\n\n3 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPemanfaatan I/O Sederhana pada Python\n\n\n\n\n\n\n\n\n30/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\nPengenalan Dasar-dasar Pandas\n\n\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPengenalan Pandas DataFrame\n\n\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPengolahan Data Menggunakan Pandas - Part 1\n\n\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\nPython Environtmen - Media Utama dalam Pengembangan Program Python\n\n\n\n\n\n\n\n\n19/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\nRangkuman Pengolahan Data Tipe String Menggunakan Python\n\n\n\n\n\n\n\n\n21/10/22\n\n\nPandu Mulya Muhammad Syah\n\n\n2 min\n\n\n\n\n\n\nTidak ada item yang cocok"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "BlogDen",
@@ -7,39 +14,74 @@
     "text": "Rangkuman Pengolahan Data Tipe String Menggunakan Python\n\n\n\n\n\n\n\n\n\n21/10/22\n\n\nPandu Mulya Muhammad Syah\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\nMembuat, Membaca dan Mengedit File Menggunakan Python\n\n\n\n\n\n\n\n\n\n05/10/22\n\n\nPandu Mulya Muhammad Syah\n\n\n3 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPemanfaatan I/O Sederhana pada Python\n\n\n\n\n\n\n\n\n\n30/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\nFilter Data Menggunakan Pandas\n\n\n\n\n\n\n\n\n\n25/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\nPengenalan Dasar-dasar Pandas\n\n\n\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPengenalan Pandas DataFrame\n\n\n\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPengolahan Data Menggunakan Pandas - Part 1\n\n\n\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\nPython Environtmen - Media Utama dalam Pengembangan Program Python\n\n\n\n\n\n\n\n\n\n19/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\nBahasa Python - Alasannya Layak untuk Dipelajari\n\n\n\n\n\n\n\n\n\n12/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\n5 Alasan Menggunakan Linux Sebagai Daily Driver\n\n\n\n\n\n\n\n\n\n04/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n3 min\n\n\n\n\n\n\nTidak ada item yang cocok"
   },
   {
-    "objectID": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html",
-    "href": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html",
-    "title": "Pengolahan Data Menggunakan Pandas - Part 1",
+    "objectID": "posts/2022-08-04-5-alasan-menggunakan-linux-sebagai-daily-driver/5-alasan-menggunakan-linux-sebagai-daily-driver.html",
+    "href": "posts/2022-08-04-5-alasan-menggunakan-linux-sebagai-daily-driver/5-alasan-menggunakan-linux-sebagai-daily-driver.html",
+    "title": "5 Alasan Menggunakan Linux Sebagai Daily Driver",
     "section": "",
-    "text": "Pandas menjadi salah satu library yang banyak digunakan dalam pemrosesan data karena memiliki banyak fitur yang mendukung. Penggunaan bahasa pemrograman dalam pemrosesan data menjadi pilihan yang baik terutama jika data yang diolah memiliki ukuran yang besar dan variasi yang beragam. Pada artikel ini akan dijelaskan secara ringkah penggunaan Pandas dalam pemrosesan data mulai dari pembacaan hingga pembuatan berkas hasil pengolahan."
+    "text": "Hampir 2 tahun yang lalu saya memutuskan untuk berpindah dari Windows ke sistem operasi berbasis Linux seperti Ubuntu atau Manjaro. Keputusan ini didasari karena kondisi device yang tidak memungkinkan untuk digunakan sebagai daily driver karena keterbatasan spesifikasi device. Usia device yang hampir mencapai masa layannya disertai keterbatasan dalam pilihan upgrade bagian device menjadi alasan utama, di lain sisi harga lisensi Windows 10 yang termasuk tidak murah ikut menjadi bahan pertimbangan kala itu. Setelah mencari beberapa solusi, akhirnya saya memutuskan untuk berpindah ke sistem operasi berbasis Linux karena dapat dijalankan pada device dengan spesifikasi low-end serta lisensi yang bersifat free dan open source. Selama menggunakan Linux berbagai pengalaman sudah saya alami mulai dari adaptasi sistem folder yang berbeda dengan Windows, pembiasaan menggunakan Command Line Interface (CLI), troubleshooting jika terjadi masalah hingga nge-custom tampilan distro yang saya gunakan agar terlihat lebih menarik dan nyaman untuk dipakai. Sebagai daily driver, Linux mampu memenuhi hampir seluruh kebutuhan saya sebagai mahasiswa kala itu. Ketersediaan alternatif aplikasi untuk kebutuhan pengolahan dokumen seperti Libreoffice cukup membantu dalam menyelesaikan tugas-tugas perkuliahan. Compatible terhadap berbagai bahasa pemrograman menjadi kelebihan tersendiri yang turut memudahkan aktivitas saya selama mengerjakan tugas tertentu. Selain itu ada beberapa alasan lainnya Linux cocok digunakan sebagai daily driver, di antaranya:\n\nFree and Open Source. Sistem operasi berbasi Linux termasuk ke dalam Free and Open Source Software di mana pengguna dapat bebas menggunakan perangkat lunak tersebut sesuai kebutuhan dan tujuan apapun serta source code yang terbuka untuk umum sehingga dapat diakses oleh banyak orang. Kelebihan dari perangkat lunak yang termasuk ke dalam ini adalah pengguna dapat dengan bebas menggunakan, belajar, memodifikasi source code sesuai kebutuhan pengguna serta mendistribusikan kembali perangkat lunak tersebut terlepas dari adanya aktivitas modifikasi atau tidak. Selain itu, sifatnya yang terbuka untuk umum menjadikan perangkat lunak tersebut memiliki tingkat keamanan yang tinggi dibanding perangkat lunak milik individu (proprietary software) karena tidak dapat menyembunyikan fitur tertentu di dalam source code-nya. Di samping itu, kehadiran open source mengundang banyak software developer yang tertarik untuk mengembangkan software tersebut menjadi lebih baik lagi (Boval, 2019).\nDapat dijalankan pada device dengan spesifikasi low-end. Permasalahan spesifikasi device yang tidak mencukupi untuk menjalankan sistem operasi Windows 10 menyebabkan banyak device lama (umur 5 - 10 tahun) tidak mampu menjalankannya. Hal ini menjadi dilema tersendiri bagi pengguna laptop atau komputer lama antara membeli perangkat baru atau upgarding beberapa bagian pada device mereka. Berbeda dengan Windows, sistem operasi berbasis Linux mampu dijalankan pada perangkat lama karena sebagian developer telah memodifikasi OS ini agar dapat dijalankan pada perangkat dengan spesifikasi low-end. OS berbasis Linux yang banyak beredar saat ini berada dalam bentuk distro, di mana sekelompok developer memodifikasi source code awal untuk disesuaikan dengan kebutuhanan mereka. Salah satu distro yang dapat dijalankan pada device lama adalah Xubuntu, Lubuntu, Zorin OS Lite, Arch Linux, BunshenLabs Linux Lithium, dan Puppy Linux (Cawley, 2022).\nCompatible untuk programming. Secara umum Linux mendukung banyak bahasa pemrograman (Python, C++, C, R, dll.) sehingga cocok digunakan untuk programming. Selain itu, fitur package manager (pacman dan apt) pada Linux memberikan kemudahan bagi pengguna jika ingin meng-install suatu aplikasi melalui terminal. Kehadiran software pendukung programming seperti curl dan git. juga menjadi kelebihan tersendiri pada Linux–mengingat kemudahan yang ditawarkan dalam proses instalasi dibanding sistem operasi lainnya jika software tersebut tidak terpasang pada perangkat. Terminal pada Linux juga memiliki fitur automasi berupa bash scripting yang merupakan sebuah script berisi kumpulan perintah untuk menjalankan suatu tugas. Terminal bawaan pada Windows (PowerShell atau Command Prompt) tidak memiliki keefektifan automasi seperti terminal pada Linux sehingga perlu instalasi software tertentu (emulator atau WSL).\nHighly customable. Linux dapat di-custom sesuai kebutuhan dan keinginan penggunanya mulai dari penyesuaian tampilan seperti penggantian theme, icons, wallpaper dan aplikasi pendukung lainnya hingga mendesain sistem operasi tersebut untuk tujuan tertentu seperi lightweight distribution (Xubuntu dan Lubuntu) agar dapat dijalankan pada perangkat lama.\nMemiliki kontrol penuh terhadap sistem operasi. Pengguna Linux dapat juga bertindak sebagai admin bagi sistem operasinya di mana pengguna diberikan kontrol penuh terhadap perangkat yang dia jalankan. Salah satu contohnya adalah pengguna dapat menghapus aplikasi bawaan yang sekiranya tidak berguna. Hal ini akan memberikan ruang penyimpanan lebih besar bagi device terutama yang memiliki spesifikasi low-end.\n\n\n\n\n\n\n\n\n\n\n\nTidak ada item yang cocok\n\nReferensi\n\nBoval, M. (2019, Juli 8). Apa Itu Free and Open Source Software? https://mochboval.wordpress.com/2019/07/08/apa-itu-free-and-open-source-software/\n\n\nCawley, C. (2022, Juni 4). 10 Lightweight Linux Distributions to Give Your Old PC New Life. https://www.makeuseof.com/tag/6-lightweight-linux-distributions-give-pc-lease-life/\n\nReusehttps://creativecommons.org/licenses/by/4.0/deed.idSitasiSitasi BibTeX:@online{mulyamuhammadsyah2022,\n  author = {Pandu Mulya Muhammad Syah},\n  title = {5 Alasan Menggunakan Linux Sebagai Daily Driver},\n  date = {2022-04-08},\n  langid = {id}\n}\nSebagai atribusi, silahkan mengutip karya ini sebagai:\nPandu Mulya Muhammad Syah. (2022, April 8). 5 Alasan Menggunakan\nLinux Sebagai Daily Driver."
   },
   {
-    "objectID": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#pembacaan-data",
-    "href": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#pembacaan-data",
-    "title": "Pengolahan Data Menggunakan Pandas - Part 1",
-    "section": "Pembacaan data",
-    "text": "Pembacaan data\nData dalam bentuk file seperti csv, json maupun xlsx dapat dibaca menggunakan Pandas menggunakan metode yang tersedia. Data yang digunakan berada dalam format xlsx dan memiliki nama data_anggota.xlsx, untuk membaca file tersebut digunakan metode read_excel().\n{bash, echo=FALSE} ls *xlsx\n\nfrom pandas import read_excel\ndf = read_excel('data_anggota.xlsx')\ndf\n\n\n\n\n\n  \n    \n      \n      nama_depan\n      nama_belakang\n    \n  \n  \n    \n      0\n      Ani\n      Lestari\n    \n    \n      1\n      Budi\n      Hermawan\n    \n    \n      2\n      Cindy\n      Amara\n    \n    \n      3\n      Dodi\n      Mulyanto\n    \n    \n      4\n      Eka\n      Saputra"
+    "objectID": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html",
+    "href": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html",
+    "title": "Bahasa Python - Alasannya Layak untuk Dipelajari",
+    "section": "",
+    "text": "Python merupakan salah satu bahasa pemrograman yang populer dalam dekade belakangan ini. Bahasa yang digagas oleh Guido Van Rossum pada tahun 1991 ini berfokus pada code readability (keterbacaan program) yang memberikan kemudahan kepada pengguna untuk belajar dan mengembangkannya (Python Language advantages and applications, 2017). Hal ini didukung karena Python termasuk ke dalam high-level language (memiliki syntax atau aturan penulisan program yang mirip seperti Bahasa Ingris: print, import, for i in range(5), if 3 < 4:..., dll.) dan interpreted language (cenderung lebih fleksibel yang menjadikan pengguna lebih leluasa dalam membuat sebuah program) (Isaac computer science, t.t.; Python Language advantages and applications, 2017)."
   },
   {
-    "objectID": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#menambah-kolom",
-    "href": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#menambah-kolom",
-    "title": "Pengolahan Data Menggunakan Pandas - Part 1",
-    "section": "Menambah kolom",
-    "text": "Menambah kolom\nPada DataFrame di atas akan ditambahkan kolom baru yang berisi nama lengkap dari masing-masing anggota. Karena tipe data pada kolom nama depan dan belakang sama (str atau object) langkah pemrosesan tipe data str dapat dilakukan seperti di bawah ini.\n\ndf['nama_lengkap'] = df.nama_depan + ' ' + df.nama_belakang\ndf['email'] = df.nama_depan.str.lower() + '.' + df.nama_belakang.str.lower() + '@mail.com'\ndf\n\n\n\n\n\n  \n    \n      \n      nama_depan\n      nama_belakang\n      nama_lengkap\n      email\n    \n  \n  \n    \n      0\n      Ani\n      Lestari\n      Ani Lestari\n      ani.lestari@mail.com\n    \n    \n      1\n      Budi\n      Hermawan\n      Budi Hermawan\n      budi.hermawan@mail.com\n    \n    \n      2\n      Cindy\n      Amara\n      Cindy Amara\n      cindy.amara@mail.com\n    \n    \n      3\n      Dodi\n      Mulyanto\n      Dodi Mulyanto\n      dodi.mulyanto@mail.com\n    \n    \n      4\n      Eka\n      Saputra\n      Eka Saputra\n      eka.saputra@mail.com\n    \n  \n\n\n\n\nSelain nama lengkap, kolom email juga dapat ditambahkan. Kolom email memiliki format penawaan nama_depan.nama_belakang@mail.com, metode str.lower() pada contoh di atas berfungsi untuk membuat setiap karakter menjadi huruf kecil."
+    "objectID": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html#penggunaan-python-dalam-dunia-industri",
+    "href": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html#penggunaan-python-dalam-dunia-industri",
+    "title": "Bahasa Python - Alasannya Layak untuk Dipelajari",
+    "section": "Penggunaan Python dalam dunia industri",
+    "text": "Penggunaan Python dalam dunia industri\n Sebagai general purpose programming language, Python banyak digunakan pada berbagai bidang mulai dari data analytics, data visualizazion, game development hingga pengembangan website. Ketersediaan library dalam jumlah yang besar disertai komunitas yang mendukung menjadikan Python banyak diminati oleh programmer. Pada masing-masing bidang terdapat libraries yang digemari pengguna karena memiliki banyak fitur mendukung, di antaranya adalah:\n\nNumpy, Pandas, Matplotlib dan Scikit-learn yang umum digunakan pada data analytics, data visualization serta machine learning dan turunannya.\nPyGame dan Kivy untuk keperluan game development dan apps development.\nDjango, Flask dan Selenium yang umum digunakan untuk keperluan pengembangan webapp dan automasinya."
   },
   {
-    "objectID": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#format-csv",
-    "href": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#format-csv",
-    "title": "Pengolahan Data Menggunakan Pandas - Part 1",
-    "section": "Format CSV",
-    "text": "Format CSV\n\ndf.to_csv('hasil_pengolahan.csv', index=False)"
+    "objectID": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html#alasan-python-layak-untuk-dipelajari",
+    "href": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html#alasan-python-layak-untuk-dipelajari",
+    "title": "Bahasa Python - Alasannya Layak untuk Dipelajari",
+    "section": "Alasan Python layak untuk dipelajari",
+    "text": "Alasan Python layak untuk dipelajari\nDikutip dari (FutureLearn, 2021) terdapat beberap alasan Python layak untuk dipelajari, di anataranya:\n\nMudah untuk digunakan terlebih bagi mereka yang baru belajar dasar-dasar pemrograman.\nMemiliki syntax yang mirip dengan Bahasa Inggris yang memudahkan pengguna untuk belajar dan memahami program yang dibuat.\nTerdapat banyak library pendukung untuk berbagai keperluan. Hal ini disebabkan Python yang tergolong ke dalam open-source language sehingga memiliki komunitas yang besar dan banyaknya pengguna berkontribusi dalam pengembangan library tertentu.\nFleksibel digunakan untuk keperluan apa pun mulai dari pengembangan aplikasi atau website hingga tugas perkuliahan."
   },
   {
-    "objectID": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#format-xlsx",
-    "href": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#format-xlsx",
-    "title": "Pengolahan Data Menggunakan Pandas - Part 1",
-    "section": "Format XLSX",
-    "text": "Format XLSX\n\ndf.to_excel('hasil_pengolahan.xlsx', index=False)\n\n{bash, echo=FALSE} ls hasil_pengolahan*"
+    "objectID": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html#keharusan-belajar-python",
+    "href": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html#keharusan-belajar-python",
+    "title": "Bahasa Python - Alasannya Layak untuk Dipelajari",
+    "section": "Keharusan belajar Python",
+    "text": "Keharusan belajar Python\nDengan kemajuan teknologi informasi dan penggunaan media sosial yang masif menyebabkan banyak sumber materi pembelajarn Python di berbagai media seperti Youtube dan course dari lembaga tertentu baik yang gratis maupun berbayar. Beberapa kanal YouTube seperti Indonesia Belajar, Dea Afrizal, Corey Schafer dan Tech With Tim merangkum materi mendasar Python untuk pemula. Free courses seperti FreeCodeCamp dan Kaggel memiliki cakupan materi pengelan dasar Python hingga penerapannya di bidang webapp dan machine learning. Melihat penerapan Python yang luas di berbagai bidang dan ketersediaan resources materi cukup menjadi alasan seseorang mempelajari bahasa tersebut. Terlebih di era digital ini kemampuan programming sangat dibutuhkan dalam kegiatan industri."
+  },
+  {
+    "objectID": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html",
+    "href": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html",
+    "title": "Python Environtmen - Media Utama dalam Pengembangan Program Python",
+    "section": "",
+    "text": "Kepopuleran Python sebagai bahasa yang banyak digunakan pada saat ini tidak lepas dari pengaruh ketersediaan media atau tools yang digunakan untuk pengembangan program Python. Kebanyakan pengguna dapat memilih antara memakai IDE, Code/Text Editor atau menggunakan Online Tools yang dapat dijalankan melalui browser selama terkoneksi dengan internet."
+  },
+  {
+    "objectID": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#pycharm",
+    "href": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#pycharm",
+    "title": "Python Environtmen - Media Utama dalam Pengembangan Program Python",
+    "section": "PyCharm",
+    "text": "PyCharm\n\nMerupakan IDE keluaran JetBrain yang terdedikasi untuk Python developer. Fitur pada IDE ini berfokus pada penyediaan environment dalam pengembangan Python, web dan data science. Terdapat beberapa pilihan versi IDE yang dapat diambil baik yang open-source maupun yang berbayar. Selain Python, IDE ini juga mendukung bahasa lainnya seperti bahasa HTML, CSS, JavaScript dan R. PyCharm menyediakan plugin tersendiri untuk memudahkan konfigurasi masing-masing bahasa. PyCharm dapat dijalankan pada sistem operasi pada umumnya seperti Windows, Linux dan MacOS. Selama device yang digunakan memiliki 4GB ram, disk space lebih dari 2.5GB hingga resolusi layar minimum 1024x768 PyCharm dapat dijalankan pada device tersebut (Get started, 2022)."
+  },
+  {
+    "objectID": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#anaconda",
+    "href": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#anaconda",
+    "title": "Python Environtmen - Media Utama dalam Pengembangan Program Python",
+    "section": "Anaconda",
+    "text": "Anaconda\n\nMerupakan IDE Python yang berfokus pada pengembangan data science. IDE ini sudah dilengkapi beberapa libraries yang umum digunakan dalam kegiatan data science seperti numpy, pandas, matplotlib dan scikit-learn. Beberapa fitur menarik telah terpapasang pada IDE ini seperti packet manager Conda yang mudah digunakan untuk instalasi Python libraries serta pengaturan virtual environment. Selain itu juga terdapat Anaconda Navigator yang merupakan aplikasi desktop berfungsi mengatur integrated application, libraries dan python environment tanpa perlu menggunakan Command Line Interface (CLI). Anaconda juga dilengkapi fitur Cloud Environment Backup sebagai mendia penyimpanan local environment. Dari versi distribusi yang tersedia, pengguna dapat memilih open source distribution atau paid version (Anaconda distribution, t.t.).\n\n\n\nAnaconda Navigation"
+  },
+  {
+    "objectID": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#vs-code",
+    "href": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#vs-code",
+    "title": "Python Environtmen - Media Utama dalam Pengembangan Program Python",
+    "section": "VS Code",
+    "text": "VS Code\nMerupakan code editor keluaran Microsoft. Dapat dijalankan pada Windows, MacOS dan linux. Memiliki fitur penambahan extension yang memudahkan pengguna untuk meng-custom code editor sesuai kebutuhannya. Terdapat banyak extension yang tersedia untuk berbagai bahasa pemrograman. Selain itu juga tersedia extension yang berfokus pada workflow seperti git dan tampilan editor seperti color scheme dan icon.\n\n\n\nTampilan VS Code"
+  },
+  {
+    "objectID": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#neovim",
+    "href": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#neovim",
+    "title": "Python Environtmen - Media Utama dalam Pengembangan Program Python",
+    "section": "NeoVim",
+    "text": "NeoVim\nNeovim merupakan code editor berbasis Vim yang didesain untuk ekstensibilitas dan kegunaan serta mendorong pengguna baru untuk ikut berkontribusi (Neovim, t.t.). Merupakan project open source yang dijalankan oleh komunitas untuk mengembangkan neovim menjadi lebih baik lagi. Memiliki banyak plugin yang dapat dipasang untuk memudahkan programmer. Ribuan plugin dapat dilihat pada Vim Awesome. Memiliki ciri khas tidak bergantung pada mouse selama dijalankan dan terdapat banyak shortcut atau key binding yang memudahkan programmer menjalankan tugasnya. Hal ini menyebabkan workflow programmer lebih efisien karena menjaga tangannya tetap berada di atas keyboard.\n\n\n\nTampilan Neovim"
   },
   {
     "objectID": "posts/2022-09-24-pengenalan-dasar-dasar-pandas/pengenalan-dasar-dasar-pandas.html#ukuran-dataset",
@@ -91,123 +133,60 @@
     "text": "Nilai kuantil\nNilai kuantil dapat ditentukan dengan metode .quantile(). Q10, Q20 maupun Q30 bisa diketahui dengan memasukkan parameter pada metode .quantile(.10), .quantile(.20) dan .quantile(.30) untuk masing-masing nilai kuantil yang ingin dicari.\n\nprint(f'Nilai Q10: {df.age.quantile(.10)}')\nprint(f'Nilai Q20: {df.age.quantile(.20)}')\nprint(f'Nilai Q30: {df.age.quantile(.30)}')\n\nNilai Q10: 14.0\nNilai Q20: 19.0\nNilai Q30: 22.0"
   },
   {
-    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#membuat-writing-file",
-    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#membuat-writing-file",
-    "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
-    "section": "Membuat (writing) file",
-    "text": "Membuat (writing) file\n\nwith open('simpel.txt', 'w') as teks:\n   teks.write('Baris satu\\n')\n   teks.write('Baris dua\\n')\n\nProgram di atas ditujukan untuk membuat file dengan nama simpel.txt menggunakan fungsi open(). Statmen with digunakan untuk mengimplementasikan context manager pada Python. Terlihat pada kode di atas mode w digunakan untuk menulis file baru. Metode write() digunakan untuk menulis isi pada file tersebut."
-  },
-  {
-    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#membaca-reading-file",
-    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#membaca-reading-file",
-    "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
-    "section": "Membaca (reading) file",
-    "text": "Membaca (reading) file\n\nwith open('simpel.txt', 'r') as teks:\n   print(teks.read())\n\nBaris satu\nBaris dua\n\n\n\nUntuk membaca suatu file dapat menggunakan statmen with yang sama dengan sedikit perubahan pada mode r. Teks pada file tersebut dapat diakses menggunakan metode read()."
-  },
-  {
-    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#menambahkan-isi-file",
-    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#menambahkan-isi-file",
-    "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
-    "section": "Menambahkan isi file",
-    "text": "Menambahkan isi file\n\nwith open('simpel.txt', 'a') as teks:\n   teks.write('Baris tiga\\n')\n\nPenambahan isi file dapat dilakukan dengan menggunakan mode a dan menuliskan baris baru melalui metode .write().\n\nwith open('simpel.txt', 'r') as teks:\n   print(teks.read())\n\nBaris satu\nBaris dua\nBaris tiga"
-  },
-  {
-    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#mengedit-isi-file",
-    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#mengedit-isi-file",
-    "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
-    "section": "Mengedit isi file",
-    "text": "Mengedit isi file\n\nwith open('simpel.txt', 'r') as fl:\n   line = fl.readlines()\nline[1] = line[1].upper()\nbaris_baru = ''.join(line)\n\nwith open('simpel.txt', 'w') as fl:\n   fl.write(baris_baru)\n\nwith open('simpel.txt', 'r') as fl:\n   print(fl.read())\n\nBaris satu\nBARIS DUA\nBaris tiga\n\n\n\nUntuk mengedit isi file pada baris tertentu dapat menggunakan pendektan di atas.\n\nMembaca file, kemudian membuat variabel line yang berisi isi file dalam bentuk list melalui metode readlines().\nMembuat baris kedua pada file menjadi huruf kapital. Langkah ini dapat dilakukan dengan mengganti nilai indeks kedua pada list (bernilai 1 karena indek pada list dimulai dari 0) menggunakan metode upper().\nMembuat file yang sama dengan mengganti isinya dengan nilai yang baru menggunakan variabel baris_baru."
-  },
-  {
-    "objectID": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html",
-    "href": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html",
-    "title": "Python Environtmen - Media Utama dalam Pengembangan Program Python",
+    "objectID": "posts/2022-09-24-pengenalan-pandas-dataframe/pengenalan-pandas-dataframe.html",
+    "href": "posts/2022-09-24-pengenalan-pandas-dataframe/pengenalan-pandas-dataframe.html",
+    "title": "Pengenalan Pandas DataFrame",
     "section": "",
-    "text": "Kepopuleran Python sebagai bahasa yang banyak digunakan pada saat ini tidak lepas dari pengaruh ketersediaan media atau tools yang digunakan untuk pengembangan program Python. Kebanyakan pengguna dapat memilih antara memakai IDE, Code/Text Editor atau menggunakan Online Tools yang dapat dijalankan melalui browser selama terkoneksi dengan internet."
+    "text": "Pandas DataFrame meruapakan salah satu tipe data yang umum digunakan pada Python, terutama dalam analisis data. Dataframe merupakan tipe data dua dimensi, size-mutable (ukurannya dapat berubah), memiliki nilai data yang heterogen (terdiri dari beberapa tipe data seperti int, str dan float). Data ini dapat dibentuk dari dictionary yang berisi key sebagai nama kolom dan value sebagai nilai data pada kolom."
   },
   {
-    "objectID": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#pycharm",
-    "href": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#pycharm",
-    "title": "Python Environtmen - Media Utama dalam Pengembangan Program Python",
-    "section": "PyCharm",
-    "text": "PyCharm\n\nMerupakan IDE keluaran JetBrain yang terdedikasi untuk Python developer. Fitur pada IDE ini berfokus pada penyediaan environment dalam pengembangan Python, web dan data science. Terdapat beberapa pilihan versi IDE yang dapat diambil baik yang open-source maupun yang berbayar. Selain Python, IDE ini juga mendukung bahasa lainnya seperti bahasa HTML, CSS, JavaScript dan R. PyCharm menyediakan plugin tersendiri untuk memudahkan konfigurasi masing-masing bahasa. PyCharm dapat dijalankan pada sistem operasi pada umumnya seperti Windows, Linux dan MacOS. Selama device yang digunakan memiliki 4GB ram, disk space lebih dari 2.5GB hingga resolusi layar minimum 1024x768 PyCharm dapat dijalankan pada device tersebut (Get started, 2022)."
+    "objectID": "posts/2022-09-24-pengenalan-pandas-dataframe/pengenalan-pandas-dataframe.html#membuat-dataframe-dari-dict",
+    "href": "posts/2022-09-24-pengenalan-pandas-dataframe/pengenalan-pandas-dataframe.html#membuat-dataframe-dari-dict",
+    "title": "Pengenalan Pandas DataFrame",
+    "section": "Membuat DataFrame dari dict",
+    "text": "Membuat DataFrame dari dict\n\nfrom pandas import DataFrame\nd = {\n    'nama': ['Ani', 'Budi', 'Cindy', 'Doni', 'Eka'],\n    'umur': [20, 22, 19, 23, 21],\n    'gender': ['P', 'L', 'P', 'L', 'L']\n}\n\ndf = DataFrame(d)\ndf\n\n\n\n\n\n  \n    \n      \n      nama\n      umur\n      gender\n    \n  \n  \n    \n      0\n      Ani\n      20\n      P\n    \n    \n      1\n      Budi\n      22\n      L\n    \n    \n      2\n      Cindy\n      19\n      P\n    \n    \n      3\n      Doni\n      23\n      L\n    \n    \n      4\n      Eka\n      21\n      L\n    \n  \n\n\n\n\nIndeks atau indikasi baris pada tabel di atas dapat dirubah dengan menambahkan parameter index yang berisi list.\n\nbaris = ['satu', 'dua', 'tiga', 'empat', 'lima']\ndf = DataFrame(d, index=baris)\ndf\n\n\n\n\n\n  \n    \n      \n      nama\n      umur\n      gender\n    \n  \n  \n    \n      satu\n      Ani\n      20\n      P\n    \n    \n      dua\n      Budi\n      22\n      L\n    \n    \n      tiga\n      Cindy\n      19\n      P\n    \n    \n      empat\n      Doni\n      23\n      L\n    \n    \n      lima\n      Eka\n      21\n      L"
   },
   {
-    "objectID": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#anaconda",
-    "href": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#anaconda",
-    "title": "Python Environtmen - Media Utama dalam Pengembangan Program Python",
-    "section": "Anaconda",
-    "text": "Anaconda\n\nMerupakan IDE Python yang berfokus pada pengembangan data science. IDE ini sudah dilengkapi beberapa libraries yang umum digunakan dalam kegiatan data science seperti numpy, pandas, matplotlib dan scikit-learn. Beberapa fitur menarik telah terpapasang pada IDE ini seperti packet manager Conda yang mudah digunakan untuk instalasi Python libraries serta pengaturan virtual environment. Selain itu juga terdapat Anaconda Navigator yang merupakan aplikasi desktop berfungsi mengatur integrated application, libraries dan python environment tanpa perlu menggunakan Command Line Interface (CLI). Anaconda juga dilengkapi fitur Cloud Environment Backup sebagai mendia penyimpanan local environment. Dari versi distribusi yang tersedia, pengguna dapat memilih open source distribution atau paid version (Anaconda distribution, t.t.).\n\n\n\nAnaconda Navigation"
+    "objectID": "posts/2022-09-24-pengenalan-pandas-dataframe/pengenalan-pandas-dataframe.html#membuat-dataframe-dari-numpy-ndarray",
+    "href": "posts/2022-09-24-pengenalan-pandas-dataframe/pengenalan-pandas-dataframe.html#membuat-dataframe-dari-numpy-ndarray",
+    "title": "Pengenalan Pandas DataFrame",
+    "section": "Membuat DataFrame dari numpy ndarray",
+    "text": "Membuat DataFrame dari numpy ndarray\n\nfrom numpy import array\ndata = [\n    ['Ani', 'Budi', 'Cindy', 'Doni', 'Eka'],\n    [20, 22, 19, 23, 21],\n    ['P', 'L', 'P', 'L', 'L']\n]\ndf = DataFrame(array(data))\ndf\n\n\n\n\n\n  \n    \n      \n      0\n      1\n      2\n      3\n      4\n    \n  \n  \n    \n      0\n      Ani\n      Budi\n      Cindy\n      Doni\n      Eka\n    \n    \n      1\n      20\n      22\n      19\n      23\n      21\n    \n    \n      2\n      P\n      L\n      P\n      L\n      L\n    \n  \n\n\n\n\nBaris dan kolom pada tabel di atas disesuaikan dengan baris dan kolom pada numpy ndarray di mana setiap list yang berada di dalam data merupakan baris sedangkan nilai pada masing-masing list tersebut merupakan kolom. Untuk mengubah tampilan tabel tersebut sesuai dengan tabel pada tabel sebelumnya, atribut transpose dapat digunakan (menjadikan baris sebagai kolom, begitu juga sebaliknya).\n\ndf = df.T\ndf.columns = ['nama', 'umur', 'gender']\ndf.index = baris\ndf\n\n\n\n\n\n  \n    \n      \n      nama\n      umur\n      gender\n    \n  \n  \n    \n      satu\n      Ani\n      20\n      P\n    \n    \n      dua\n      Budi\n      22\n      L\n    \n    \n      tiga\n      Cindy\n      19\n      P\n    \n    \n      empat\n      Doni\n      23\n      L\n    \n    \n      lima\n      Eka\n      21\n      L\n    \n  \n\n\n\n\nBaris dan kolom pada DataFrame dapat diubah setelah dibuat dengan menetapakan atribut .columns dan .index dengan nilai baru yang ingin digunakan. Nilai baru tersebut biasa dalam bentuk tipe data list."
   },
   {
-    "objectID": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#vs-code",
-    "href": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#vs-code",
-    "title": "Python Environtmen - Media Utama dalam Pengembangan Program Python",
-    "section": "VS Code",
-    "text": "VS Code\nMerupakan code editor keluaran Microsoft. Dapat dijalankan pada Windows, MacOS dan linux. Memiliki fitur penambahan extension yang memudahkan pengguna untuk meng-custom code editor sesuai kebutuhannya. Terdapat banyak extension yang tersedia untuk berbagai bahasa pemrograman. Selain itu juga tersedia extension yang berfokus pada workflow seperti git dan tampilan editor seperti color scheme dan icon.\n\n\n\nTampilan VS Code"
-  },
-  {
-    "objectID": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#neovim",
-    "href": "posts/2022-08-19-python-environtmen-media-utama-dalam-pengembangan-program-python/python-environtmen-media-utama-dalam-pengembangan-program-python.html#neovim",
-    "title": "Python Environtmen - Media Utama dalam Pengembangan Program Python",
-    "section": "NeoVim",
-    "text": "NeoVim\nNeovim merupakan code editor berbasis Vim yang didesain untuk ekstensibilitas dan kegunaan serta mendorong pengguna baru untuk ikut berkontribusi (Neovim, t.t.). Merupakan project open source yang dijalankan oleh komunitas untuk mengembangkan neovim menjadi lebih baik lagi. Memiliki banyak plugin yang dapat dipasang untuk memudahkan programmer. Ribuan plugin dapat dilihat pada Vim Awesome. Memiliki ciri khas tidak bergantung pada mouse selama dijalankan dan terdapat banyak shortcut atau key binding yang memudahkan programmer menjalankan tugasnya. Hal ini menyebabkan workflow programmer lebih efisien karena menjaga tangannya tetap berada di atas keyboard.\n\n\n\nTampilan Neovim"
-  },
-  {
-    "objectID": "posts/2022-08-04-5-alasan-menggunakan-linux-sebagai-daily-driver/5-alasan-menggunakan-linux-sebagai-daily-driver.html",
-    "href": "posts/2022-08-04-5-alasan-menggunakan-linux-sebagai-daily-driver/5-alasan-menggunakan-linux-sebagai-daily-driver.html",
-    "title": "5 Alasan Menggunakan Linux Sebagai Daily Driver",
+    "objectID": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html",
+    "href": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html",
+    "title": "Pengolahan Data Menggunakan Pandas - Part 1",
     "section": "",
-    "text": "Hampir 2 tahun yang lalu saya memutuskan untuk berpindah dari Windows ke sistem operasi berbasis Linux seperti Ubuntu atau Manjaro. Keputusan ini didasari karena kondisi device yang tidak memungkinkan untuk digunakan sebagai daily driver karena keterbatasan spesifikasi device. Usia device yang hampir mencapai masa layannya disertai keterbatasan dalam pilihan upgrade bagian device menjadi alasan utama, di lain sisi harga lisensi Windows 10 yang termasuk tidak murah ikut menjadi bahan pertimbangan kala itu. Setelah mencari beberapa solusi, akhirnya saya memutuskan untuk berpindah ke sistem operasi berbasis Linux karena dapat dijalankan pada device dengan spesifikasi low-end serta lisensi yang bersifat free dan open source. Selama menggunakan Linux berbagai pengalaman sudah saya alami mulai dari adaptasi sistem folder yang berbeda dengan Windows, pembiasaan menggunakan Command Line Interface (CLI), troubleshooting jika terjadi masalah hingga nge-custom tampilan distro yang saya gunakan agar terlihat lebih menarik dan nyaman untuk dipakai. Sebagai daily driver, Linux mampu memenuhi hampir seluruh kebutuhan saya sebagai mahasiswa kala itu. Ketersediaan alternatif aplikasi untuk kebutuhan pengolahan dokumen seperti Libreoffice cukup membantu dalam menyelesaikan tugas-tugas perkuliahan. Compatible terhadap berbagai bahasa pemrograman menjadi kelebihan tersendiri yang turut memudahkan aktivitas saya selama mengerjakan tugas tertentu. Selain itu ada beberapa alasan lainnya Linux cocok digunakan sebagai daily driver, di antaranya:\n\nFree and Open Source. Sistem operasi berbasi Linux termasuk ke dalam Free and Open Source Software di mana pengguna dapat bebas menggunakan perangkat lunak tersebut sesuai kebutuhan dan tujuan apapun serta source code yang terbuka untuk umum sehingga dapat diakses oleh banyak orang. Kelebihan dari perangkat lunak yang termasuk ke dalam ini adalah pengguna dapat dengan bebas menggunakan, belajar, memodifikasi source code sesuai kebutuhan pengguna serta mendistribusikan kembali perangkat lunak tersebut terlepas dari adanya aktivitas modifikasi atau tidak. Selain itu, sifatnya yang terbuka untuk umum menjadikan perangkat lunak tersebut memiliki tingkat keamanan yang tinggi dibanding perangkat lunak milik individu (proprietary software) karena tidak dapat menyembunyikan fitur tertentu di dalam source code-nya. Di samping itu, kehadiran open source mengundang banyak software developer yang tertarik untuk mengembangkan software tersebut menjadi lebih baik lagi (Boval, 2019).\nDapat dijalankan pada device dengan spesifikasi low-end. Permasalahan spesifikasi device yang tidak mencukupi untuk menjalankan sistem operasi Windows 10 menyebabkan banyak device lama (umur 5 - 10 tahun) tidak mampu menjalankannya. Hal ini menjadi dilema tersendiri bagi pengguna laptop atau komputer lama antara membeli perangkat baru atau upgarding beberapa bagian pada device mereka. Berbeda dengan Windows, sistem operasi berbasis Linux mampu dijalankan pada perangkat lama karena sebagian developer telah memodifikasi OS ini agar dapat dijalankan pada perangkat dengan spesifikasi low-end. OS berbasis Linux yang banyak beredar saat ini berada dalam bentuk distro, di mana sekelompok developer memodifikasi source code awal untuk disesuaikan dengan kebutuhanan mereka. Salah satu distro yang dapat dijalankan pada device lama adalah Xubuntu, Lubuntu, Zorin OS Lite, Arch Linux, BunshenLabs Linux Lithium, dan Puppy Linux (Cawley, 2022).\nCompatible untuk programming. Secara umum Linux mendukung banyak bahasa pemrograman (Python, C++, C, R, dll.) sehingga cocok digunakan untuk programming. Selain itu, fitur package manager (pacman dan apt) pada Linux memberikan kemudahan bagi pengguna jika ingin meng-install suatu aplikasi melalui terminal. Kehadiran software pendukung programming seperti curl dan git. juga menjadi kelebihan tersendiri pada Linux–mengingat kemudahan yang ditawarkan dalam proses instalasi dibanding sistem operasi lainnya jika software tersebut tidak terpasang pada perangkat. Terminal pada Linux juga memiliki fitur automasi berupa bash scripting yang merupakan sebuah script berisi kumpulan perintah untuk menjalankan suatu tugas. Terminal bawaan pada Windows (PowerShell atau Command Prompt) tidak memiliki keefektifan automasi seperti terminal pada Linux sehingga perlu instalasi software tertentu (emulator atau WSL).\nHighly customable. Linux dapat di-custom sesuai kebutuhan dan keinginan penggunanya mulai dari penyesuaian tampilan seperti penggantian theme, icons, wallpaper dan aplikasi pendukung lainnya hingga mendesain sistem operasi tersebut untuk tujuan tertentu seperi lightweight distribution (Xubuntu dan Lubuntu) agar dapat dijalankan pada perangkat lama.\nMemiliki kontrol penuh terhadap sistem operasi. Pengguna Linux dapat juga bertindak sebagai admin bagi sistem operasinya di mana pengguna diberikan kontrol penuh terhadap perangkat yang dia jalankan. Salah satu contohnya adalah pengguna dapat menghapus aplikasi bawaan yang sekiranya tidak berguna. Hal ini akan memberikan ruang penyimpanan lebih besar bagi device terutama yang memiliki spesifikasi low-end.\n\n\n\n\n\n\n\n\n\n\n\nTidak ada item yang cocok\n\nReferensi\n\nBoval, M. (2019, Juli 8). Apa Itu Free and Open Source Software? https://mochboval.wordpress.com/2019/07/08/apa-itu-free-and-open-source-software/\n\n\nCawley, C. (2022, Juni 4). 10 Lightweight Linux Distributions to Give Your Old PC New Life. https://www.makeuseof.com/tag/6-lightweight-linux-distributions-give-pc-lease-life/\n\nReusehttps://creativecommons.org/licenses/by/4.0/deed.idSitasiSitasi BibTeX:@online{mulyamuhammadsyah2022,\n  author = {Pandu Mulya Muhammad Syah},\n  title = {5 Alasan Menggunakan Linux Sebagai Daily Driver},\n  date = {2022-04-08},\n  langid = {id}\n}\nSebagai atribusi, silahkan mengutip karya ini sebagai:\nPandu Mulya Muhammad Syah. (2022, April 8). 5 Alasan Menggunakan\nLinux Sebagai Daily Driver."
+    "text": "Pandas menjadi salah satu library yang banyak digunakan dalam pemrosesan data karena memiliki banyak fitur yang mendukung. Penggunaan bahasa pemrograman dalam pemrosesan data menjadi pilihan yang baik terutama jika data yang diolah memiliki ukuran yang besar dan variasi yang beragam. Pada artikel ini akan dijelaskan secara ringkah penggunaan Pandas dalam pemrosesan data mulai dari pembacaan hingga pembuatan berkas hasil pengolahan."
   },
   {
-    "objectID": "posts/2022-09-27-python-dasar-io/python-basic-io.html",
-    "href": "posts/2022-09-27-python-dasar-io/python-basic-io.html",
-    "title": "Pemanfaatan I/O Sederhana pada Python",
-    "section": "",
-    "text": "I/O (Input/Output) merupakan materi dan fitur yang umum dipelajari dan digunakan dalam pemrograman. Programmer biasanya menggunakan fitur ini untuk membaca data masukan dari keyboard atau membaca file tertentu (input) serta menampilkan data tersebut ke dalam format tertentu pada terminal atau ke dalam file lainnya. Pada pembahasan kali ini akan dijabarkan secara ringkas penggunaan I/O menggunakan Python."
+    "objectID": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#pembacaan-data",
+    "href": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#pembacaan-data",
+    "title": "Pengolahan Data Menggunakan Pandas - Part 1",
+    "section": "Pembacaan data",
+    "text": "Pembacaan data\nData dalam bentuk file seperti csv, json maupun xlsx dapat dibaca menggunakan Pandas menggunakan metode yang tersedia. Data yang digunakan berada dalam format xlsx dan memiliki nama data_anggota.xlsx, untuk membaca file tersebut digunakan metode read_excel().\n{bash, echo=FALSE} ls *xlsx\n\nfrom pandas import read_excel\ndf = read_excel('data_anggota.xlsx')\ndf\n\n\n\n\n\n  \n    \n      \n      nama_depan\n      nama_belakang\n    \n  \n  \n    \n      0\n      Ani\n      Lestari\n    \n    \n      1\n      Budi\n      Hermawan\n    \n    \n      2\n      Cindy\n      Amara\n    \n    \n      3\n      Dodi\n      Mulyanto\n    \n    \n      4\n      Eka\n      Saputra"
   },
   {
-    "objectID": "posts/2022-09-27-python-dasar-io/python-basic-io.html#pemanfaatan-fungsi-print",
-    "href": "posts/2022-09-27-python-dasar-io/python-basic-io.html#pemanfaatan-fungsi-print",
-    "title": "Pemanfaatan I/O Sederhana pada Python",
-    "section": "Pemanfaatan fungsi print()",
-    "text": "Pemanfaatan fungsi print()\n\nOutput berupa str\n\nprint('Halo, nama saya Budi Budiman\\nSalam Kenal :)')\n\nHalo, nama saya Budi Budiman\nSalam Kenal :)\n\n\n\n\nOutput berupa int\n\nprint(1000 + 3*100)\n\n1300\n\n\n\n\nOutput berupa float\n\nprint((99)**0.5)\n\n9.9498743710662"
+    "objectID": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#menambah-kolom",
+    "href": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#menambah-kolom",
+    "title": "Pengolahan Data Menggunakan Pandas - Part 1",
+    "section": "Menambah kolom",
+    "text": "Menambah kolom\nPada DataFrame di atas akan ditambahkan kolom baru yang berisi nama lengkap dari masing-masing anggota. Karena tipe data pada kolom nama depan dan belakang sama (str atau object) langkah pemrosesan tipe data str dapat dilakukan seperti di bawah ini.\n\ndf['nama_lengkap'] = df.nama_depan + ' ' + df.nama_belakang\ndf['email'] = df.nama_depan.str.lower() + '.' + df.nama_belakang.str.lower() + '@mail.com'\ndf\n\n\n\n\n\n  \n    \n      \n      nama_depan\n      nama_belakang\n      nama_lengkap\n      email\n    \n  \n  \n    \n      0\n      Ani\n      Lestari\n      Ani Lestari\n      ani.lestari@mail.com\n    \n    \n      1\n      Budi\n      Hermawan\n      Budi Hermawan\n      budi.hermawan@mail.com\n    \n    \n      2\n      Cindy\n      Amara\n      Cindy Amara\n      cindy.amara@mail.com\n    \n    \n      3\n      Dodi\n      Mulyanto\n      Dodi Mulyanto\n      dodi.mulyanto@mail.com\n    \n    \n      4\n      Eka\n      Saputra\n      Eka Saputra\n      eka.saputra@mail.com\n    \n  \n\n\n\n\nSelain nama lengkap, kolom email juga dapat ditambahkan. Kolom email memiliki format penawaan nama_depan.nama_belakang@mail.com, metode str.lower() pada contoh di atas berfungsi untuk membuat setiap karakter menjadi huruf kecil."
   },
   {
-    "objectID": "posts/2022-09-27-python-dasar-io/python-basic-io.html#pemanfaatan-fungsi-input",
-    "href": "posts/2022-09-27-python-dasar-io/python-basic-io.html#pemanfaatan-fungsi-input",
-    "title": "Pemanfaatan I/O Sederhana pada Python",
-    "section": "Pemanfaatan fungsi input()",
-    "text": "Pemanfaatan fungsi input()\n\nInput data tipe str\n\nnama = input('Masukkan nama: ')\nprint(nama)\nprint(f'Halo nama saya {nama}\\nSalam kenal :)')\n\n\n\nPandu\nHalo nama saya Pandu\nSalam kenal :)\n\n\n\n\nInput data tipe int\n\nbil_bulat = input('Masukkan bil. bulat: ')\nprint(bil_bulat)\nprint(int(bil_bulat)*5)\n\n\n\n14\n70\n\n\n\n\nInput data tipe float\n\nbil_desimal = input('Masukkan bil. desimal: ')\nprint(bil_desimal)\nprint(float(bil_desimal)*7)\n\n\n\n12.34\n86.38"
+    "objectID": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#format-csv",
+    "href": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#format-csv",
+    "title": "Pengolahan Data Menggunakan Pandas - Part 1",
+    "section": "Format CSV",
+    "text": "Format CSV\n\ndf.to_csv('hasil_pengolahan.csv', index=False)"
   },
   {
-    "objectID": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html",
-    "href": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html",
-    "title": "Bahasa Python - Alasannya Layak untuk Dipelajari",
-    "section": "",
-    "text": "Python merupakan salah satu bahasa pemrograman yang populer dalam dekade belakangan ini. Bahasa yang digagas oleh Guido Van Rossum pada tahun 1991 ini berfokus pada code readability (keterbacaan program) yang memberikan kemudahan kepada pengguna untuk belajar dan mengembangkannya (Python Language advantages and applications, 2017). Hal ini didukung karena Python termasuk ke dalam high-level language (memiliki syntax atau aturan penulisan program yang mirip seperti Bahasa Ingris: print, import, for i in range(5), if 3 < 4:..., dll.) dan interpreted language (cenderung lebih fleksibel yang menjadikan pengguna lebih leluasa dalam membuat sebuah program) (Isaac computer science, t.t.; Python Language advantages and applications, 2017)."
-  },
-  {
-    "objectID": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html#penggunaan-python-dalam-dunia-industri",
-    "href": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html#penggunaan-python-dalam-dunia-industri",
-    "title": "Bahasa Python - Alasannya Layak untuk Dipelajari",
-    "section": "Penggunaan Python dalam dunia industri",
-    "text": "Penggunaan Python dalam dunia industri\n Sebagai general purpose programming language, Python banyak digunakan pada berbagai bidang mulai dari data analytics, data visualizazion, game development hingga pengembangan website. Ketersediaan library dalam jumlah yang besar disertai komunitas yang mendukung menjadikan Python banyak diminati oleh programmer. Pada masing-masing bidang terdapat libraries yang digemari pengguna karena memiliki banyak fitur mendukung, di antaranya adalah:\n\nNumpy, Pandas, Matplotlib dan Scikit-learn yang umum digunakan pada data analytics, data visualization serta machine learning dan turunannya.\nPyGame dan Kivy untuk keperluan game development dan apps development.\nDjango, Flask dan Selenium yang umum digunakan untuk keperluan pengembangan webapp dan automasinya."
-  },
-  {
-    "objectID": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html#alasan-python-layak-untuk-dipelajari",
-    "href": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html#alasan-python-layak-untuk-dipelajari",
-    "title": "Bahasa Python - Alasannya Layak untuk Dipelajari",
-    "section": "Alasan Python layak untuk dipelajari",
-    "text": "Alasan Python layak untuk dipelajari\nDikutip dari (FutureLearn, 2021) terdapat beberap alasan Python layak untuk dipelajari, di anataranya:\n\nMudah untuk digunakan terlebih bagi mereka yang baru belajar dasar-dasar pemrograman.\nMemiliki syntax yang mirip dengan Bahasa Inggris yang memudahkan pengguna untuk belajar dan memahami program yang dibuat.\nTerdapat banyak library pendukung untuk berbagai keperluan. Hal ini disebabkan Python yang tergolong ke dalam open-source language sehingga memiliki komunitas yang besar dan banyaknya pengguna berkontribusi dalam pengembangan library tertentu.\nFleksibel digunakan untuk keperluan apa pun mulai dari pengembangan aplikasi atau website hingga tugas perkuliahan."
-  },
-  {
-    "objectID": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html#keharusan-belajar-python",
-    "href": "posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html#keharusan-belajar-python",
-    "title": "Bahasa Python - Alasannya Layak untuk Dipelajari",
-    "section": "Keharusan belajar Python",
-    "text": "Keharusan belajar Python\nDengan kemajuan teknologi informasi dan penggunaan media sosial yang masif menyebabkan banyak sumber materi pembelajarn Python di berbagai media seperti Youtube dan course dari lembaga tertentu baik yang gratis maupun berbayar. Beberapa kanal YouTube seperti Indonesia Belajar, Dea Afrizal, Corey Schafer dan Tech With Tim merangkum materi mendasar Python untuk pemula. Free courses seperti FreeCodeCamp dan Kaggel memiliki cakupan materi pengelan dasar Python hingga penerapannya di bidang webapp dan machine learning. Melihat penerapan Python yang luas di berbagai bidang dan ketersediaan resources materi cukup menjadi alasan seseorang mempelajari bahasa tersebut. Terlebih di era digital ini kemampuan programming sangat dibutuhkan dalam kegiatan industri."
+    "objectID": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#format-xlsx",
+    "href": "posts/2022-09-24-pengolahan-data-menggunakan-pandas-part-1/pengolahan-data-menggunakan-pandas-part-1.html#format-xlsx",
+    "title": "Pengolahan Data Menggunakan Pandas - Part 1",
+    "section": "Format XLSX",
+    "text": "Format XLSX\n\ndf.to_excel('hasil_pengolahan.xlsx', index=False)\n\n{bash, echo=FALSE} ls hasil_pengolahan*"
   },
   {
     "objectID": "posts/2022-09-25-filter-data-menggunakan-pandas/filter-data-menggunakan-pandas.html",
@@ -238,39 +217,53 @@
     "text": "Menggunakan query\nMetode query menggunakan parameter dalam bentuk str sehingga lebih memudahkan dalam memfilter data. Langkah di bawah menampilkan siswa yang memiliki nilia matematika dan fisika di atas 60 dan 75 secara bersamaan.\n\ndf.query('matematika > 60 and fisika > 75')\n\n\n\n\n\n  \n    \n      \n      nama\n      matematika\n      fisika\n      kimia\n    \n  \n  \n    \n      1\n      Budi\n      96\n      85\n      58\n    \n    \n      5\n      Eko\n      63\n      98\n      96\n    \n    \n      10\n      Hermawan\n      76\n      79\n      75"
   },
   {
-    "objectID": "posts/2022-09-24-pengenalan-pandas-dataframe/pengenalan-pandas-dataframe.html",
-    "href": "posts/2022-09-24-pengenalan-pandas-dataframe/pengenalan-pandas-dataframe.html",
-    "title": "Pengenalan Pandas DataFrame",
+    "objectID": "posts/2022-09-27-python-dasar-io/python-basic-io.html",
+    "href": "posts/2022-09-27-python-dasar-io/python-basic-io.html",
+    "title": "Pemanfaatan I/O Sederhana pada Python",
     "section": "",
-    "text": "Pandas DataFrame meruapakan salah satu tipe data yang umum digunakan pada Python, terutama dalam analisis data. Dataframe merupakan tipe data dua dimensi, size-mutable (ukurannya dapat berubah), memiliki nilai data yang heterogen (terdiri dari beberapa tipe data seperti int, str dan float). Data ini dapat dibentuk dari dictionary yang berisi key sebagai nama kolom dan value sebagai nilai data pada kolom."
+    "text": "I/O (Input/Output) merupakan materi dan fitur yang umum dipelajari dan digunakan dalam pemrograman. Programmer biasanya menggunakan fitur ini untuk membaca data masukan dari keyboard atau membaca file tertentu (input) serta menampilkan data tersebut ke dalam format tertentu pada terminal atau ke dalam file lainnya. Pada pembahasan kali ini akan dijabarkan secara ringkas penggunaan I/O menggunakan Python."
   },
   {
-    "objectID": "posts/2022-09-24-pengenalan-pandas-dataframe/pengenalan-pandas-dataframe.html#membuat-dataframe-dari-dict",
-    "href": "posts/2022-09-24-pengenalan-pandas-dataframe/pengenalan-pandas-dataframe.html#membuat-dataframe-dari-dict",
-    "title": "Pengenalan Pandas DataFrame",
-    "section": "Membuat DataFrame dari dict",
-    "text": "Membuat DataFrame dari dict\n\nfrom pandas import DataFrame\nd = {\n    'nama': ['Ani', 'Budi', 'Cindy', 'Doni', 'Eka'],\n    'umur': [20, 22, 19, 23, 21],\n    'gender': ['P', 'L', 'P', 'L', 'L']\n}\n\ndf = DataFrame(d)\ndf\n\n\n\n\n\n  \n    \n      \n      nama\n      umur\n      gender\n    \n  \n  \n    \n      0\n      Ani\n      20\n      P\n    \n    \n      1\n      Budi\n      22\n      L\n    \n    \n      2\n      Cindy\n      19\n      P\n    \n    \n      3\n      Doni\n      23\n      L\n    \n    \n      4\n      Eka\n      21\n      L\n    \n  \n\n\n\n\nIndeks atau indikasi baris pada tabel di atas dapat dirubah dengan menambahkan parameter index yang berisi list.\n\nbaris = ['satu', 'dua', 'tiga', 'empat', 'lima']\ndf = DataFrame(d, index=baris)\ndf\n\n\n\n\n\n  \n    \n      \n      nama\n      umur\n      gender\n    \n  \n  \n    \n      satu\n      Ani\n      20\n      P\n    \n    \n      dua\n      Budi\n      22\n      L\n    \n    \n      tiga\n      Cindy\n      19\n      P\n    \n    \n      empat\n      Doni\n      23\n      L\n    \n    \n      lima\n      Eka\n      21\n      L"
+    "objectID": "posts/2022-09-27-python-dasar-io/python-basic-io.html#pemanfaatan-fungsi-print",
+    "href": "posts/2022-09-27-python-dasar-io/python-basic-io.html#pemanfaatan-fungsi-print",
+    "title": "Pemanfaatan I/O Sederhana pada Python",
+    "section": "Pemanfaatan fungsi print()",
+    "text": "Pemanfaatan fungsi print()\n\nOutput berupa str\n\nprint('Halo, nama saya Budi Budiman\\nSalam Kenal :)')\n\nHalo, nama saya Budi Budiman\nSalam Kenal :)\n\n\n\n\nOutput berupa int\n\nprint(1000 + 3*100)\n\n1300\n\n\n\n\nOutput berupa float\n\nprint((99)**0.5)\n\n9.9498743710662"
   },
   {
-    "objectID": "posts/2022-09-24-pengenalan-pandas-dataframe/pengenalan-pandas-dataframe.html#membuat-dataframe-dari-numpy-ndarray",
-    "href": "posts/2022-09-24-pengenalan-pandas-dataframe/pengenalan-pandas-dataframe.html#membuat-dataframe-dari-numpy-ndarray",
-    "title": "Pengenalan Pandas DataFrame",
-    "section": "Membuat DataFrame dari numpy ndarray",
-    "text": "Membuat DataFrame dari numpy ndarray\n\nfrom numpy import array\ndata = [\n    ['Ani', 'Budi', 'Cindy', 'Doni', 'Eka'],\n    [20, 22, 19, 23, 21],\n    ['P', 'L', 'P', 'L', 'L']\n]\ndf = DataFrame(array(data))\ndf\n\n\n\n\n\n  \n    \n      \n      0\n      1\n      2\n      3\n      4\n    \n  \n  \n    \n      0\n      Ani\n      Budi\n      Cindy\n      Doni\n      Eka\n    \n    \n      1\n      20\n      22\n      19\n      23\n      21\n    \n    \n      2\n      P\n      L\n      P\n      L\n      L\n    \n  \n\n\n\n\nBaris dan kolom pada tabel di atas disesuaikan dengan baris dan kolom pada numpy ndarray di mana setiap list yang berada di dalam data merupakan baris sedangkan nilai pada masing-masing list tersebut merupakan kolom. Untuk mengubah tampilan tabel tersebut sesuai dengan tabel pada tabel sebelumnya, atribut transpose dapat digunakan (menjadikan baris sebagai kolom, begitu juga sebaliknya).\n\ndf = df.T\ndf.columns = ['nama', 'umur', 'gender']\ndf.index = baris\ndf\n\n\n\n\n\n  \n    \n      \n      nama\n      umur\n      gender\n    \n  \n  \n    \n      satu\n      Ani\n      20\n      P\n    \n    \n      dua\n      Budi\n      22\n      L\n    \n    \n      tiga\n      Cindy\n      19\n      P\n    \n    \n      empat\n      Doni\n      23\n      L\n    \n    \n      lima\n      Eka\n      21\n      L\n    \n  \n\n\n\n\nBaris dan kolom pada DataFrame dapat diubah setelah dibuat dengan menetapakan atribut .columns dan .index dengan nilai baru yang ingin digunakan. Nilai baru tersebut biasa dalam bentuk tipe data list."
+    "objectID": "posts/2022-09-27-python-dasar-io/python-basic-io.html#pemanfaatan-fungsi-input",
+    "href": "posts/2022-09-27-python-dasar-io/python-basic-io.html#pemanfaatan-fungsi-input",
+    "title": "Pemanfaatan I/O Sederhana pada Python",
+    "section": "Pemanfaatan fungsi input()",
+    "text": "Pemanfaatan fungsi input()\n\nInput data tipe str\n\nnama = input('Masukkan nama: ')\nprint(nama)\nprint(f'Halo nama saya {nama}\\nSalam kenal :)')\n\n\n\nPandu\nHalo nama saya Pandu\nSalam kenal :)\n\n\n\n\nInput data tipe int\n\nbil_bulat = input('Masukkan bil. bulat: ')\nprint(bil_bulat)\nprint(int(bil_bulat)*5)\n\n\n\n14\n70\n\n\n\n\nInput data tipe float\n\nbil_desimal = input('Masukkan bil. desimal: ')\nprint(bil_desimal)\nprint(float(bil_desimal)*7)\n\n\n\n12.34\n86.38"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Tentang Saya",
-    "section": "",
-    "text": "Mahasiswa tingkat akhir yang tertarik dengan pemrograman, data analysis dan sistem operasi Linux.\n\n\n\n\n\n\n  \n\n\n\n\n5 Alasan Menggunakan Linux Sebagai Daily Driver\n\n\n\n\n\n\n\n\n04/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n3 min\n\n\n\n\n\n\n  \n\n\n\n\nBahasa Python - Alasannya Layak untuk Dipelajari\n\n\n\n\n\n\n\n\n12/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlogDen\n\n\n\n\n\n\n\n\n0 min\n\n\n\n\n\n\n  \n\n\n\n\nFilter Data Menggunakan Pandas\n\n\n\n\n\n\n\n\n25/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\nMembuat, Membaca dan Mengedit File Menggunakan Python\n\n\n\n\n\n\n\n\n05/10/22\n\n\nPandu Mulya Muhammad Syah\n\n\n3 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPemanfaatan I/O Sederhana pada Python\n\n\n\n\n\n\n\n\n30/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\nPengenalan Dasar-dasar Pandas\n\n\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPengenalan Pandas DataFrame\n\n\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPengolahan Data Menggunakan Pandas - Part 1\n\n\n\n\n\n\n\n\n24/09/22\n\n\nPandu Mulya Muhammad Syah\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\nPython Environtmen - Media Utama dalam Pengembangan Program Python\n\n\n\n\n\n\n\n\n19/08/22\n\n\nPandu Mulya Muhammad Syah\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\nRangkuman Pengolahan Data Tipe String Menggunakan Python\n\n\n\n\n\n\n\n\n21/10/22\n\n\nPandu Mulya Muhammad Syah\n\n\n2 min\n\n\n\n\n\n\nTidak ada item yang cocok"
+    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#membuat-writing-file",
+    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#membuat-writing-file",
+    "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
+    "section": "Membuat (writing) file",
+    "text": "Membuat (writing) file\n\nwith open('simpel.txt', 'w') as teks:\n   teks.write('Baris satu\\n')\n   teks.write('Baris dua\\n')\n\nProgram di atas ditujukan untuk membuat file dengan nama simpel.txt menggunakan fungsi open(). Statmen with digunakan untuk mengimplementasikan context manager pada Python. Terlihat pada kode di atas mode w digunakan untuk menulis file baru. Metode write() digunakan untuk menulis isi pada file tersebut."
   },
   {
-    "objectID": "posts/2022-10-17-python-rangkuman-pengolahan-data-string/rangkuman-pengolahan-string.html",
-    "href": "posts/2022-10-17-python-rangkuman-pengolahan-data-string/rangkuman-pengolahan-string.html",
-    "title": "Rangkuman Pengolahan Data Tipe String Menggunakan Python",
-    "section": "",
-    "text": "string merupakan salah satu tipe data yang umum digunakan pada bahasa Python selain int, float dan boolen. Tipe data: ini banyak digunakan untuk menampilkan informasi berupa pesan singkat maupun panjang terkait suatu hal. Pesan yang disampaikan dapat berupa peringanatan (warning), kesalahan (error) ataupun digunakan sebagai debugger."
+    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#membaca-reading-file",
+    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#membaca-reading-file",
+    "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
+    "section": "Membaca (reading) file",
+    "text": "Membaca (reading) file\n\nwith open('simpel.txt', 'r') as teks:\n   print(teks.read())\n\nBaris satu\nBaris dua\n\n\n\nUntuk membaca suatu file dapat menggunakan statmen with yang sama dengan sedikit perubahan pada mode r. Teks pada file tersebut dapat diakses menggunakan metode read()."
+  },
+  {
+    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#menambahkan-isi-file",
+    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#menambahkan-isi-file",
+    "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
+    "section": "Menambahkan isi file",
+    "text": "Menambahkan isi file\n\nwith open('simpel.txt', 'a') as teks:\n   teks.write('Baris tiga\\n')\n\nPenambahan isi file dapat dilakukan dengan menggunakan mode a dan menuliskan baris baru melalui metode .write().\n\nwith open('simpel.txt', 'r') as teks:\n   print(teks.read())\n\nBaris satu\nBaris dua\nBaris tiga"
+  },
+  {
+    "objectID": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#mengedit-isi-file",
+    "href": "posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html#mengedit-isi-file",
+    "title": "Membuat, Membaca dan Mengedit File Menggunakan Python",
+    "section": "Mengedit isi file",
+    "text": "Mengedit isi file\n\nwith open('simpel.txt', 'r') as fl:\n   line = fl.readlines()\nline[1] = line[1].upper()\nbaris_baru = ''.join(line)\n\nwith open('simpel.txt', 'w') as fl:\n   fl.write(baris_baru)\n\nwith open('simpel.txt', 'r') as fl:\n   print(fl.read())\n\nBaris satu\nBARIS DUA\nBaris tiga\n\n\n\nUntuk mengedit isi file pada baris tertentu dapat menggunakan pendektan di atas.\n\nMembaca file, kemudian membuat variabel line yang berisi isi file dalam bentuk list melalui metode readlines().\nMembuat baris kedua pada file menjadi huruf kapital. Langkah ini dapat dilakukan dengan mengganti nilai indeks kedua pada list (bernilai 1 karena indek pada list dimulai dari 0) menggunakan metode upper().\nMembuat file yang sama dengan mengganti isinya dengan nilai yang baru menggunakan variabel baris_baru."
   },
   {
     "objectID": "posts/2022-10-17-python-rangkuman-pengolahan-data-string/rangkuman-pengolahan-string.html#metode-slicing",
