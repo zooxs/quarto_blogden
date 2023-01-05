@@ -1,0 +1,12 @@
+---
+title: "Post Pertama Fisika"
+description: |
+   Ringkasan pengolahan data tipe *string* pada Python mulai dari pendeklarasian variabel hingga metode manipulasi yang umum dilakukan.
+categories: [Fisika, Kinematika]
+date: 2023-05-01
+draft: true
+---
+
+## soal
+
+## solusi

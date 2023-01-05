@@ -1,0 +1,12 @@
+---
+title: "Post Pertama python setelah modifikasi"
+description: |
+   Ringkasan pengolahan data tipe *string* pada Python mulai dari pendeklarasian variabel hingga metode manipulasi yang umum dilakukan.
+categories: [Python]
+date: 2023-05-01
+draft: true
+---
+
+## headin 1
+
+## headin 2
