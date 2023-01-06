@@ -4,10 +4,11 @@ description: |
    Beberapa solusi dari soal yang berkaitan dengan operasi fungsi ganjil genap seperti perkalian, pangkat dan kombinasi fungsi.
 categories: [Kalkulus, Fungsi]
 date: 2023-06-01
-
 ---
 
 # Pengenalan
+
+![](./tb-kalkulus-fungsi-ganjil-genap.png)
 
 Fungsi merupakan salah satu materi yang dipelajari dalam matematika mulai dari tingkat dasar sampai tingkat lanjut seperti kalkulus dan matematika teknik. Fungsi dapat dijadikan sebagai alat untuk mendeskripsikan permasalahan di dunia nyata ke dalam bentuk matematis [@Thomas2013Thomas]. Komponen dasar fungsi terdiri atas domain dan range atau daerah hasil. Domain dapat juga disebut sebagai variabel bebas, suatu nilai yang dapat mempengaruhi variabel terikat. Domain umumnya dinotasikan sebagai $x$. Range ($y$) merupakan variabel terikat yang nilainya bergantung pada variabel bebas.
 

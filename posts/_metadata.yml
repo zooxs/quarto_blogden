@@ -33,7 +33,7 @@ date-format: short
 
 # footer format
 include-after-body: ../footer.html
-
+include-before-body: ../header.html
 # Default for author
 author: 
   - name: Pandu Mulya Muhammad Syah

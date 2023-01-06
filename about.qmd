@@ -24,6 +24,12 @@ license: ''
   .quarto-title-meta, .share-on-section, .giscus {
     visibility: hidden;
   }
+
+  div #listing-listing {
+    visibility: collapse;
+  }
+
+
 </style>
 
 Mahasiswa tingkat akhir yang tertarik dengan pemrograman, *data analysis* dan sistem operasi Linux.

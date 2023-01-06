@@ -2,8 +2,8 @@
 title: "BlogDen"
 listing:
   contents: 
-  - 'posts'
-  - 'posts/*/*qmd'
+  - "posts"
+  - "posts/*/*qmd"
   sort: "date desc"
   type: default
   categories: true

@@ -6,12 +6,12 @@ p {
 .share-on-section {
     background: #fff;
     display: flex;
-    flex-direction: column;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
+    flex-direction: row;
+    padding: 10px 0;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    right: 50%;
+    position: relative;
+    /*transform: translateX(-50%);*/
   }
   
   .share-on-section a i {
@@ -23,9 +23,9 @@ p {
     transition: 500ms;
   }
   
-  .share-on-section a:hover {
+  /*.share-on-section a:hover {
     transform: scale(1.2);
-  }
+  }*/
   
   .share-on-section .fa-facebook {
     color: #3b5998;
@@ -55,13 +55,13 @@ p {
   }
 
   .share-on-section {
-    left: 50%;
+    /*left: 50%;
     top: unset;
-    transform: translateX(-50%);
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3);
+    transform: translateX(-50%);*/
     width: 50%;
     bottom: 0;
     flex-direction: row;
-    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3);
     padding: 10px 0;
     justify-content: center;
   }
