@@ -1,0 +1,86 @@
+---
+title: "Fungsi Ganjil Genap"
+description: |
+   Beberapa solusi dari soal yang berkaitan dengan operasi fungsi ganjil genap seperti perkalian, pangkat dan kombinasi fungsi.
+categories: [Kalkulus, Fungsi]
+date: 2023-06-01
+
+---
+
+# Pengenalan
+
+Fungsi merupakan salah satu materi yang dipelajari dalam matematika mulai dari tingkat dasar sampai tingkat lanjut seperti kalkulus dan matematika teknik. Fungsi dapat dijadikan sebagai alat untuk mendeskripsikan permasalahan di dunia nyata ke dalam bentuk matematis [@Thomas2013Thomas]. Komponen dasar fungsi terdiri atas domain dan range atau daerah hasil. Domain dapat juga disebut sebagai variabel bebas, suatu nilai yang dapat mempengaruhi variabel terikat. Domain umumnya dinotasikan sebagai $x$. Range ($y$) merupakan variabel terikat yang nilainya bergantung pada variabel bebas.
+
+Fungsi memiliki banyak jenis mulai dari fungsi konstan, linar dan polinomian seperti fungsi kuadrat serta fungsi trigonometri. Selain itu, fungsi dapat juga dikelompokkan menjadi fungsi genap dan ganjil. Pengelompokan ini berdasarkan ciri simetrisnya. Fungsi genap simetri terhadap sumbu - y sedangkan fungsi ganjil simetri terhadap sumbu origin. Fungsi genap-ganjil dapat diketahui jika memenuhi persyaratan berikut:
+
+
+\begin{align}
+f(x) &= f(-x) \text{, fungsi genap}\\
+-f(x) &= f(-x) \text{, fungsi ganjil}
+\end{align}
+
+Persyaratan di atas berlaku jika untuk setiap nilai $x$ yang berada di dalam domain fungsi $f(x)$.
+
+Secara visual perbedaan kedua fungsi tersebut dapat dilihat pada gambar di bawah ini.
+
+::: {#fig-grafik layout-ncol="2"}
+![Fungsi ganjil](./fungsi-ganjil.png)
+
+![Fungsi genap](./fungsi-genap.png)
+
+Fungsi ganjil-genap
+:::
+
+# Contoh Persoalan
+
+Diketahui fungsi $f(x)$ dan $g(x)$ merupakan fungsi ganjil. Dengan menggunakan karakteristik atau syarat dari fungsi ganjil-genap di atas, tentukan jenis dari fungsi-fungsi di bawah ini:
+
+- $m(x) = f(x)^3$
+
+\begin{align}
+m(x) &= [f(x)]^3\\
+m(-x) &= [f(-x)]^3\\
+m(-x) &= [-f(x)]^3\\
+m(-x) &= -[f(x)]^3\\
+m(-x) &= -m(x)
+\end{align}
+
+Dengan demikian fungsi tersebut termasuk ke dalam fungsi ganjil.
+
+- $n(x) = f(\sin x)$
+
+\begin{align}
+n(x) &= f(\sin x)\\
+n(-x) &= f(\sin (-x))\\
+n(-x) &= f(-\sin (x))\\
+n(-x) &= -f(\sin (x))\\
+n(-x) &= -n(x)
+\end{align}
+
+Dengan demikian fungsi tersebut termasuk ke dalam fungsi ganjil.
+
+- $o(x) = g(\sec x)$
+
+\begin{align}
+\sec x &= \frac{1}{\cos x}\\
+o(x) &= g(\sec x)\\
+o(-x) &= g(\sec (-x))\\
+o(-x) &= g(\sec (x))\\
+o(-x) &= o(x)
+\end{align}
+
+Dengan demikian fungsi tersebut termasuk ke dalam fungsi genap.
+
+- $p(x) = |g(x)|$
+
+Perlu diingat fungsi absolut akan bernilai positif terlepas nilai $x$ yang dimasukkan negatif atau positif.
+
+\begin{align}
+p(x) &= |g(x)|\\
+p(-x) &= |g(-x)|\\
+p(-x) &= |-g(x)|\\
+p(-x) &= |g(x)|\\
+p(-x) &= p(x)
+\end{align}
+
+Dengan demikian fungsi tersebut termasuk ke dalam fungsi genap.

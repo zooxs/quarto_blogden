@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id" xml:lang="id"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Pandu Mulya Muhammad Syah">
+<meta name="dcterms.date" content="2023-01-06">
+<meta name="description" content="Beberapa solusi dari soal yang berkaitan dengan operasi fungsi ganjil genap seperti perkalian, pangkat dan kombinasi fungsi.">
+
+<title>BlogDen - Fungsi Ganjil Genap</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Tidak ada hasil",
+    "search-matching-documents-text": "dokumen yang cocok",
+    "search-copy-link-title": "Salin tautan untuk mencari",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Bersihkan",
+    "search-detached-cancel-button-title": "Batalkan",
+    "search-submit-button-title": "Kirim"
+  }
+}</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: [],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B8MH87QSQ9"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-B8MH87QSQ9', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">BlogDen</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/zooxs"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://instagram.com/atensiden"><i class="bi bi-instagram" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/pandumulyams"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Fungsi Ganjil Genap</h1>
+                  <div>
+        <div class="description">
+          <p>Beberapa solusi dari soal yang berkaitan dengan operasi fungsi ganjil genap seperti perkalian, pangkat dan kombinasi fungsi.</p>
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Kalkulus</div>
+                <div class="quarto-category">Fungsi</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Penulis</div>
+      <div class="quarto-title-meta-contents">
+               <p>Pandu Mulya Muhammad Syah </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Diterbitkan</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">01/06/23</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Di halaman ini</h2>
+   
+  <ul>
+  <li><a href="#pengenalan" id="toc-pengenalan" class="nav-link active" data-scroll-target="#pengenalan">Pengenalan</a></li>
+  <li><a href="#contoh-persoalan" id="toc-contoh-persoalan" class="nav-link" data-scroll-target="#contoh-persoalan">Contoh Persoalan</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="pengenalan" class="level1">
+<h1>Pengenalan</h1>
+<p>Fungsi merupakan salah satu materi yang dipelajari dalam matematika mulai dari tingkat dasar sampai tingkat lanjut seperti kalkulus dan matematika teknik. Fungsi dapat dijadikan sebagai alat untuk mendeskripsikan permasalahan di dunia nyata ke dalam bentuk matematis <span class="citation" data-cites="Thomas2013Thomas">(<a href="#ref-Thomas2013Thomas" role="doc-biblioref">Thomas dkk., 2013</a>)</span>. Komponen dasar fungsi terdiri atas domain dan range atau daerah hasil. Domain dapat juga disebut sebagai variabel bebas, suatu nilai yang dapat mempengaruhi variabel terikat. Domain umumnya dinotasikan sebagai <span class="math inline">\(x\)</span>. Range (<span class="math inline">\(y\)</span>) merupakan variabel terikat yang nilainya bergantung pada variabel bebas.</p>
+<p>Fungsi memiliki banyak jenis mulai dari fungsi konstan, linar dan polinomian seperti fungsi kuadrat serta fungsi trigonometri. Selain itu, fungsi dapat juga dikelompokkan menjadi fungsi genap dan ganjil. Pengelompokan ini berdasarkan ciri simetrisnya. Fungsi genap simetri terhadap sumbu - y sedangkan fungsi ganjil simetri terhadap sumbu origin. Fungsi genap-ganjil dapat diketahui jika memenuhi persyaratan berikut:</p>
+<p><span class="math display">\[\begin{align}
+f(x) &amp;= f(-x) \text{, fungsi genap}\\
+-f(x) &amp;= f(-x) \text{, fungsi ganjil}
+\end{align}\]</span></p>
+<p>Persyaratan di atas berlaku jika untuk setiap nilai <span class="math inline">\(x\)</span> yang berada di dalam domain fungsi <span class="math inline">\(f(x)\)</span>.</p>
+<p>Secara visual perbedaan kedua fungsi tersebut dapat dilihat pada gambar di bawah ini.</p>
+<div id="fig-grafik" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./fungsi-ganjil.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Fungsi ganjil</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./fungsi-genap.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Fungsi genap</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Gambar&nbsp;1: Fungsi ganjil-genap</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="contoh-persoalan" class="level1">
+<h1>Contoh Persoalan</h1>
+<p>Diketahui fungsi <span class="math inline">\(f(x)\)</span> dan <span class="math inline">\(g(x)\)</span> merupakan fungsi ganjil. Dengan menggunakan karakteristik atau syarat dari fungsi ganjil-genap di atas, tentukan jenis dari fungsi-fungsi di bawah ini:</p>
+<ul>
+<li><span class="math inline">\(m(x) = f(x)^3\)</span></li>
+</ul>
+<p><span class="math display">\[\begin{align}
+m(x) &amp;= [f(x)]^3\\
+m(-x) &amp;= [f(-x)]^3\\
+m(-x) &amp;= [-f(x)]^3\\
+m(-x) &amp;= -[f(x)]^3\\
+m(-x) &amp;= -m(x)
+\end{align}\]</span></p>
+<p>Dengan demikian fungsi tersebut termasuk ke dalam fungsi ganjil.</p>
+<ul>
+<li><span class="math inline">\(n(x) = f(\sin x)\)</span></li>
+</ul>
+<p><span class="math display">\[\begin{align}
+n(x) &amp;= f(\sin x)\\
+n(-x) &amp;= f(\sin (-x))\\
+n(-x) &amp;= f(-\sin (x))\\
+n(-x) &amp;= -f(\sin (x))\\
+n(-x) &amp;= -n(x)
+\end{align}\]</span></p>
+<p>Dengan demikian fungsi tersebut termasuk ke dalam fungsi ganjil.</p>
+<ul>
+<li><span class="math inline">\(o(x) = g(\sec x)\)</span></li>
+</ul>
+<p><span class="math display">\[\begin{align}
+\sec x &amp;= \frac{1}{\cos x}\\
+o(x) &amp;= g(\sec x)\\
+o(-x) &amp;= g(\sec (-x))\\
+o(-x) &amp;= g(\sec (x))\\
+o(-x) &amp;= o(x)
+\end{align}\]</span></p>
+<p>Dengan demikian fungsi tersebut termasuk ke dalam fungsi genap.</p>
+<ul>
+<li><span class="math inline">\(p(x) = |g(x)|\)</span></li>
+</ul>
+<p>Perlu diingat fungsi absolut akan bernilai positif terlepas nilai <span class="math inline">\(x\)</span> yang dimasukkan negatif atau positif.</p>
+<p><span class="math display">\[\begin{align}
+p(x) &amp;= |g(x)|\\
+p(-x) &amp;= |g(-x)|\\
+p(-x) &amp;= |-g(x)|\\
+p(-x) &amp;= |g(x)|\\
+p(-x) &amp;= p(x)
+\end{align}\]</span></p>
+<p>Dengan demikian fungsi tersebut termasuk ke dalam fungsi genap.</p>
+
+
+
+
+</section>
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+
+</div>
+<div class="listing-no-matching d-none">
+Tidak ada item yang cocok
+</div>
+</div><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Referensi</h2><div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
+<div id="ref-Thomas2013Thomas" class="csl-entry" role="doc-biblioentry">
+Thomas, Jr., Weir, M. D., &amp; Hass, J. (2013). <em>Thomas’ calculus: Early transcendentals</em>. Pearson.
+</div>
+</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.id">https://creativecommons.org/licenses/by/4.0/deed.id</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Sitasi</h2><div><div class="quarto-appendix-secondary-label">Sitasi BibTeX:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{mulyamuhammadsyah2023,
+  author = {Pandu Mulya Muhammad Syah},
+  title = {Fungsi Ganjil Genap},
+  date = {2023-01-06},
+  langid = {id}
+}
+</code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Sebagai atribusi, silahkan mengutip karya ini sebagai:</div><div id="ref-mulyamuhammadsyah2023" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+Pandu Mulya Muhammad Syah. (2023, January 6). <em>Fungsi Ganjil
+Genap</em>.
+</div></div></section></div></main> <!-- /main -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+<div class="share-on-section">
+
+    <a href="#" class="facebook-btn">
+        <i class="fab fa-facebook"></i>
+      </a>
+
+      <a href="#" class="twitter-btn">
+        <i class="fab fa-twitter"></i>
+      </a>
+
+      <a href="#" class="linkedin-btn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+
+      <a href="#" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    
+</div>
+
+<script>
+    const facebookBtn = document.querySelector(".facebook-btn");
+    const twitterBtn = document.querySelector(".twitter-btn");
+    const linkedinBtn = document.querySelector(".linkedin-btn");
+    const whatsappBtn = document.querySelector(".whatsapp-btn");
+
+    function init() {
+
+    let postUrl = encodeURI(document.location.href);
+    let postTitle = encodeURI("Hi ada artikel baru nih, ayo dicek: ");
+
+    facebookBtn.setAttribute(
+        "href",
+        `https://www.facebook.com/sharer.php?u=${postUrl}`
+    );
+
+    twitterBtn.setAttribute(
+        "href",
+        `https://twitter.com/share?url=${postUrl}&text=${postTitle}`
+    );
+
+    linkedinBtn.setAttribute(
+        "href",
+        `https://www.linkedin.com/shareArticle?url=${postUrl}&title=${postTitle}`
+    );
+
+    whatsappBtn.setAttribute(
+        "href",
+        `https://api.whatsapp.com/send?text=${postTitle} ${postUrl}`
+    );
+    }
+
+    init();
+</script>
+
+<script type="text/javascript" src="https://cdn.trakteer.id/js/embed/trbtn.min.js"></script><script type="text/javascript">(function(){var trbtnId=trbtn.init('Dukung Saya di Trakteer','#19287D','https://trakteer.id/atensiden','https://cdn.trakteer.id/images/embed/trbtn-icon.png','40');trbtn.draw(trbtnId);})();</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Tersalin!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Tersalin!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="zooxs/blogden-giscus" data-repo-id="R_kgDOIGDrfQ" data-category="General" data-category-id="DIC_kwDOIGDrfc4CRtFQ" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="id" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Copyright 2023, Pandu Mulya Muhammad Syah</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/zooxs">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://instagram.com/atensiden">
+      <i class="bi bi-instagram" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/pandumulyams">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>
