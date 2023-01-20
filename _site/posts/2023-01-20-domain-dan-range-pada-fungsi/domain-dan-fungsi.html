@@ -2,15 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="id" xml:lang="id"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.2.313">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Pandu Mulya Muhammad Syah">
-<meta name="dcterms.date" content="2023-01-05">
-<meta name="description" content="Ringkasan pengolahan data tipe string pada Python mulai dari pendeklarasian variabel hingga metode manipulasi yang umum dilakukan.">
+<meta name="description" content="Penjelasan ringkas mengenai domain dan range disertai beberapa contoh soal.">
 
-<title>BlogDen - Post Pertama Fisika</title>
+<title>BlogDen - Domain dan Range pada Fungsi</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,24 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -104,7 +103,7 @@ gtag('config', 'G-B8MH87QSQ9', { 'anonymize_ip': true});
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -114,7 +113,7 @@ gtag('config', 'G-B8MH87QSQ9', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">BlogDen</span>
     </a>
   </div>
@@ -148,15 +147,15 @@ gtag('config', 'G-B8MH87QSQ9', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Post Pertama Fisika</h1>
+      <h1 class="title">Domain dan Range pada Fungsi</h1>
                   <div>
         <div class="description">
-          <p>Ringkasan pengolahan data tipe <em>string</em> pada Python mulai dari pendeklarasian variabel hingga metode manipulasi yang umum dilakukan.</p>
+          <p>Penjelasan ringkas mengenai domain dan range disertai beberapa contoh soal.</p>
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Fisika</div>
-                <div class="quarto-category">Kinematika</div>
+                <div class="quarto-category">Kalkulus</div>
+                <div class="quarto-category">Fungsi</div>
               </div>
                   </div>
   </div>
@@ -174,7 +173,7 @@ gtag('config', 'G-B8MH87QSQ9', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Diterbitkan</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">01/05/23</p>
+        <p class="date">20/01/23</p>
       </div>
     </div>
     
@@ -190,8 +189,14 @@ gtag('config', 'G-B8MH87QSQ9', { 'anonymize_ip': true});
     <h2 id="toc-title">Di halaman ini</h2>
    
   <ul>
-  <li><a href="#soal" id="toc-soal" class="nav-link active" data-scroll-target="#soal">soal</a></li>
-  <li><a href="#solusi" id="toc-solusi" class="nav-link" data-scroll-target="#solusi">solusi</a></li>
+  <li><a href="#pengenalan" id="toc-pengenalan" class="nav-link active" data-scroll-target="#pengenalan">Pengenalan</a></li>
+  <li><a href="#contoh-soal" id="toc-contoh-soal" class="nav-link" data-scroll-target="#contoh-soal">Contoh Soal</a>
+  <ul class="collapse">
+  <li><a href="#soal-1" id="toc-soal-1" class="nav-link" data-scroll-target="#soal-1">Soal 1</a></li>
+  <li><a href="#soal-2" id="toc-soal-2" class="nav-link" data-scroll-target="#soal-2">Soal 2</a></li>
+  <li><a href="#soal-3" id="toc-soal-3" class="nav-link" data-scroll-target="#soal-3">Soal 3</a></li>
+  <li><a href="#soal-4" id="toc-soal-4" class="nav-link" data-scroll-target="#soal-4">Soal 4</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -202,14 +207,97 @@ gtag('config', 'G-B8MH87QSQ9', { 'anonymize_ip': true});
 
 
 
-<section id="soal" class="level2">
-<h2 class="anchored" data-anchor-id="soal">soal</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tb-domain-range.png" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+<section id="pengenalan" class="level1">
+<h1>Pengenalan</h1>
+<p>Domain dan range merupakan komponen pada suatu fungsi. Domain atau daerah asal merupakan variabel bebas yang nilainya tidak bergantung pada aturan apa pun, secara umum dinotasikan sebagai <span class="math inline">\(x\)</span> pada permasalahan matematika. Domain juga dapat dipahami sebagi kumpulan nilai <span class="math inline">\(x\)</span> yang dapat dipakai pada suatu fungsi sehingga menghasilkan nilai <span class="math inline">\(y\)</span> yang terdefinisi. Range atau daerah hasil merupakan variabel terikat yang nilainya bergantung pada suatu aturan dan nilai dari variabel lainnya, biasanya dinotasikan sebagai varibel <span class="math inline">\(y\)</span>.</p>
 </section>
-<section id="solusi" class="level2">
-<h2 class="anchored" data-anchor-id="solusi">solusi</h2>
+<section id="contoh-soal" class="level1">
+<h1>Contoh Soal</h1>
+<section id="soal-1" class="level2">
+<h2 class="anchored" data-anchor-id="soal-1">Soal 1</h2>
+<p><span class="math display">\[\begin{align}
+y = -2 + \sqrt{1 - x}
+\end{align}\]</span></p>
+<p>Fungsi di atas akan terdefinisi pada saat bagian di dalam akar kuadrat bernilai positif. Agar kondisi tersebut terpenuhi, nilai <span class="math inline">\(x\)</span> yang diizinkan tidak lebih dari 1 (<span class="math inline">\(x \leq 1\)</span>). Dengan memasukkan rentang nilai <span class="math inline">\(x\)</span> tersebut diketahui nilai minimum <span class="math inline">\(y\)</span> adalah -2 (<span class="math inline">\(y \leq -2\)</span>).</p>
+<p><span class="math display">\[\begin{align}
+1 - x &amp;\geq 0\\
+x &amp;\leq 1\\
+\therefore x &amp;\in (-\infty, 1]\\
+\therefore y &amp;\in [-2, \infty)\\
+\end{align}\]</span></p>
+<p>Bentuk visual dari fungsi di atas dapat dilihat pada grafik di bawah ini.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="domain-dan-fungsi_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="soal-2" class="level2">
+<h2 class="anchored" data-anchor-id="soal-2">Soal 2</h2>
+<p><span class="math display">\[\begin{align}
+y = 3^{2-x} + 1
+\end{align}\]</span></p>
+<p>Fungsi di atas memiliki domain pada semua bilangan karena tidak memiliki kondisi yang membuat fungsi tersebut memiliki nilai tak terdefenisi. Karena termasuk ke dalam fungsi pangkat (<em>power function</em>) nilai <span class="math inline">\(y\)</span> yang dihasilkan akan mengalami perubahan yang signifikan pada rentang tertentu dan konvergen pada suatu nilai di kondisi lainnya. Hal ini dapat dibuktikan dengan memasukkan beberapa nilai.</p>
+<p><span class="math display">\[\begin{align}
+f(-4) &amp;= 3^{2+4} + 1 = 3^{6} + 1\\
+f(-3) &amp;= 3^{2+3} + 1 = 3^{5} + 1\\
+f(-2) &amp;= 3^{2+2} + 1 = 3^{4} + 1\\
+f(2) &amp;= 3^{2-2} + 1 = 1 + 1 = 2\\
+f(3) &amp;= 3^{2-3} + 1 = 3^{-1} + 1 = \frac{1}{3} + 1\\
+f(4) &amp;= 3^{2-4} + 1 = 3^{-2} + 1 = \frac{1}{3^2} + 1\\
+\lim_{n \to \infty} f(n) &amp;= 1\\
+\therefore x &amp;\in (-\infty, \infty)\\
+\therefore y &amp;\in [1, \infty)
+\end{align}\]</span></p>
+<p>Bentuk visual dari fungsi di atas dapat dilihat pada grafik di bawah ini.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="domain-dan-fungsi_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="soal-3" class="level2">
+<h2 class="anchored" data-anchor-id="soal-3">Soal 3</h2>
+<p><span class="math display">\[\begin{align}
+y = 2e^{-x} - 3
+\end{align}\]</span></p>
+<p>Sama seperti pada fungsi sebelumnya, hanya saja menggunakan basis <span class="math inline">\(e\)</span>.</p>
+<p><span class="math display">\[\begin{align}
+f(-2) &amp;= 2e^{2} - 3 = 11.78\\
+f(-1) &amp;= 2e^{1} - 3 = 2.44\\
+f(0) &amp;= 2e^{0} - 3 = -1\\
+f(1) &amp;= 2e^{-1} - 3 = -2.26\\
+f(2) &amp;= 2e^{-2} - 3 = -2.73\\
+\lim_{n \to \infty} f(n) &amp;= -3\\
+\therefore x &amp;\in (-\infty, \infty)\\
+\therefore y &amp;\in [-3, \infty)
+\end{align}\]</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="domain-dan-fungsi_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="soal-4" class="level2">
+<h2 class="anchored" data-anchor-id="soal-4">Soal 4</h2>
+<p><span class="math display">\[\begin{align}
+y = \tan (2x - \pi)
+\end{align}\]</span></p>
+<p>Karena fungsi di atas termasuk ke dalam jenis periodik, di mana nilainya akan berulang pada rentang <span class="math inline">\(x\)</span> tertentu maka dapat ditinjau pada interval tersebut. Fungsi <span class="math inline">\(tan(x)\)</span> pada dasarnya memiliki rentang nilai <span class="math inline">\((-\infty, \infty)\)</span> pada <span class="math inline">\(x \in (-\frac{\pi}{2}, \frac{\pi}{2})\)</span>. Terdapat modifikasi pada fungsi di atas, nilai sudut digandakan dan fasanya dikurangi dengan <span class="math inline">\(\pi\)</span>. Dengan demikian domain fungsi tersebut akan bekurang untuk satu periodik.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tan-graph.png" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
 
 
 
+</section>
 </section>
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
@@ -219,15 +307,15 @@ gtag('config', 'G-B8MH87QSQ9', { 'anonymize_ip': true});
 <div class="listing-no-matching d-none">
 Tidak ada item yang cocok
 </div>
-</div><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.id">https://creativecommons.org/licenses/by/4.0/deed.id</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Sitasi</h2><div><div class="quarto-appendix-secondary-label">Sitasi BibTeX:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{mulyamuhammadsyah2023,
+</div><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div quarto-reuse="quarto-reuse" class="quarto-appendix-contents"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.id">https://creativecommons.org/licenses/by/4.0/deed.id</a></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Sitasi</h2><div><div class="quarto-appendix-secondary-label">Sitasi BibTeX:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{mulyamuhammadsyah2024,
   author = {Pandu Mulya Muhammad Syah},
-  title = {Post Pertama Fisika},
-  date = {2023-01-05},
+  title = {Domain dan Range pada Fungsi},
+  date = {2024-08-01},
   langid = {id}
 }
-</code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Sebagai atribusi, silahkan mengutip karya ini sebagai:</div><div id="ref-mulyamuhammadsyah2023" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
-Pandu Mulya Muhammad Syah. (2023, January 5). <em>Post Pertama
-Fisika</em>.
+</code><button title="Salin ke Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">Sebagai atribusi, silahkan mengutip karya ini sebagai:</div><div id="ref-mulyamuhammadsyah2024" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+Pandu Mulya Muhammad Syah. (2024, August 1). <em>Domain dan Range pada
+Fungsi</em>.
 </div></div></section></div></main> <!-- /main -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 <div class="share-on-section">
@@ -423,7 +511,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">Copyright 2023, Pandu Mulya Muhammad Syah</div>   
+    <div class="nav-footer-left">Copyright 2022, Pandu Mulya Muhammad Syah</div>   
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

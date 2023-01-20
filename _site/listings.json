@@ -5,8 +5,9 @@
       "/posts/2022-08-04-5-alasan-menggunakan-linux-sebagai-daily-driver/5-alasan-menggunakan-linux-sebagai-daily-driver.html",
       "/posts/2022-08-12-bahasa-python-alasannya-layak-untuk-dipelajari/bahasa-python-alasannya-layak-untuk-dipelajari.html",
       "/index.html",
+      "/posts/2023-01-20-domain-dan-range-pada-fungsi/domain-dan-fungsi.html",
       "/posts/2022-09-25-filter-data-menggunakan-pandas/filter-data-menggunakan-pandas.html",
-      "/posts/kalkulus/2023-01-06-fungsi-ganjil-genap/fungsi-ganjil-genap.html",
+      "/posts/2023-01-06-fungsi-ganjil-genap/fungsi-ganjil-genap.html",
       "/posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html",
       "/posts/2022-09-27-python-dasar-io/python-basic-io.html",
       "/posts/2022-09-24-pengenalan-dasar-dasar-pandas/pengenalan-dasar-dasar-pandas.html",
@@ -19,7 +20,8 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/kalkulus/2023-01-06-fungsi-ganjil-genap/fungsi-ganjil-genap.html",
+      "/posts/2023-01-06-fungsi-ganjil-genap/fungsi-ganjil-genap.html",
+      "/posts/2023-01-20-domain-dan-range-pada-fungsi/domain-dan-fungsi.html",
       "/posts/2022-10-17-python-rangkuman-pengolahan-data-string/rangkuman-pengolahan-string.html",
       "/posts/2022-10-02-python-io-baca-tulis-file/python-baca-tulis-file.html",
       "/posts/2022-09-27-python-dasar-io/python-basic-io.html",
@@ -73,15 +75,11 @@
     "items": []
   },
   {
-    "listing": "/posts/fisdas/2023-01-05-post-pertama-fisika/post-pertama-fisika.html",
+    "listing": "/posts/2023-01-06-fungsi-ganjil-genap/fungsi-ganjil-genap.html",
     "items": []
   },
   {
-    "listing": "/posts/kalkulus/2023-01-06-fungsi-ganjil-genap/fungsi-ganjil-genap.html",
-    "items": []
-  },
-  {
-    "listing": "/posts/python-post/2023-01-05-first-post/post-python.html",
+    "listing": "/posts/2023-01-20-domain-dan-range-pada-fungsi/domain-dan-fungsi.html",
     "items": []
   }
 ]

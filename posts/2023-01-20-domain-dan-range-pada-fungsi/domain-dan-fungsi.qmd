@@ -1,0 +1,113 @@
+---
+title: "Domain dan Range pada Fungsi"
+description: |
+   Penjelasan ringkas mengenai domain dan range disertai beberapa contoh soal.
+categories: [Kalkulus, Fungsi]
+date: 2023-01-20
+---
+
+
+![](./tb-domain-range.png){width="60%" fig-align="center"}
+
+# Pengenalan
+
+Domain dan range merupakan komponen pada suatu fungsi. Domain atau daerah asal merupakan variabel bebas yang nilainya tidak bergantung pada aturan apa pun, secara umum dinotasikan sebagai $x$ pada permasalahan matematika. Domain juga dapat dipahami sebagi kumpulan nilai $x$ yang dapat dipakai pada suatu fungsi sehingga menghasilkan nilai $y$ yang terdefinisi. Range atau daerah hasil merupakan variabel terikat yang nilainya bergantung pada suatu aturan dan nilai dari variabel lainnya, biasanya dinotasikan sebagai varibel $y$.
+
+# Contoh Soal
+
+## Soal 1
+
+\begin{align}
+y = -2 + \sqrt{1 - x}
+\end{align}
+
+Fungsi di atas akan terdefinisi pada saat bagian di dalam akar kuadrat bernilai positif. Agar kondisi tersebut terpenuhi, nilai $x$ yang diizinkan tidak lebih dari 1 ($x \leq 1$). Dengan memasukkan rentang nilai $x$ tersebut diketahui nilai minimum $y$ adalah -2 ($y \leq -2$).
+
+\begin{align}
+1 - x &\geq 0\\
+x &\leq 1\\
+\therefore x &\in (-\infty, 1]\\
+\therefore y &\in [-2, \infty)\\
+\end{align}
+
+Bentuk visual dari fungsi di atas dapat dilihat pada grafik di bawah ini.
+```{r, echo=FALSE, warning=FALSE}
+x <- seq(-5, 2, .1)
+plot(x, -2 + sqrt(1-x), 
+main='Grafik f(x)', 
+ylab='y',
+xlab='x',
+type='l',
+col='blue')
+```
+
+## Soal 2
+
+\begin{align}
+y = 3^{2-x} + 1
+\end{align}
+
+Fungsi di atas memiliki domain pada semua bilangan karena tidak memiliki kondisi yang membuat fungsi tersebut memiliki nilai tak terdefenisi. Karena termasuk ke dalam fungsi pangkat (*power function*) nilai $y$ yang dihasilkan akan mengalami perubahan yang signifikan pada rentang tertentu dan konvergen pada suatu nilai di kondisi lainnya. Hal ini dapat dibuktikan dengan memasukkan beberapa nilai.
+
+\begin{align}
+f(-4) &= 3^{2+4} + 1 = 3^{6} + 1\\
+f(-3) &= 3^{2+3} + 1 = 3^{5} + 1\\
+f(-2) &= 3^{2+2} + 1 = 3^{4} + 1\\
+f(2) &= 3^{2-2} + 1 = 1 + 1 = 2\\
+f(3) &= 3^{2-3} + 1 = 3^{-1} + 1 = \frac{1}{3} + 1\\
+f(4) &= 3^{2-4} + 1 = 3^{-2} + 1 = \frac{1}{3^2} + 1\\
+\lim_{n \to \infty} f(n) &= 1\\
+\therefore x &\in (-\infty, \infty)\\
+\therefore y &\in [1, \infty)
+\end{align}
+
+Bentuk visual dari fungsi di atas dapat dilihat pada grafik di bawah ini.
+
+```{r, echo=FALSE, warning=FALSE}
+x <- seq(-4, 4, .1)
+plot(x, 3^(2-x), 
+main='Grafik f(x)', 
+ylab='y',
+xlab='x',
+type='l',
+col='red')
+```
+
+
+## Soal 3
+
+\begin{align}
+y = 2e^{-x} - 3
+\end{align}
+
+Sama seperti pada fungsi sebelumnya, hanya saja menggunakan basis $e$.
+
+\begin{align}
+f(-2) &= 2e^{2} - 3 = 11.78\\
+f(-1) &= 2e^{1} - 3 = 2.44\\
+f(0) &= 2e^{0} - 3 = -1\\
+f(1) &= 2e^{-1} - 3 = -2.26\\
+f(2) &= 2e^{-2} - 3 = -2.73\\
+\lim_{n \to \infty} f(n) &= -3\\
+\therefore x &\in (-\infty, \infty)\\
+\therefore y &\in [-3, \infty)
+\end{align}
+
+```{r, echo=FALSE, warning=FALSE}
+x <- seq(-4, 4, .1)
+plot(x, 2*exp(-x) -3, 
+main='Grafik f(x)', 
+ylab='y',
+xlab='x',
+type='l',
+col='green')
+```
+
+## Soal 4
+\begin{align}
+y = \tan (2x - \pi)
+\end{align}
+
+Karena fungsi di atas termasuk ke dalam jenis periodik, di mana nilainya akan berulang pada rentang $x$ tertentu maka dapat ditinjau pada interval tersebut. Fungsi $tan(x)$ pada dasarnya memiliki rentang nilai $(-\infty, \infty)$ pada $x \in (-\frac{\pi}{2}, \frac{\pi}{2})$. Terdapat modifikasi pada fungsi di atas, nilai sudut digandakan dan fasanya dikurangi dengan $\pi$. Dengan demikian domain fungsi tersebut akan bekurang untuk satu periodik.
+
+![](./tan-graph.png){width="60%" fig-align="center"}

@@ -31,6 +31,7 @@ fig-cap-location: bottom
 # date format
 date-format: short
 
+
 # footer format
 include-after-body: ../footer.html
 include-before-body: ../header.html
